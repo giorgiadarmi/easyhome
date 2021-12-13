@@ -9,7 +9,7 @@ Università La Sapienza di Roma
 "Easy home"
 
 ## Icona
-<img src="https://github.com/giorgiadarmi/easyhome/blob/master/icon.png" width="68">
+<img src="https://github.com/giorgiadarmi/easyhome/blob/master/icon.png" width="78">
 
 ## Funzionalità
 L'applicazione offre ai visitatori la possibilità di ricercare e visionare gli annunci di vendita e affitto inseriti dagli utenti registrati.
