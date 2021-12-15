@@ -1,0 +1,8 @@
+%h1 Crea un nuovo Annuncio
+
+=form_tag ads_path, :method => :post do 
+
+    =render :partial => 'ad_form'
+    %br  
+    %br
+    =submit_tag 'Save Changes'

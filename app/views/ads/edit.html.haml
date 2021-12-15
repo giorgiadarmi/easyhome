@@ -1,0 +1,5 @@
+%h2 Modifica Annuncio
+= form_tag ad_path(@ad), :method => :put do
+    =render :partial => 'ad_form'
+    %br
+    =submit_tag 'Save Changes'

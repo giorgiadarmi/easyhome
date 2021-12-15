@@ -1,0 +1,26 @@
+%h1 HOME
+%table#ads
+ %thead 
+  %tr
+   %th Owner
+   %th Type
+   %th Title
+   %th Notice
+   %th Location
+   %th More Info 
+ %tbody 
+  - @all.each do |ad|
+   %tr
+    %td= ad.owner
+    %td= ad.adtype
+    %td= ad.title
+    %td= ad.notice
+    %td= ad.location
+    %td= link_to "Details", ad_path(ad)
+%br
+%br
+#{link_to 'Crea un nuovo Annuncio', new_ad_path}
+
+%br 
+%br
+=link_to 'Profilo', mates_path

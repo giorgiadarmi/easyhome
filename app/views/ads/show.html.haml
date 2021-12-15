@@ -1,0 +1,33 @@
+%h1 Dettagli: #{@ad.title}
+
+%ul#details
+    %li 
+        Proprietario Annuncio:
+        = @ad.owner
+    %br
+    %li 
+        Tipo:
+        = @ad.adtype
+    %br
+    %li 
+        Titolo:
+        = @ad.title
+    %br
+    %li 
+        Descrizione:
+        =@ad.notice
+    %br
+    %li 
+        Indirizzo:
+        =@ad.location
+
+
+
+
+%br
+#{link_to 'Cancella Annuncio', ad_path(@ad), :method => :delete}
+=link_to 'Modifica Annuncio', edit_ad_path(@ad)
+%br
+%br 
+=link_to 'Home', ads_path
+

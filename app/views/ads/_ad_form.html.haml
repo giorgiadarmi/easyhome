@@ -1,0 +1,14 @@
+= label :ad, :title, 'Titolo'
+= text_field :ad, :title 
+%br
+%br
+= label :ad, :adtype, 'Tipo'
+= select :ad, :adtype, ['Affitto','Vendita']
+%br
+%br
+= label :ad, :location, 'Indirizzo'
+= text_field :ad, :location
+%br
+%br
+= label :ad, :notice, 'Descrizione'
+= text_area :ad, :notice
