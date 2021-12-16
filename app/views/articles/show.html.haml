@@ -1,0 +1,37 @@
+%h1 Dettagli riguardo l'articolo: #{@article.title}
+
+%ul#details 
+    %li 
+        Titolo:
+        = @article.title
+    %li 
+        Release date:
+        = @article&.release_date&.strftime("%B %d %Y")
+        
+    %li
+    	Testo articolo:
+    	= @article.text
+    
+    %li
+    	Autore articolo:
+    	= @article.author
+    
+    	
+
+%h3 Reviews:
+
+- if @article.reviews.empty?
+    %p
+        No reviews fot this article...
+- else
+    %p
+        - @article.reviews.each do |r|
+            = r.comments
+            %br
+
+#{link_to 'Torna a edilnews', articles_path}
+%br
+#{link_to 'Cancella articolo', article_path(@article), :method => :delete}
+#{link_to 'Aggiorna informazioni', edit_article_path(@article)}
+%br
+#{link_to 'Aggiungi commenti', new_article_review_path(@article)}

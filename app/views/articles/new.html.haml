@@ -1,0 +1,7 @@
+%h2 Crea nuovo articolo
+
+= form_tag articles_path, :method => :post do 
+
+    = render :partial => 'article_form'
+
+    = submit_tag 'Save Changes'

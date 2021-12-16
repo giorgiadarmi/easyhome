@@ -3550,3 +3550,131 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.0ms | Allocations: 4990)
 
 
+Started GET "/" for 127.0.0.1 at 2021-12-16 11:58:30 +0100
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 25ms (ActiveRecord: 0.0ms | Allocations: 3137)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-12-16 11:58:30 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 3.0ms | Allocations: 727)
+  Rendered /home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 176.4ms | Allocations: 4648)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 420.7ms | Allocations: 29532)
+Completed 200 OK in 535ms (Views: 485.3ms | ActiveRecord: 2.0ms | Allocations: 38629)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-12-16 11:58:45 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"darmientogiorgia@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "darmientogiorgia@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 81ms (ActiveRecord: 0.6ms | Allocations: 5239)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"darmientogiorgia@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering /home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 180)
+  Rendered /home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1192)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 4287)
+Completed 200 OK in 409ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 6211)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2021-12-16 11:58:52 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/shared/_error_messages.html.erb (Duration: 8.0ms | Allocations: 244)
+  Rendered /home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 166)
+  Rendered /home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 28.9ms | Allocations: 2175)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.2ms | Allocations: 5363)
+Completed 200 OK in 47ms (Views: 44.6ms | ActiveRecord: 0.0ms | Allocations: 7044)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-12-16 11:59:11 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"darmientogiorgia@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "darmientogiorgia@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "darmientogiorgia@gmail.com"], ["encrypted_password", "$2a$12$BHwcsHe6fS3QZ3gp8v4xv.kgV2ASVgHCeQox/zLqxUpEfs8VhHN6u"], ["created_at", "2021-12-16 10:59:11.814342"], ["updated_at", "2021-12-16 10:59:11.814342"]]
+  [1m[36mTRANSACTION (99.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 452ms (ActiveRecord: 100.8ms | Allocations: 10710)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-16 11:59:11 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.5ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 25.2ms | Allocations: 10624)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.1ms | Allocations: 14137)
+Completed 200 OK in 65ms (Views: 39.3ms | ActiveRecord: 2.0ms | Allocations: 17098)
+
+
+Started GET "/ads/new" for 127.0.0.1 at 2021-12-16 11:59:18 +0100
+Processing by AdsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/new.html.haml within layouts/application
+  Rendered ads/_ad_form.html.haml (Duration: 41.6ms | Allocations: 5538)
+  Rendered ads/new.html.haml within layouts/application (Duration: 47.6ms | Allocations: 7990)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 58.1ms | Allocations: 11094)
+Completed 200 OK in 68ms (Views: 59.3ms | ActiveRecord: 0.3ms | Allocations: 12961)
+
+
+Started POST "/ads" for 127.0.0.1 at 2021-12-16 11:59:49 +0100
+Processing by AdsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "ad"=>{"title"=>"Attico ", "adtype"=>"Vendita", "location"=>"piazza Venezia", "notice"=>"Ciao Anto"}, "commit"=>"Save Changes"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ads_controller.rb:23:in `create'
+  [1m[36mAd Create (0.6ms)[0m  [1m[32mINSERT INTO "ads" ("adtype", "title", "notice", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["adtype", "Vendita"], ["title", "Attico "], ["notice", "Ciao Anto"], ["location", "piazza Venezia"], ["created_at", "2021-12-16 10:59:49.603881"], ["updated_at", "2021-12-16 10:59:49.603881"]]
+  ↳ app/controllers/ads_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (268.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ads_controller.rb:23:in `create'
+Redirected to http://localhost:3000/ads
+Completed 302 Found in 295ms (ActiveRecord: 269.8ms | Allocations: 6158)
+
+
+Started GET "/ads" for 127.0.0.1 at 2021-12-16 11:59:49 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 4.6ms | Allocations: 1080)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 4306)
+Completed 200 OK in 21ms (Views: 13.9ms | ActiveRecord: 0.4ms | Allocations: 5920)
+
+
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20211216112430)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "release_date" datetime, "text" text, "author" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211216112430"]]
+  [1m[36mTRANSACTION (166.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Bonus 110%"], ["text", "il bonus prevede il rifacimento della cappotta termica"], ["author", "Giorgia D Armiento"], ["created_at", "2021-12-16 11:34:25.665515"], ["updated_at", "2021-12-16 11:34:25.665515"]]
+  [1m[36mTRANSACTION (203.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Assicurazione condominiale"], ["text", "Assicura il tuo condominio, in modo facile e veloce..."], ["author", "Giorgia D Armiento"], ["created_at", "2021-12-16 11:35:28.095745"], ["updated_at", "2021-12-16 11:35:28.095745"]]
+  [1m[36mTRANSACTION (155.6ms)[0m  [1m[36mcommit transaction[0m
