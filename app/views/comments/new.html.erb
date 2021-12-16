@@ -1,0 +1,12 @@
+%h2 Aggiungi un commento
+
+= form_tag movie_comments_path, :method => :post do 
+	= label :comment, :easyhome, 'Commento'
+	= text_area :comment, :easyhome, :text
+	
+	= label :comment, :comments, 'Comment'
+	= text_field :comment, :comments
+	
+	%br
+	%br
+	= submit_tag 'Aggiungi commento'

@@ -9,23 +9,23 @@
         = @article&.release_date&.strftime("%B %d %Y")
         
     %li
-    	Testo articolo:
-    	= @article.text
+        Testo articolo:
+        = @article.text
     
     %li
-    	Autore articolo:
-    	= @article.author
+        Autore articolo:
+        = @article.author
     
     	
 
-%h3 Reviews:
+%h3 comments:
 
-- if @article.reviews.empty?
+- if @article.comments.empty?
     %p
-        No reviews fot this article...
+        No comments fot this article...
 - else
     %p
-        - @article.reviews.each do |r|
+        - @article.comments.each do |r|
             = r.comments
             %br
 
@@ -34,4 +34,4 @@
 #{link_to 'Cancella articolo', article_path(@article), :method => :delete}
 #{link_to 'Aggiorna informazioni', edit_article_path(@article)}
 %br
-#{link_to 'Aggiungi commenti', new_article_review_path(@article)}
+#{link_to 'Aggiungi commenti', new_article_comment_path(@article)}
