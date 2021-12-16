@@ -4224,3 +4224,724 @@ FOREIGN KEY ("article_id")
 )[0m
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
   [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/ads" for 127.0.0.1 at 2021-12-16 14:02:49 +0100
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20211216123856_create_comments.rb
+
+
+):
+  
+activerecord (6.1.4.1) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.1) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.1) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4.1) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/ads" for 127.0.0.1 at 2021-12-16 14:03:07 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20211216123856_create_comments.rb
+
+
+):
+  
+activerecord (6.1.4.1) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4.1) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4.1) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4.1) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/rails/actions" for 127.0.0.1 at 2021-12-16 14:03:19 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateComments (20211216123856)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "easyhome" integer, "comments" text, "mate_id" integer NOT NULL, "article_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_a7663537c7"
+FOREIGN KEY ("mate_id")
+  REFERENCES "mates" ("id")
+, CONSTRAINT "fk_rails_3bf61a60d3"
+FOREIGN KEY ("article_id")
+  REFERENCES "articles" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE INDEX "index_comments_on_mate_id" ON "comments" ("mate_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_comments_on_article_id" ON "comments" ("article_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211216123856"]]
+  [1m[36mTRANSACTION (207.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/ads" for 127.0.0.1 at 2021-12-16 14:03:19 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.4ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 24.9ms | Allocations: 10627)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 109.3ms | Allocations: 35576)
+Completed 200 OK in 149ms (Views: 112.1ms | ActiveRecord: 2.9ms | Allocations: 45454)
+
+
+Started GET "/ads" for 127.0.0.1 at 2021-12-16 14:03:24 +0100
+Processing by AdsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 16.1ms | Allocations: 4767)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 8125)
+Completed 200 OK in 53ms (Views: 25.1ms | ActiveRecord: 3.8ms | Allocations: 16339)
+
+
+Started GET "/articles" for 127.0.0.1 at 2021-12-16 14:03:32 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 21.3ms | Allocations: 8039)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 11290)
+Completed 200 OK in 44ms (Views: 31.5ms | ActiveRecord: 1.7ms | Allocations: 15099)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2021-12-16 14:03:35 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:23
+  Rendered articles/show.html.haml within layouts/application (Duration: 148.1ms | Allocations: 15473)
+  Rendered layout layouts/application.html.erb (Duration: 148.5ms | Allocations: 15546)
+Completed 500 Internal Server Error in 170ms (ActiveRecord: 2.4ms | Allocations: 18824)
+
+
+  
+ActionView::Template::Error (undefined method `new_article_comment_path' for #<ActionView::Base:0x0000000000d020>
+Did you mean?  new_article_review_path):
+    34: #{link_to 'Cancella articolo', article_path(@article), :method => :delete}
+    35: #{link_to 'Aggiorna informazioni', edit_article_path(@article)}
+    36: %br
+    37: #{link_to 'Aggiungi commenti', new_article_comment_path(@article)}
+  
+app/views/articles/show.html.haml:37
+Started GET "/articles/2" for 127.0.0.1 at 2021-12-16 14:04:43 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:23
+  Rendered articles/show.html.haml within layouts/application (Duration: 44.3ms | Allocations: 7485)
+  Rendered layout layouts/application.html.erb (Duration: 44.7ms | Allocations: 7562)
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 5.3ms | Allocations: 21053)
+
+
+  
+ActionView::Template::Error (undefined method `new_article_comment_path' for #<ActionView::Base:0x0000000000f910>
+Did you mean?  new_article_review_path):
+    34: #{link_to 'Cancella articolo', article_path(@article), :method => :delete}
+    35: #{link_to 'Aggiorna informazioni', edit_article_path(@article)}
+    36: %br
+    37: #{link_to 'Aggiungi commenti', new_article_comment_path(@article)}
+  
+app/views/articles/show.html.haml:37
+Started GET "/articles/2" for 127.0.0.1 at 2021-12-16 20:15:40 +0100
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:23
+  Rendered articles/show.html.haml within layouts/application (Duration: 62.7ms | Allocations: 16096)
+  Rendered layout layouts/application.html.erb (Duration: 63.3ms | Allocations: 16215)
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 5.1ms | Allocations: 34234)
+
+
+  
+ActionView::Template::Error (undefined method `new_article_comment_path' for #<ActionView::Base:0x00000000009a60>
+Did you mean?  new_article_review_path):
+    34: #{link_to 'Cancella articolo', article_path(@article), :method => :delete}
+    35: #{link_to 'Aggiorna informazioni', edit_article_path(@article)}
+    36: %br
+    37: #{link_to 'Aggiungi commenti', new_article_comment_path(@article)}
+  
+app/views/articles/show.html.haml:37
+Started GET "/articles" for 127.0.0.1 at 2021-12-16 20:15:45 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 12.1ms | Allocations: 4848)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 11940)
+Completed 200 OK in 44ms (Views: 34.1ms | ActiveRecord: 0.8ms | Allocations: 13928)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2021-12-16 20:15:47 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:23
+  Rendered articles/show.html.haml within layouts/application (Duration: 38.3ms | Allocations: 5721)
+  Rendered layout layouts/application.html.erb (Duration: 39.0ms | Allocations: 5794)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 1.1ms | Allocations: 8740)
+
+
+  
+ActionView::Template::Error (undefined method `new_article_comment_path' for #<ActionView::Base:0x0000000000a168>
+Did you mean?  new_article_review_path):
+    34: #{link_to 'Cancella articolo', article_path(@article), :method => :delete}
+    35: #{link_to 'Aggiorna informazioni', edit_article_path(@article)}
+    36: %br
+    37: #{link_to 'Aggiungi commenti', new_article_comment_path(@article)}
+  
+app/views/articles/show.html.haml:37
+Started GET "/articles/2" for 127.0.0.1 at 2021-12-16 20:16:49 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:23
+  Rendered articles/show.html.haml within layouts/application (Duration: 45.0ms | Allocations: 9311)
+  Rendered layout layouts/application.html.erb (Duration: 45.8ms | Allocations: 9390)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 1.1ms | Allocations: 13156)
+
+
+  
+ActionView::Template::Error (undefined method `new_article_comment_path' for #<ActionView::Base:0x0000000000a528>
+Did you mean?  new_article_review_path):
+    34: #{link_to 'Cancella articolo', article_path(@article), :method => :delete}
+    35: #{link_to 'Aggiorna informazioni', edit_article_path(@article)}
+    36: %br
+    37: #{link_to 'Aggiungi commenti', new_article_comment_path(@article)}
+  
+app/views/articles/show.html.haml:37
+Started GET "/articles" for 127.0.0.1 at 2021-12-16 20:17:21 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 10.2ms | Allocations: 4731)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 8248)
+Completed 200 OK in 32ms (Views: 23.1ms | ActiveRecord: 0.5ms | Allocations: 10046)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2021-12-16 20:17:23 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 4], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:23
+  Rendered articles/show.html.haml within layouts/application (Duration: 37.5ms | Allocations: 5752)
+  Rendered layout layouts/application.html.erb (Duration: 37.9ms | Allocations: 5825)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 1.3ms | Allocations: 8662)
+
+
+  
+ActionView::Template::Error (undefined method `new_article_comment_path' for #<ActionView::Base:0x0000000000aa00>
+Did you mean?  new_article_review_path):
+    34: #{link_to 'Cancella articolo', article_path(@article), :method => :delete}
+    35: #{link_to 'Aggiorna informazioni', edit_article_path(@article)}
+    36: %br
+    37: #{link_to 'Aggiungi commenti', new_article_comment_path(@article)}
+  
+app/views/articles/show.html.haml:37
+Started GET "/articles/4" for 127.0.0.1 at 2021-12-16 20:18:29 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 4], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:23
+  Rendered articles/show.html.haml within layouts/application (Duration: 12.0ms | Allocations: 3166)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 6438)
+Completed 200 OK in 82ms (Views: 27.4ms | ActiveRecord: 5.5ms | Allocations: 19988)
+
+
+Started GET "/articles/4/comments/new" for 127.0.0.1 at 2021-12-16 20:18:36 +0100
+Processing by CommentsController#new as HTML
+  Parameters: {"article_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 163)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 3568)
+Completed 200 OK in 22ms (Views: 13.8ms | ActiveRecord: 0.3ms | Allocations: 6160)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2021-12-16 20:18:43 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 0.2ms | Allocations: 4683)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-16 20:18:43 +0100
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms | Allocations: 421)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-12-16 20:18:43 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 2.1ms | Allocations: 694)
+  Rendered /home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 3616)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 6951)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 0.0ms | Allocations: 9277)
+
+
+Started GET "/articles/4/comments/new" for 127.0.0.1 at 2021-12-16 20:18:44 +0100
+Processing by CommentsController#new as HTML
+  Parameters: {"article_id"=>"4"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 291)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-12-16 20:18:44 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 164)
+  Rendered /home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1072)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 4184)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 4923)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-12-16 20:19:05 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"darmientogiorgia@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "darmientogiorgia@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/articles/4/comments/new
+Completed 302 Found in 308ms (ActiveRecord: 0.6ms | Allocations: 6735)
+
+
+Started GET "/articles/4/comments/new" for 127.0.0.1 at 2021-12-16 20:19:05 +0100
+Processing by CommentsController#new as HTML
+  Parameters: {"article_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 3312)
+Completed 200 OK in 33ms (Views: 25.2ms | ActiveRecord: 0.3ms | Allocations: 5048)
+
+
+Started GET "/articles" for 127.0.0.1 at 2021-12-16 20:19:11 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 5.6ms | Allocations: 1235)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 4567)
+Completed 200 OK in 20ms (Views: 13.7ms | ActiveRecord: 0.7ms | Allocations: 6155)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2021-12-16 20:19:14 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:23
+  Rendered articles/show.html.haml within layouts/application (Duration: 5.8ms | Allocations: 1246)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 4576)
+Completed 200 OK in 30ms (Views: 15.8ms | ActiveRecord: 1.3ms | Allocations: 7465)
+
+
+Started GET "/articles/2/comments/new" for 127.0.0.1 at 2021-12-16 20:19:17 +0100
+Processing by CommentsController#new as HTML
+  Parameters: {"article_id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 3165)
+Completed 200 OK in 17ms (Views: 10.5ms | ActiveRecord: 0.3ms | Allocations: 4803)
+
+
+Started GET "/articles" for 127.0.0.1 at 2021-12-16 20:20:26 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 4.5ms | Allocations: 1197)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 4549)
+Completed 200 OK in 40ms (Views: 15.1ms | ActiveRecord: 0.4ms | Allocations: 6181)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2021-12-16 20:20:28 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 4], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:23
+  Rendered articles/show.html.haml within layouts/application (Duration: 5.4ms | Allocations: 1279)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 4609)
+Completed 200 OK in 27ms (Views: 14.7ms | ActiveRecord: 1.1ms | Allocations: 7498)
+
+
+Started GET "/articles/4/comments/new" for 127.0.0.1 at 2021-12-16 20:20:30 +0100
+Processing by CommentsController#new as HTML
+  Parameters: {"article_id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3182)
+Completed 200 OK in 15ms (Views: 9.2ms | ActiveRecord: 0.2ms | Allocations: 4821)
+
+
+Started GET "/articles" for 127.0.0.1 at 2021-12-16 20:21:39 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 6.7ms | Allocations: 1196)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 4560)
+Completed 200 OK in 31ms (Views: 18.8ms | ActiveRecord: 0.5ms | Allocations: 6147)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2021-12-16 20:21:41 +0100
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.haml within layouts/application
+  Rendered articles/_article_form.html.haml (Duration: 17.1ms | Allocations: 6011)
+  Rendered articles/new.html.haml within layouts/application (Duration: 23.8ms | Allocations: 8316)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.6ms | Allocations: 11530)
+Completed 200 OK in 42ms (Views: 33.8ms | ActiveRecord: 0.3ms | Allocations: 13392)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2021-12-16 20:22:49 +0100
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.haml within layouts/application
+  Rendered articles/_article_form.html.haml (Duration: 4.9ms | Allocations: 3253)
+  Rendered articles/new.html.haml within layouts/application (Duration: 10.1ms | Allocations: 5542)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 9008)
+Completed 200 OK in 29ms (Views: 21.8ms | ActiveRecord: 0.2ms | Allocations: 11766)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2021-12-16 20:23:55 +0100
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.haml within layouts/application
+  Rendered articles/_article_form.html.haml (Duration: 5.8ms | Allocations: 3253)
+  Rendered articles/new.html.haml within layouts/application (Duration: 12.0ms | Allocations: 5541)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 9005)
+Completed 200 OK in 33ms (Views: 25.4ms | ActiveRecord: 0.3ms | Allocations: 11726)
+
+
+Started GET "/articles" for 127.0.0.1 at 2021-12-16 20:24:06 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 9.2ms | Allocations: 4687)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 7919)
+Completed 200 OK in 25ms (Views: 17.8ms | ActiveRecord: 0.6ms | Allocations: 9832)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2021-12-16 20:24:08 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:23
+  Rendered articles/show.html.haml within layouts/application (Duration: 11.6ms | Allocations: 4934)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 8163)
+Completed 200 OK in 33ms (Views: 20.5ms | ActiveRecord: 1.0ms | Allocations: 11213)
+
+
+Started GET "/articles/1/comments/new" for 127.0.0.1 at 2021-12-16 20:24:10 +0100
+Processing by CommentsController#new as HTML
+  Parameters: {"article_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering comments/new.html.haml within layouts/application
+  Rendered comments/new.html.haml within layouts/application (Duration: 7.4ms | Allocations: 3794)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3877)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.2ms | Allocations: 6217)
+
+
+  
+ActionView::Template::Error (undefined method `delete' for :text:Symbol):
+    2: 
+    3: = form_tag article_comments_path, :method => :post do 
+    4: 	= label :comment, :easyhome, 'Commento'
+    5: 	= text_area :comment, :easyhome, :text
+    6: 	
+    7: 	= label :comment, :comments, 'Comment'
+    8: 	= text_field :comment, :comments
+  
+app/views/comments/new.html.haml:5
+app/views/comments/new.html.haml:3
+Started GET "/articles/1/comments/new" for 127.0.0.1 at 2021-12-16 20:25:30 +0100
+Processing by CommentsController#new as HTML
+  Parameters: {"article_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering comments/new.html.haml within layouts/application
+  Rendered comments/new.html.haml within layouts/application (Duration: 6.3ms | Allocations: 2624)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 6135)
+Completed 200 OK in 31ms (Views: 20.7ms | ActiveRecord: 0.3ms | Allocations: 8865)
+
+
+Started GET "/articles/1/comments/new" for 127.0.0.1 at 2021-12-16 20:25:54 +0100
+Processing by CommentsController#new as HTML
+  Parameters: {"article_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering comments/new.html.haml within layouts/application
+  Rendered comments/new.html.haml within layouts/application (Duration: 6.2ms | Allocations: 2431)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 5943)
+Completed 200 OK in 27ms (Views: 19.1ms | ActiveRecord: 0.4ms | Allocations: 8707)
+
+
+Started POST "/articles/1/comments" for 127.0.0.1 at 2021-12-16 20:26:03 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"text"=>"bellissimo articolo"}, "commit"=>"Aggiungi commento", "article_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.3ms | Allocations: 5075)
+
+
+  
+NameError (undefined local variable or method `article' for #<CommentsController:0x0000000000e1c8>
+Did you mean?  article_url):
+  
+app/controllers/comments_controller.rb:8:in `create'
+Started POST "/articles/1/comments" for 127.0.0.1 at 2021-12-16 20:28:47 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"text"=>"bellissimo articolo"}, "commit"=>"Aggiungi commento", "article_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 2.0ms | Allocations: 10995)
+
+
+  
+NameError (undefined local variable or method `article' for #<CommentsController:0x00000000010c48>
+Did you mean?  article_url):
+  
+app/controllers/comments_controller.rb:8:in `create'
+Started POST "/articles/1/comments" for 127.0.0.1 at 2021-12-16 20:29:54 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"text"=>"bellissimo articolo"}, "commit"=>"Aggiungi commento", "article_id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:8:in `create'
+Completed 422 Unprocessable Entity in 84ms (ActiveRecord: 6.1ms | Allocations: 22050)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Mate must exist):
+  
+app/controllers/comments_controller.rb:9:in `create'
+Started POST "/articles/1/comments" for 127.0.0.1 at 2021-12-16 20:30:51 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"text"=>"bellissimo articolo"}, "commit"=>"Aggiungi commento", "article_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:8:in `create'
+Completed 422 Unprocessable Entity in 17ms (ActiveRecord: 0.5ms | Allocations: 3320)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Mate must exist):
+  
+app/controllers/comments_controller.rb:9:in `create'
