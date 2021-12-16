@@ -4,7 +4,6 @@
   %tr
    %th Article title
    %th Release Date
-   %th Text
    %th Author
    %th More Info
  %tbody
@@ -12,9 +11,9 @@
    %tr
     %td=article.title
     %td=article&.release_date&.strftime("%B %d %Y")
-    %td=article.text
     %td=article.author
     %td=link_to "Details", article_path(article)
+%br
 #{link_to 'Crea nuovo articolo', new_article_path}
 %br
 %br

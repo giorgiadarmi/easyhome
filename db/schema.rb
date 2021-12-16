@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_16_123856) do
+ActiveRecord::Schema.define(version: 2021_12_16_210435) do
 
   create_table "ads", force: :cascade do |t|
     t.string "owner"
@@ -40,6 +40,13 @@ ActiveRecord::Schema.define(version: 2021_12_16_123856) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["article_id"], name: "index_comments_on_article_id"
     t.index ["mate_id"], name: "index_comments_on_mate_id"
+  end
+
+  create_table "favorite_articles", force: :cascade do |t|
+    t.integer "article_id"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "mates", force: :cascade do |t|

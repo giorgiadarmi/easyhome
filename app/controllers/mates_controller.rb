@@ -39,7 +39,15 @@ class MatesController < ApplicationController
        render :edit
      end
    end
- 
+   
+   def favorites
+       @articles = current_user.favorites
+   end
+   
+   def myarticles
+       @articles = current_user.articles
+   end
+   
      private
      def mate_params
        params.require(:mate).permit(:name, :bio)

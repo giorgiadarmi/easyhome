@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :mates
   
   resources :articles do
+  	put :favorite, on: :member
   	resources :comments, only: [:new, :create, :destroy]
   end
 end

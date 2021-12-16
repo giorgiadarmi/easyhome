@@ -1,0 +1,20 @@
+%h2 I miei articoli 
+
+- if @articles.empty?
+    %p No article added!
+- else
+    %br
+    - @articles.each do |c|
+        = link_to '#{c.title}', article_path(c.id), :class => 'btn btn-outline-success'
+        - if !current_user.is_banned?
+            - if can? :destroy, article
+                = link_to 'Rimuovi articolo', article_path(c.id), :method => :delete, data: {confirm: 'Are you sure'}, :class => 'btn btn-outline-primary btn-sm'
+            - if can? :edit, article
+                = link_to 'Modifica articolo', edit_article_path(c.id), :class => 'btn btn-outline-danger btn-sm'
+        %br
+        %br
+%hr
+- if !current_user.is_banned?
+    = link_to 'Aggiungi un nuovo articolo', new_article_path, class: 'btn btn-sm btn-info'
+%br
+= link_to 'Vai a edilnews', articles_path
