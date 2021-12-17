@@ -40,13 +40,6 @@ class MatesController < ApplicationController
      end
    end
    
-   def favorites
-       @articles = current_user.favorites
-   end
-   
-   def myarticles
-       @articles = current_user.articles
-   end
    
      private
      def mate_params

@@ -29,12 +29,6 @@
             %br
 
 %br
--if FavoriteArticle.find_by(:user_id => current_user, :article_id => @article.id) != nil
-    = link_to 'Rimuovi dai preferiti', favorite_article_path(@article, type: "unfavorite"), method: :put, :class => 'btn btn-outline-danger'
-- else
-    = link_to 'Aggiungi ai preferiti', favorite_article_path(@article, type: "favorite"), method: :put, :class => 'btn btn-outline-success'
-
-%br
 %br
 %br
 

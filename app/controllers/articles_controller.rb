@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
 	
 	#CREATE 2/2
 	def create
-		p=params.require(:article).permit( :title, :release_date, :text, :author)
+		p=params.require(:article).permit(:title, :release_date, :text, :author)
 		Article.create(p)
 		redirect_to articles_path
 	end
@@ -43,22 +43,5 @@ class ArticlesController < ApplicationController
 		Article.find(params[:id]).destroy
 		redirect_to articles_path
 	end
-	
-	#FAVORITE
-    def favorite
-        @article = Article.find(params[:id])
-        type = params[:type]
-        if type == "favorite"
-          current_user.favorites << @article
-          redirect_to articles_path, notice: "Aggiunto preferito #{@article.title}"
-    
-        elsif type == "unfavorite"
-          current_user.delete(@article)
-          redirect_to articles_path, notice: "Rimosso preferito #{@article.title}"
-    
-        else
-          # Type missing, nothing happens
-          redirect_to articles_path, notice: 'Niente è cambiato.'
-        end
-    end
+
 end

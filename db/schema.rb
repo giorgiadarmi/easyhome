@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_16_210435) do
+ActiveRecord::Schema.define(version: 2021_12_17_215456) do
 
   create_table "ads", force: :cascade do |t|
     t.string "owner"
@@ -45,6 +45,13 @@ ActiveRecord::Schema.define(version: 2021_12_16_210435) do
   create_table "favorite_articles", force: :cascade do |t|
     t.integer "article_id"
     t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer "article_id"
+    t.integer "mate_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
