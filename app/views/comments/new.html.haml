@@ -1,10 +1,9 @@
 %h2 Aggiungi un commento
 
 = form_tag article_comments_path, :method => :post do 
-	= label :comment, :easyhome, 'Commento'
-	= text_area :comment, :text
-	
+    = label :comment, :easyhome, 'Commento'
+    = text_area :comment, :text
 	%br
 	%br
-	= submit_tag 'Aggiungi commento'
+	= submit_tag 'Aggiungi un commento'
 	

@@ -8802,3 +8802,468 @@ Completed 422 Unprocessable Entity in 25ms (ActiveRecord: 1.2ms | Allocations: 7
 ActiveRecord::RecordInvalid (Validation failed: Mate must exist):
   
 app/controllers/comments_controller.rb:9:in `create'
+Started GET "/" for 127.0.0.1 at 2021-12-18 08:42:37 +0100
+  [1m[35m (10.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 22ms (ActiveRecord: 0.0ms | Allocations: 2443)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-12-18 08:42:38 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 2.9ms | Allocations: 719)
+  Rendered /home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 49.4ms | Allocations: 3935)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 302.6ms | Allocations: 11026)
+Completed 200 OK in 374ms (Views: 339.5ms | ActiveRecord: 1.9ms | Allocations: 19277)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-12-18 08:42:44 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"darmientogiorgia@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "darmientogiorgia@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 699ms (ActiveRecord: 0.6ms | Allocations: 5950)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-18 08:42:45 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 25.6ms | Allocations: 10567)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 13832)
+Completed 200 OK in 62ms (Views: 35.9ms | ActiveRecord: 1.9ms | Allocations: 16756)
+
+
+Started GET "/mates" for 127.0.0.1 at 2021-12-18 08:42:47 +0100
+Processing by MatesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering mates/index.html.haml within layouts/application
+  Rendered mates/index.html.haml within layouts/application (Duration: 3.5ms | Allocations: 2270)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 5531)
+Completed 200 OK in 101ms (Views: 14.3ms | ActiveRecord: 0.4ms | Allocations: 10355)
+
+
+Started GET "/articles" for 127.0.0.1 at 2021-12-18 08:42:51 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:10
+  Rendered articles/index.html.haml within layouts/application (Duration: 25.0ms | Allocations: 7860)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | Allocations: 11111)
+Completed 200 OK in 86ms (Views: 35.1ms | ActiveRecord: 1.8ms | Allocations: 15085)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2021-12-18 08:42:53 +0100
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.haml within layouts/application
+  Rendered articles/new.html.haml within layouts/application (Duration: 6.9ms | Allocations: 4057)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4136)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.3ms | Allocations: 5959)
+
+
+  
+ActionView::Template::Error (Missing partial articles/_ad_form, application/_ad_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder, :haml]}. Searched in:
+  * "/home/giorgia/easyhome/easyhome/app/views"
+  * "/home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views"
+  * "/home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views"
+  * "/home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.4.1/app/views"
+):
+    2: 
+    3: =form_tag articles_path, :method => :post do 
+    4: 
+    5:     =render :partial => 'ad_form'
+    6:     %br  
+    7:     %br
+    8:     =submit_tag 'Salva cambiamenti'
+  
+app/views/articles/new.html.haml:5
+app/views/articles/new.html.haml:3
+Started GET "/articles/new" for 127.0.0.1 at 2021-12-18 08:43:10 +0100
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.haml within layouts/application
+  Rendered articles/_article_form.html.haml (Duration: 31.1ms | Allocations: 6019)
+  Rendered articles/new.html.haml within layouts/application (Duration: 37.9ms | Allocations: 8710)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 50.0ms | Allocations: 12203)
+Completed 200 OK in 63ms (Views: 54.5ms | ActiveRecord: 0.3ms | Allocations: 14964)
+
+
+Started POST "/articles" for 127.0.0.1 at 2021-12-18 08:43:30 +0100
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"bonus 120", "release_date(1i)"=>"2021", "release_date(2i)"=>"4", "release_date(3i)"=>"18", "text"=>"il bonus comorende", "author"=>"jdsdnhjk"}, "commit"=>"Salva cambiamenti"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 92ms (ActiveRecord: 0.5ms | Allocations: 4217)
+
+
+Started GET "/articles" for 127.0.0.1 at 2021-12-18 08:43:30 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:10
+  Rendered articles/index.html.haml within layouts/application (Duration: 29.4ms | Allocations: 4490)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.8ms | Allocations: 7722)
+Completed 200 OK in 58ms (Views: 45.7ms | ActiveRecord: 0.4ms | Allocations: 9682)
+
+
+Started GET "/articles" for 127.0.0.1 at 2021-12-18 08:45:19 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:10
+  Rendered articles/index.html.haml within layouts/application (Duration: 11.1ms | Allocations: 4502)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 8024)
+Completed 200 OK in 35ms (Views: 26.7ms | ActiveRecord: 0.4ms | Allocations: 10721)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2021-12-18 08:45:20 +0100
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.haml within layouts/application
+  Rendered articles/_article_form.html.haml (Duration: 9.0ms | Allocations: 3253)
+  Rendered articles/new.html.haml within layouts/application (Duration: 15.4ms | Allocations: 5906)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | Allocations: 9108)
+Completed 200 OK in 35ms (Views: 26.8ms | ActiveRecord: 0.3ms | Allocations: 10976)
+
+
+Started GET "/articles" for 127.0.0.1 at 2021-12-18 08:45:28 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:10
+  Rendered articles/index.html.haml within layouts/application (Duration: 7.4ms | Allocations: 1067)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 4400)
+Completed 200 OK in 32ms (Views: 20.5ms | ActiveRecord: 0.9ms | Allocations: 6186)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2021-12-18 08:45:31 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (14.0ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:22
+  Rendered articles/show.html.haml within layouts/application (Duration: 130.5ms | Allocations: 11261)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 141.8ms | Allocations: 14494)
+Completed 200 OK in 159ms (Views: 127.0ms | ActiveRecord: 17.2ms | Allocations: 17830)
+
+
+Started GET "/articles/3/edit" for 127.0.0.1 at 2021-12-18 08:45:35 +0100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:32:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.haml within layouts/application
+  Rendered articles/_article_form.html.haml (Duration: 3.7ms | Allocations: 1482)
+  Rendered articles/edit.html.haml within layouts/application (Duration: 9.1ms | Allocations: 3657)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 6862)
+Completed 200 OK in 30ms (Views: 19.0ms | ActiveRecord: 0.5ms | Allocations: 9256)
+
+
+Started POST "/articles/3" for 127.0.0.1 at 2021-12-18 08:45:37 +0100
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"Bonus 110%", "release_date(1i)"=>"2019", "release_date(2i)"=>"12", "release_date(3i)"=>"16", "text"=>"il bonus prevede il rifacimento della cappotta termica", "author"=>"Giorgia D Armiento"}, "commit"=>"Save Changes", "id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 12ms (ActiveRecord: 0.3ms | Allocations: 2419)
+
+
+Started GET "/articles" for 127.0.0.1 at 2021-12-18 08:45:37 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:10
+  Rendered articles/index.html.haml within layouts/application (Duration: 5.1ms | Allocations: 1067)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 4400)
+Completed 200 OK in 21ms (Views: 15.5ms | ActiveRecord: 0.4ms | Allocations: 6013)
+
+
+Started GET "/articles" for 127.0.0.1 at 2021-12-18 08:46:50 +0100
+Processing by ArticlesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:10
+  Rendered articles/index.html.haml within layouts/application (Duration: 15.8ms | Allocations: 4339)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 7698)
+Completed 200 OK in 72ms (Views: 25.2ms | ActiveRecord: 4.0ms | Allocations: 16850)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2021-12-18 08:46:51 +0100
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.haml within layouts/application
+  Rendered articles/_article_form.html.haml (Duration: 3.5ms | Allocations: 1357)
+  Rendered articles/new.html.haml within layouts/application (Duration: 5.4ms | Allocations: 1816)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 5125)
+Completed 200 OK in 24ms (Views: 16.2ms | ActiveRecord: 0.3ms | Allocations: 6835)
+
+
+Started POST "/articles" for 127.0.0.1 at 2021-12-18 08:46:54 +0100
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"cjks", "release_date(1i)"=>"2021", "release_date(2i)"=>"12", "release_date(3i)"=>"18", "text"=>"", "author"=>""}, "commit"=>"Salva cambiamenti"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 90ms (ActiveRecord: 0.3ms | Allocations: 4902)
+
+
+Started GET "/articles" for 127.0.0.1 at 2021-12-18 08:46:54 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:10
+  Rendered articles/index.html.haml within layouts/application (Duration: 4.3ms | Allocations: 1070)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 4403)
+Completed 200 OK in 20ms (Views: 14.6ms | ActiveRecord: 0.4ms | Allocations: 6204)
+
+
+Started GET "/articles" for 127.0.0.1 at 2021-12-18 08:50:50 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:10
+  Rendered articles/index.html.haml within layouts/application (Duration: 10.6ms | Allocations: 4507)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 8011)
+Completed 200 OK in 33ms (Views: 24.5ms | ActiveRecord: 0.4ms | Allocations: 10706)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2021-12-18 08:50:51 +0100
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.haml within layouts/application
+  Rendered articles/_article_form.html.haml (Duration: 6.2ms | Allocations: 3253)
+  Rendered articles/new.html.haml within layouts/application (Duration: 11.6ms | Allocations: 5665)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 8872)
+Completed 200 OK in 29ms (Views: 21.9ms | ActiveRecord: 0.3ms | Allocations: 10740)
+
+
+Started POST "/articles" for 127.0.0.1 at 2021-12-18 08:51:01 +0100
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"ciao", "release_date(1i)"=>"2021", "release_date(2i)"=>"3", "release_date(3i)"=>"4", "text"=>"kdjkvko", "author"=>"ckl"}, "commit"=>"Salva cambiamenti"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 9ms (ActiveRecord: 0.3ms | Allocations: 2409)
+
+
+Started GET "/articles" for 127.0.0.1 at 2021-12-18 08:51:01 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:10
+  Rendered articles/index.html.haml within layouts/application (Duration: 5.4ms | Allocations: 1067)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 4400)
+Completed 200 OK in 21ms (Views: 13.7ms | ActiveRecord: 0.8ms | Allocations: 6013)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2021-12-18 08:51:03 +0100
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.haml within layouts/application
+  Rendered articles/_article_form.html.haml (Duration: 2.7ms | Allocations: 1357)
+  Rendered articles/new.html.haml within layouts/application (Duration: 4.9ms | Allocations: 1787)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 5094)
+Completed 200 OK in 23ms (Views: 16.0ms | ActiveRecord: 0.2ms | Allocations: 6804)
+
+
+Started POST "/articles" for 127.0.0.1 at 2021-12-18 08:51:42 +0100
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"", "release_date(1i)"=>"2021", "release_date(2i)"=>"12", "release_date(3i)"=>"18", "text"=>"", "author"=>""}, "commit"=>"Salva cambiamenti"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 11ms (ActiveRecord: 0.2ms | Allocations: 2409)
+
+
+Started GET "/articles" for 127.0.0.1 at 2021-12-18 08:51:42 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:10
+  Rendered articles/index.html.haml within layouts/application (Duration: 4.7ms | Allocations: 1067)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 4400)
+Completed 200 OK in 24ms (Views: 16.3ms | ActiveRecord: 0.6ms | Allocations: 6013)
+
+
+Started GET "/mates" for 127.0.0.1 at 2021-12-18 08:51:43 +0100
+Processing by MatesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering mates/index.html.haml within layouts/application
+  Rendered mates/index.html.haml within layouts/application (Duration: 5.1ms | Allocations: 2229)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 5507)
+Completed 200 OK in 36ms (Views: 18.4ms | ActiveRecord: 0.2ms | Allocations: 8186)
+
+
+Started GET "/articles" for 127.0.0.1 at 2021-12-18 08:51:46 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:10
+  Rendered articles/index.html.haml within layouts/application (Duration: 8.4ms | Allocations: 1066)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 4417)
+Completed 200 OK in 29ms (Views: 21.6ms | ActiveRecord: 0.6ms | Allocations: 6205)
+
+
+Started GET "/articles" for 127.0.0.1 at 2021-12-18 08:54:13 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:10
+  Rendered articles/index.html.haml within layouts/application (Duration: 9.8ms | Allocations: 4499)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 8010)
+Completed 200 OK in 29ms (Views: 21.6ms | ActiveRecord: 1.0ms | Allocations: 10705)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2021-12-18 08:54:17 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:22
+  Rendered articles/show.html.haml within layouts/application (Duration: 29.6ms | Allocations: 9469)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.4ms | Allocations: 12699)
+Completed 200 OK in 58ms (Views: 39.5ms | ActiveRecord: 2.3ms | Allocations: 15953)
+
+
+Started GET "/articles/3/edit" for 127.0.0.1 at 2021-12-18 08:54:21 +0100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:32:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.haml within layouts/application
+  Rendered articles/_article_form.html.haml (Duration: 6.8ms | Allocations: 3368)
+  Rendered articles/edit.html.haml within layouts/application (Duration: 11.8ms | Allocations: 5704)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 8909)
+Completed 200 OK in 30ms (Views: 20.2ms | ActiveRecord: 0.5ms | Allocations: 11297)
+
+
+Started POST "/articles/3" for 127.0.0.1 at 2021-12-18 08:54:26 +0100
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"Bonus ", "release_date(1i)"=>"2021", "release_date(2i)"=>"12", "release_date(3i)"=>"16", "text"=>"il bonus prevede il rifacimento della cappotta termica", "author"=>"Giorgia D Armiento"}, "commit"=>"Save Changes", "id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms | Allocations: 2408)
+
+
+Started GET "/articles" for 127.0.0.1 at 2021-12-18 08:54:26 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:10
+  Rendered articles/index.html.haml within layouts/application (Duration: 4.7ms | Allocations: 1067)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 4400)
+Completed 200 OK in 22ms (Views: 14.7ms | ActiveRecord: 0.5ms | Allocations: 6013)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2021-12-18 08:54:28 +0100
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.haml within layouts/application
+  Rendered articles/_article_form.html.haml (Duration: 2.5ms | Allocations: 1343)
+  Rendered articles/new.html.haml within layouts/application (Duration: 7.7ms | Allocations: 3599)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 6806)
+Completed 200 OK in 25ms (Views: 17.5ms | ActiveRecord: 0.3ms | Allocations: 8676)
+
+
+Started POST "/articles" for 127.0.0.1 at 2021-12-18 08:54:31 +0100
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"klfmlds", "release_date(1i)"=>"2021", "release_date(2i)"=>"12", "release_date(3i)"=>"18", "text"=>"", "author"=>""}, "commit"=>"Salva cambiamenti"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 11ms (ActiveRecord: 0.2ms | Allocations: 2412)
+
+
+Started GET "/articles" for 127.0.0.1 at 2021-12-18 08:54:31 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:10
+  Rendered articles/index.html.haml within layouts/application (Duration: 5.7ms | Allocations: 1067)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 4400)
+Completed 200 OK in 24ms (Views: 16.6ms | ActiveRecord: 0.6ms | Allocations: 6013)
+
+

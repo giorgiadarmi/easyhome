@@ -3,16 +3,16 @@
 %ul#details 
 
     %li 
-        %h3 Titolo: 
+        Titolo: 
         = @article.title
     %li 
-        %h4 Release date:
+        Release date:
         = @article&.release_date&.strftime("%B %d %Y")     
     %li
-        %h4 Testo articolo:
+        Testo articolo:
         = @article.text  
     %li
-        %h4 Autore articolo:
+        Autore articolo:
         = @article.author
     
     	
@@ -27,10 +27,6 @@
         - @article.comments.each do |r|
             = r.comments
             %br
-
-%br
-%br
-%br
 
 #{link_to 'Torna a edilnews', articles_path}
 %br
