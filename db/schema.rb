@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_16_123856) do
+ActiveRecord::Schema.define(version: 2021_12_18_181034) do
 
   create_table "ads", force: :cascade do |t|
     t.string "owner"
@@ -31,16 +31,8 @@ ActiveRecord::Schema.define(version: 2021_12_16_123856) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "comments", force: :cascade do |t|
-    t.integer "easyhome"
-    t.text "comments"
-    t.integer "mate_id", null: false
-    t.integer "article_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["article_id"], name: "index_comments_on_article_id"
-    t.index ["mate_id"], name: "index_comments_on_mate_id"
-  end
+# Could not dump table "comments" because of following StandardError
+#   Unknown type 'reference' for column 'user_id'
 
   create_table "mates", force: :cascade do |t|
     t.string "name"
@@ -66,11 +58,12 @@ ActiveRecord::Schema.define(version: 2021_12_16_123856) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "provider"
+    t.string "uid"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "comments", "articles"
-  add_foreign_key "comments", "mates"
   add_foreign_key "reviews", "mates", column: "mates_id"
 end

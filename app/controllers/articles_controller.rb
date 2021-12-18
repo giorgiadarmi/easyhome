@@ -43,4 +43,5 @@ class ArticlesController < ApplicationController
 		Article.find(params[:id]).destroy
 		redirect_to articles_path
 	end
+
 end

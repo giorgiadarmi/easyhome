@@ -5,7 +5,7 @@ class CreateArticles < ActiveRecord::Migration[6.1]
 	  t.datetime 'release_date'
 	  t.text 'text'
 	  t.string 'author'
-      t.timestamps
+    t.timestamps
     end
   end
 end

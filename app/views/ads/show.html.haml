@@ -25,7 +25,7 @@
 
 
 %br
-#{link_to 'Cancella Annuncio', ad_path(@ad), :method => :delete}
+#{link_to 'Cancella Annuncio', ad_path(@ad), :method => :delete,data: { confirm: "Are you sure?" }}
 =link_to 'Modifica Annuncio', edit_ad_path(@ad)
 %br
 %br 
