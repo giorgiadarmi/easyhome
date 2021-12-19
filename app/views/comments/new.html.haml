@@ -1,11 +1,11 @@
 %h2 Aggiungi un commento
 
-= form_tag article_comments_path, :method => :post do 
-	= label :comment, :body, 'Commento'
-	= text_area :comment, :body
-	
-	%br
-	%br
-	= submit_tag 'Aggiungi commento'
+= form_tag article_comments_path, :method => :post do
 
-	
+ 
+  = label :comment, :body, 'Comment'
+  = text_field :comment, :body
+
+  = label :comment, :user, 'User'
+  = collection_select(:user,:mate_id,Mate.all,:id,:name)
+  = submit_tag 'Add Comment'

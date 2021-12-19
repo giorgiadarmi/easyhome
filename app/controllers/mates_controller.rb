@@ -4,44 +4,39 @@ class MatesController < ApplicationController
    end
  
    def show
-     @mate = Mate.find(params[:id])
-   end
- 
-   def new
-       @mate = Mate.new
-   end
- 
-   def create
-       @mate = Mate.new(mate_params)
-       if @mate.save
-       redirect_to @mate
-     else
-       render :new
-     end
-   end
- 
-  def edit
-     @mate = Mate.find(params[:id])
-   end
- 
- def destroy
-     @mate = Mate.find(params[:id])
-     @mate.destroy
- 
-     redirect_to root_path
-   end
- 
-  def update
-     @mate = Mate.find(params[:id])
-     if @mate.update(mate_params)
-       redirect_to @mate
-     else
-       render :edit
-     end
-   end
- 
-     private
-     def mate_params
-       params.require(:mate).permit(:name, :bio)
-     end
+		id = params[:id]
+		@user = Mate.find(id)
+	end
+	
+	def new
+		#default rendering
+	end
+	
+	def create
+		@user = Mate.create!(params[:mate].permit(:name))
+		flash[:notice] = "#{@user.name} was successfully created."
+		redirect_to mates_path
+	end
+	
+	def edit
+		id = params[:id]
+		@user = Mate.find(id)
+	end
+	
+	def update
+		id = params[:id]
+		@user = Mate.find(id)
+		@user.update_attributes!(params[:user].permit(:name))
+		flash[:notice] = "#{@user.name} was successfully updated."
+		redirect_to mates_path(@user)
+	end
+	
+	def destroy
+		id = params[:id]
+		@user = Mate.find(id)
+		@user.destroy
+		flash[:notice] = "#{@user.name} has been deleted."
+		redirect_to mates_path
+	end
 end
+

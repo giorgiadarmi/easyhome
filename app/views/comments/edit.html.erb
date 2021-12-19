@@ -1,0 +1,12 @@
+<h2> Modifica Commento</h2>
+
+<%= form_with model: [ @comment.article, @comment ] do |form| %>
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+  </p>
+  <p>
+  <p>	
+    <%= form.submit "Salva Commento" %>
+  </p>
+<% end %>

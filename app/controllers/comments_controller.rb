@@ -1,4 +1,8 @@
 class CommentsController < ApplicationController
+  def user_comments
+    @user = User.find(params[:id])
+ end
+
   def edit
     @comment = Article.find(params[:article_id]).comments.find(params[:id])
   end
@@ -28,7 +32,8 @@ class CommentsController < ApplicationController
 
   private
   def comment_params
-      p = params.require(:comment).permit(:body,:user)
-      {:body=> p[:body],:user=>current_user}
+      p = params.require(:comment).permit(:body, :user)
+      {:body=> p[:body], :user=>current_user}
   end
+
 end

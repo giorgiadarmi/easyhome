@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   get 'comments/new'
   get 'comments/create'
   get 'comments/destroy'
@@ -14,6 +15,5 @@ Rails.application.routes.draw do
   resources :articles do
   	resources :comments, only: [:new, :create, :destroy]
   end
-  devise_for :users, controllers: { omniauth_callbacks:
-    'users/omniauth_callbacks' }
+
 end

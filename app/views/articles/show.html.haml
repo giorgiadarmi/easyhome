@@ -28,6 +28,7 @@
         - @article.comments.each do |r|
             = r.body
             = link_to 'Cancella commento', [r.article, r], method: :delete,data: { confirm: "Are you sure?" }
+    
             %br
 
 

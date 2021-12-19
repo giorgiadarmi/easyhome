@@ -1,7 +1,8 @@
 %h2 Modifica Articolo
 
-= form_tag article_path(@article), :methos => :put do
+= form_tag article_path(@article), :method => :put do
  
     = render :partial => 'article_form'
 
     = submit_tag 'Save Changes'
+    
