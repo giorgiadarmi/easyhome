@@ -15,6 +15,12 @@
     %td=article.text
     %td=article.author
     %td=link_to "Details", article_path(article)
+%br
+%h4 Search by Title
+= form_tag search_path, :method => :get do
+ = text_field_tag(:search, params[:search], placeholder: "Type", class: "form-control")
+ = submit_tag 'Cerca articolo', :class => 'btn btn-info glyphicon glyphicon-search' , :title => nil
+%br
 #{link_to 'Crea nuovo articolo', new_article_path}
 %br
 %br
@@ -22,3 +28,4 @@
 %br
 %br 
 =link_to 'Home', ads_path
+

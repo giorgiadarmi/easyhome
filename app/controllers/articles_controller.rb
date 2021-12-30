@@ -43,5 +43,16 @@ class ArticlesController < ApplicationController
 		Article.find(params[:id]).destroy
 		redirect_to articles_path
 	end
-
+	
+	#SEARCH
+	def search
+		if params[:search].blank?
+			redirect_to articles_path and return
+		else
+			@parameter = params[:search].downcase
+			@results = Article.all.where("lower(title) LIKE :search", search: "%#{@parameter}%")
+		end
+	end
+	
+		
 end
