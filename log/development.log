@@ -20263,3 +20263,1128 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 32ms (Views: 20.3ms | ActiveRecord: 0.8ms | Allocations: 6667)
 
 
+Started GET "/articles" for 127.0.0.1 at 2022-01-02 16:09:22 +0100
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 31.3ms | Allocations: 11499)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 82.5ms | Allocations: 20485)
+Completed 200 OK in 132ms (Views: 89.7ms | ActiveRecord: 2.7ms | Allocations: 33756)
+
+
+Started GET "/search?search=Bonus+110%25&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:09:30 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"Bonus 110%", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  Rendered articles/search.html.haml within layouts/application (Duration: 38.2ms | Allocations: 4124)
+  Rendered layout layouts/application.html.erb (Duration: 39.1ms | Allocations: 4205)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.3ms | Allocations: 6272)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check %h3 Search Results
+- @results.each do |result|
+%ul#details 
+    %li 
+        Titolo:
+        = @result.title
+    %li 
+        Release date:
+        = @result&.release_date&.strftime("%B %d %Y")
+        
+    %li
+        Testo articolo:
+        = @result.text
+    
+    %li
+        Autore articolo:
+        = @result.author
+    
+%br
+%br
+=link_to 'Edilnews', articles_path
+%br
+%br 
+
+):
+1:    %h3 Search Results
+2:    - @results.each do |result|
+3:    %ul#details 
+4:        %li 
+5:            Titolo:
+6:            = @result.title
+7:        %li 
+8:            Release date:
+9:            = @result&.release_date&.strftime("%B %d %Y")
+10:            
+11:        %li
+12:            Testo articolo:
+13:            = @result.text
+14:        
+15:        %li
+16:            Autore articolo:
+17:            = @result.author
+18:        
+19:    %br
+20:    %br
+21:    =link_to 'Edilnews', articles_path
+22:    %br
+23:    %br 
+  
+app/views/articles/search.html.haml:24: syntax error, unexpected end-of-input, expecting `end'
+app/views/articles/search.html.haml:24: syntax error, unexpected end-of-input, expecting `end'
+app/views/articles/search.html.haml:24: syntax error, unexpected end-of-input, expecting `end'
+app/views/articles/search.html.haml:24: syntax error, unexpected end-of-input, expecting `end'
+app/views/articles/search.html.haml:24: syntax error, unexpected end-of-input, expecting `end'
+app/views/articles/search.html.haml:24: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/search?search=Bonus+110%25&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:10:10 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"Bonus 110%", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (lower(title) LIKE '%bonus 110%%')[0m
+  ↳ app/views/articles/search.html.haml:2
+  Rendered articles/search.html.haml within layouts/application (Duration: 12.9ms | Allocations: 4906)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 4984)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.7ms | Allocations: 7765)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    2: - @results.each do |result|
+    3:     %li 
+    4:         Titolo:
+    5:         = @result.title
+    6:     %li 
+    7:         Release date:
+    8:         = @result&.release_date&.strftime("%B %d %Y")
+  
+app/views/articles/search.html.haml:5
+app/views/articles/search.html.haml:2
+Started GET "/search?search=Bonus+110%25&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:16:51 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"Bonus 110%", "commit"=>"Cerca articolo"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  Rendered articles/search.html.haml within layouts/application (Duration: 3.2ms | Allocations: 1912)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1986)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.5ms | Allocations: 5730)
+
+
+  
+ActionView::Template::Error (Inconsistent indentation: 4 spaces used for indentation, but the rest of the document was indented using 1 tab.):
+    1: %h3 Search Results
+    2: - @results.each do |result|
+    3: 	= @result.title
+    4:     = @result&.release_date&.strftime("%B %d %Y")
+    5: 	= @result.text
+    6:     = @result.author
+    7:     
+  
+app/views/articles/search.html.haml:4
+Started GET "/search?search=Bonus+110%25&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:17:53 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"Bonus 110%", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (lower(title) LIKE '%bonus 110%%')[0m
+  ↳ app/views/articles/search.html.haml:2
+  Rendered articles/search.html.haml within layouts/application (Duration: 9.8ms | Allocations: 4319)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 4396)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.6ms | Allocations: 7142)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: %h3 Search Results
+    2: - @results.each do |result|
+    3: 	= @result.title
+    4: 	= @result.text
+    5: 	= @result.author
+    6:     
+  
+app/views/articles/search.html.haml:3
+app/views/articles/search.html.haml:2
+Started GET "/search?search=Bonus+110%25&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:18:49 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"Bonus 110%", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (lower(title) LIKE '%bonus 110%%')[0m
+  ↳ app/views/articles/search.html.haml:2
+  Rendered articles/search.html.haml within layouts/application (Duration: 8.5ms | Allocations: 3108)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 6641)
+Completed 200 OK in 32ms (Views: 22.0ms | ActiveRecord: 0.6ms | Allocations: 9383)
+
+
+Started GET "/search?search=Bonus+110%25&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:20:23 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"Bonus 110%", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  Rendered articles/search.html.haml within layouts/application (Duration: 6.5ms | Allocations: 3774)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3849)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.2ms | Allocations: 6553)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check %h3 Search Results
+- @results.each do |result|
+
+%ul#details 
+    %li 
+        Titolo:
+        = result.title
+    %li 
+        Release date:
+        = result&.release_date&.strftime("%B %d %Y")
+        
+    %li
+        Testo articolo:
+        = result.text
+    
+    %li
+        Autore articolo:
+        = result.author
+    
+    	
+%br
+%br
+=link_to 'Edilnews', articles_path
+%br
+%br 
+
+):
+1:    %h3 Search Results
+2:    - @results.each do |result|
+3:    
+4:    %ul#details 
+5:        %li 
+6:            Titolo:
+7:            = result.title
+8:        %li 
+9:            Release date:
+10:            = result&.release_date&.strftime("%B %d %Y")
+11:            
+12:        %li
+13:            Testo articolo:
+14:            = result.text
+15:        
+16:        %li
+17:            Autore articolo:
+18:            = result.author
+19:        
+20:        	
+21:    %br
+22:    %br
+23:    =link_to 'Edilnews', articles_path
+24:    %br
+25:    %br 
+  
+app/views/articles/search.html.haml:26: syntax error, unexpected end-of-input, expecting `end'
+app/views/articles/search.html.haml:26: syntax error, unexpected end-of-input, expecting `end'
+app/views/articles/search.html.haml:26: syntax error, unexpected end-of-input, expecting `end'
+app/views/articles/search.html.haml:26: syntax error, unexpected end-of-input, expecting `end'
+app/views/articles/search.html.haml:26: syntax error, unexpected end-of-input, expecting `end'
+app/views/articles/search.html.haml:26: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/search?search=Bonus+110%25&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:20:43 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"Bonus 110%", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (lower(title) LIKE '%bonus 110%%')[0m
+  ↳ app/views/articles/search.html.haml:2
+  Rendered articles/search.html.haml within layouts/application (Duration: 10.0ms | Allocations: 3683)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 7214)
+Completed 200 OK in 32ms (Views: 22.5ms | ActiveRecord: 0.8ms | Allocations: 10006)
+
+
+Started GET "/search?search=Bonus+110%25&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:21:37 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"Bonus 110%", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (lower(title) LIKE '%bonus 110%%')[0m
+  ↳ app/views/articles/search.html.haml:2
+  Rendered articles/search.html.haml within layouts/application (Duration: 23.2ms | Allocations: 8372)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 8449)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.7ms | Allocations: 11146)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `result' for #<ActionView::Base:0x0000000000bb80>
+Did you mean?  @results):
+     7: %br
+     8:     %li 
+     9:         Release date:
+    10:         = result&.release_date&.strftime("%B %d %Y")
+    11: %br
+    12:     %li
+    13:         Testo articolo:
+  
+app/views/articles/search.html.haml:10
+Started GET "/search?search=Bonus+110%25&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:22:08 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"Bonus 110%", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (lower(title) LIKE '%bonus 110%%')[0m
+  ↳ app/views/articles/search.html.haml:2
+  Rendered articles/search.html.haml within layouts/application (Duration: 24.6ms | Allocations: 8340)
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 8417)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.0ms | Allocations: 11086)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `result' for #<ActionView::Base:0x0000000000bfe0>
+Did you mean?  @results):
+     7: %br
+     8:     %li 
+     9:         Release date:
+    10:         = result&.release_date&.strftime("%B %d %Y")
+    11: %br
+    12:     %li
+    13:         Testo articolo:
+  
+app/views/articles/search.html.haml:10
+Started GET "/search?search=Bonus+110%25&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:22:10 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"Bonus 110%", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (lower(title) LIKE '%bonus 110%%')[0m
+  ↳ app/views/articles/search.html.haml:2
+  Rendered articles/search.html.haml within layouts/application (Duration: 17.3ms | Allocations: 5621)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 5694)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.6ms | Allocations: 7430)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `result' for #<ActionView::Base:0x0000000000c418>
+Did you mean?  @results):
+     7: %br
+     8:     %li 
+     9:         Release date:
+    10:         = result&.release_date&.strftime("%B %d %Y")
+    11: %br
+    12:     %li
+    13:         Testo articolo:
+  
+app/views/articles/search.html.haml:10
+Started GET "/search?search=Bonus+110%25&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:22:16 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"Bonus 110%", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (lower(title) LIKE '%bonus 110%%')[0m
+  ↳ app/views/articles/search.html.haml:2
+  Rendered articles/search.html.haml within layouts/application (Duration: 19.0ms | Allocations: 5621)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 5693)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.8ms | Allocations: 7408)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `result' for #<ActionView::Base:0x0000000000c6e8>
+Did you mean?  @results):
+     7: %br
+     8:     %li 
+     9:         Release date:
+    10:         = result&.release_date&.strftime("%B %d %Y")
+    11: %br
+    12:     %li
+    13:         Testo articolo:
+  
+app/views/articles/search.html.haml:10
+Started GET "/search?search=Bonus+110%25&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:22:46 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"Bonus 110%", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (lower(title) LIKE '%bonus 110%%')[0m
+  ↳ app/views/articles/search.html.haml:2
+  Rendered articles/search.html.haml within layouts/application (Duration: 19.6ms | Allocations: 6567)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 6644)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.7ms | Allocations: 9313)
+
+
+  
+ActionView::Template::Error (undefined method `release_date' for #<ActiveRecord::Relation [#<Article id: 1, title: "Bonus 110%", release_date: nil, text: "il bonus prevede il rifacimento della cappotta ter...", author: "Giorgia D Armiento", created_at: "2021-12-16 11:34:25.665515000 +0000", updated_at: "2021-12-16 11:34:25.665515000 +0000">, #<Article id: 3, title: "Bonus 110%", release_date: "2021-12-16 00:00:00.000000000 +0000", text: "il bonus prevede il rifacimento della cappotta ter...", author: "Giorgia D Armiento", created_at: "2021-12-16 12:14:26.144600000 +0000", updated_at: "2021-12-16 12:14:26.144600000 +0000">]>):
+     7: %br
+     8:     %li 
+     9:         Release date:
+    10:         = @results&.release_date&.strftime("%B %d %Y")
+    11: %br
+    12:     %li
+    13:         Testo articolo:
+  
+app/views/articles/search.html.haml:10
+Started GET "/search?search=Bonus+110%25&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:23:15 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"Bonus 110%", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (lower(title) LIKE '%bonus 110%%')[0m
+  ↳ app/views/articles/search.html.haml:2
+  Rendered articles/search.html.haml within layouts/application (Duration: 21.2ms | Allocations: 8340)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 8417)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.6ms | Allocations: 11086)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `result' for #<ActionView::Base:0x0000000000ce68>
+Did you mean?  @results):
+     7: %br
+     8:     %li 
+     9:         Release date:
+    10:         = result&.release_date&.strftime('%B %d %Y')
+    11: %br
+    12:     %li
+    13:         Testo articolo:
+  
+app/views/articles/search.html.haml:10
+Started GET "/search?search=Bonus+110%25&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:23:43 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"Bonus 110%", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (lower(title) LIKE '%bonus 110%%')[0m
+  ↳ app/views/articles/search.html.haml:2
+  Rendered articles/search.html.haml within layouts/application (Duration: 21.2ms | Allocations: 8275)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 8352)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.8ms | Allocations: 11021)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `result' for #<ActionView::Base:0x0000000000d2c8>
+Did you mean?  @results):
+     7: %br
+     8:     %li 
+     9:         Release date:
+    10:         = result&.release_date&.strftime("%B %d %Y")
+    11:         
+    12:     %li
+    13:         Testo articolo:
+  
+app/views/articles/search.html.haml:10
+Started GET "/articles" for 127.0.0.1 at 2022-01-02 16:23:49 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 13.2ms | Allocations: 5716)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 9239)
+Completed 200 OK in 39ms (Views: 30.0ms | ActiveRecord: 0.6ms | Allocations: 11086)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2022-01-02 16:23:53 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:23
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.haml:28
+  Rendered articles/show.html.haml within layouts/application (Duration: 62.1ms | Allocations: 17561)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 70.8ms | Allocations: 20816)
+Completed 200 OK in 89ms (Views: 70.2ms | ActiveRecord: 3.0ms | Allocations: 24134)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-02 16:24:17 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 24.9ms | Allocations: 5708)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.5ms | Allocations: 9217)
+Completed 200 OK in 53ms (Views: 42.8ms | ActiveRecord: 0.7ms | Allocations: 12004)
+
+
+Started GET "/search?search=Assicurazione&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:24:21 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"Assicurazione", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (lower(title) LIKE '%assicurazione%')[0m
+  ↳ app/views/articles/search.html.haml:2
+  Rendered articles/search.html.haml within layouts/application (Duration: 22.8ms | Allocations: 8245)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 8318)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.7ms | Allocations: 10197)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `result' for #<ActionView::Base:0x0000000000d9d0>
+Did you mean?  @results):
+     7: %br
+     8:     %li 
+     9:         Release date:
+    10:         = result.release_date.strftime("%B %d %Y")
+    11:         
+    12:     %li
+    13:         Testo articolo:
+  
+app/views/articles/search.html.haml:10
+Started GET "/articles" for 127.0.0.1 at 2022-01-02 16:28:34 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 6.1ms | Allocations: 1501)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 4852)
+Completed 200 OK in 24ms (Views: 16.6ms | ActiveRecord: 0.5ms | Allocations: 6572)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-02 16:28:36 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 6.4ms | Allocations: 1500)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 4839)
+Completed 200 OK in 30ms (Views: 22.6ms | ActiveRecord: 0.5ms | Allocations: 6566)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-02 16:29:16 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 13.8ms | Allocations: 5716)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 9237)
+Completed 200 OK in 41ms (Views: 31.0ms | ActiveRecord: 0.7ms | Allocations: 11946)
+
+
+Started GET "/articles/17" for 127.0.0.1 at 2022-01-02 16:29:18 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 17], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:23
+  Rendered articles/show.html.haml within layouts/application (Duration: 12.6ms | Allocations: 5029)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 8266)
+Completed 200 OK in 37ms (Views: 22.5ms | ActiveRecord: 1.0ms | Allocations: 11334)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2022-01-02 16:29:36 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:23
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.haml:28
+  Rendered articles/show.html.haml within layouts/application (Duration: 11.0ms | Allocations: 2174)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 5514)
+Completed 200 OK in 35ms (Views: 20.7ms | ActiveRecord: 1.7ms | Allocations: 8371)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-02 16:29:43 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 7.4ms | Allocations: 1500)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 4871)
+Completed 200 OK in 27ms (Views: 18.1ms | ActiveRecord: 0.7ms | Allocations: 6555)
+
+
+Started GET "/articles/18" for 127.0.0.1 at 2022-01-02 16:29:45 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 18], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:23
+  Rendered articles/show.html.haml within layouts/application (Duration: 5.8ms | Allocations: 1294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 4635)
+Completed 200 OK in 31ms (Views: 15.6ms | ActiveRecord: 1.2ms | Allocations: 7541)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-02 16:29:48 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 8.4ms | Allocations: 1500)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 4839)
+Completed 200 OK in 29ms (Views: 21.6ms | ActiveRecord: 0.5ms | Allocations: 6527)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2022-01-02 16:29:50 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:23
+  Rendered articles/show.html.haml within layouts/application (Duration: 5.8ms | Allocations: 1255)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 4595)
+Completed 200 OK in 31ms (Views: 16.0ms | ActiveRecord: 1.2ms | Allocations: 7500)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-02 16:29:52 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 7.5ms | Allocations: 1500)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 4839)
+Completed 200 OK in 34ms (Views: 18.2ms | ActiveRecord: 0.5ms | Allocations: 6553)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2022-01-02 16:30:20 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:23
+  Rendered articles/show.html.haml within layouts/application (Duration: 13.6ms | Allocations: 5009)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 8533)
+Completed 200 OK in 54ms (Views: 37.0ms | ActiveRecord: 1.3ms | Allocations: 12444)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2022-01-02 16:30:22 +0100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:32:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.haml within layouts/application
+  Rendered articles/_article_form.html.haml (Duration: 44.7ms | Allocations: 8174)
+  Rendered articles/edit.html.haml within layouts/application (Duration: 52.5ms | Allocations: 10486)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 62.7ms | Allocations: 13717)
+Completed 200 OK in 77ms (Views: 64.1ms | ActiveRecord: 0.6ms | Allocations: 16123)
+
+
+Started PUT "/articles/1" for 127.0.0.1 at 2022-01-02 16:30:26 +0100
+Processing by ArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"Bonus 110%", "release_date(1i)"=>"2021", "release_date(2i)"=>"3", "release_date(3i)"=>"2", "text"=>"il bonus prevede il rifacimento della cappotta termica", "author"=>"Giorgia D Armiento"}, "commit"=>"Save Changes", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:37:in `update'
+  [1m[36mArticle Update (24.0ms)[0m  [1m[33mUPDATE "articles" SET "release_date" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["release_date", "2021-03-02 00:00:00"], ["updated_at", "2022-01-02 15:30:26.227366"], ["id", 1]]
+  ↳ app/controllers/articles_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (95.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:37:in `update'
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 153ms (ActiveRecord: 119.5ms | Allocations: 7607)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-02 16:30:26 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 12.6ms | Allocations: 5718)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 8955)
+Completed 200 OK in 32ms (Views: 23.7ms | ActiveRecord: 0.6ms | Allocations: 10737)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2022-01-02 16:30:31 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:23
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/show.html.haml:28
+  Rendered articles/show.html.haml within layouts/application (Duration: 11.1ms | Allocations: 2174)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 5514)
+Completed 200 OK in 37ms (Views: 21.7ms | ActiveRecord: 1.7ms | Allocations: 8419)
+
+
+Started GET "/articles/2/edit" for 127.0.0.1 at 2022-01-02 16:30:34 +0100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:32:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.haml within layouts/application
+  Rendered articles/_article_form.html.haml (Duration: 3.5ms | Allocations: 1474)
+  Rendered articles/edit.html.haml within layouts/application (Duration: 6.1ms | Allocations: 1928)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 5243)
+Completed 200 OK in 29ms (Views: 17.6ms | ActiveRecord: 0.5ms | Allocations: 7479)
+
+
+Started PUT "/articles/2" for 127.0.0.1 at 2022-01-02 16:30:40 +0100
+Processing by ArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"Assicurazione condominiale", "release_date(1i)"=>"2019", "release_date(2i)"=>"1", "release_date(3i)"=>"2", "text"=>"Assicura il tuo condominio, in modo facile e veloce...", "author"=>"Giorgia D Armiento"}, "commit"=>"Save Changes", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:37:in `update'
+  [1m[36mArticle Update (0.5ms)[0m  [1m[33mUPDATE "articles" SET "release_date" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["release_date", "2019-01-02 00:00:00"], ["updated_at", "2022-01-02 15:30:40.357649"], ["id", 2]]
+  ↳ app/controllers/articles_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (101.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:37:in `update'
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 131ms (ActiveRecord: 102.8ms | Allocations: 6858)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-02 16:30:40 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 6.7ms | Allocations: 1543)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 4882)
+Completed 200 OK in 26ms (Views: 17.7ms | ActiveRecord: 0.9ms | Allocations: 6506)
+
+
+Started GET "/search?search=prova&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:30:45 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"prova", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (lower(title) LIKE '%prova%')[0m
+  ↳ app/views/articles/search.html.haml:2
+  Rendered articles/search.html.haml within layouts/application (Duration: 22.4ms | Allocations: 8265)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 8338)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.6ms | Allocations: 10216)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `result' for #<ActionView::Base:0x0000000000e448>
+Did you mean?  @results):
+     7: %br
+     8:     %li 
+     9:         Release date:
+    10:         = result&.release_date&.strftime("%B %d %Y")
+    11:         
+    12:     %li
+    13:         Testo articolo:
+  
+app/views/articles/search.html.haml:10
+Started GET "/search?search=prova&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:31:02 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"prova", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (lower(title) LIKE '%prova%')[0m
+  ↳ app/views/articles/search.html.haml:2
+  Rendered articles/search.html.haml within layouts/application (Duration: 23.5ms | Allocations: 8260)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 8337)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.7ms | Allocations: 11005)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `result' for #<ActionView::Base:0x0000000000e880>
+Did you mean?  @results):
+     7: %br
+     8:     %li 
+     9:         Release date:
+    10:         = result.release_date.strftime("%B %d %Y")
+    11:         
+    12:     %li
+    13:         Testo articolo:
+  
+app/views/articles/search.html.haml:10
+Started GET "/search?search=prova&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:31:24 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"prova", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (lower(title) LIKE '%prova%')[0m
+  ↳ app/views/articles/search.html.haml:2
+  Rendered articles/search.html.haml within layouts/application (Duration: 23.1ms | Allocations: 8091)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 8168)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.7ms | Allocations: 10837)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `result' for #<ActionView::Base:0x0000000000ece0>
+Did you mean?  @results):
+     7: %br      
+     8:     %li
+     9:         Testo articolo:
+    10:         = result.text
+    11: %br
+    12:     %li
+    13:         Autore articolo:
+  
+app/views/articles/search.html.haml:10
+Started GET "/search?search=prova&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:31:39 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"prova", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (lower(title) LIKE '%prova%')[0m
+  ↳ app/views/articles/search.html.haml:2
+  Rendered articles/search.html.haml within layouts/application (Duration: 9.1ms | Allocations: 3410)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 6935)
+Completed 200 OK in 32ms (Views: 23.3ms | ActiveRecord: 0.6ms | Allocations: 9650)
+
+
+Started GET "/search?search=prova&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:32:14 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"prova", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (lower(title) LIKE '%prova%')[0m
+  ↳ app/views/articles/search.html.haml:2
+  Rendered articles/search.html.haml within layouts/application (Duration: 8.7ms | Allocations: 3612)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 7125)
+Completed 200 OK in 32ms (Views: 21.3ms | ActiveRecord: 1.3ms | Allocations: 9866)
+
+
+Started GET "/search?search=prova&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:32:36 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"prova", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (lower(title) LIKE '%prova%')[0m
+  ↳ app/views/articles/search.html.haml:2
+  Rendered articles/search.html.haml within layouts/application (Duration: 9.7ms | Allocations: 3619)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 7145)
+Completed 200 OK in 34ms (Views: 24.4ms | ActiveRecord: 0.6ms | Allocations: 9895)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-02 16:32:37 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 13.8ms | Allocations: 5727)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 8964)
+Completed 200 OK in 34ms (Views: 24.6ms | ActiveRecord: 0.5ms | Allocations: 10849)
+
+
+Started GET "/search?search=Bonus&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:32:44 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"Bonus", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (lower(title) LIKE '%bonus%')[0m
+  ↳ app/views/articles/search.html.haml:2
+  Rendered articles/search.html.haml within layouts/application (Duration: 6.7ms | Allocations: 1050)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 4394)
+Completed 200 OK in 26ms (Views: 17.1ms | ActiveRecord: 0.8ms | Allocations: 6161)
+
+
+Started GET "/search?search=Bonus&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:33:16 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"Bonus", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  Rendered articles/search.html.haml within layouts/application (Duration: 6.9ms | Allocations: 3567)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3642)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms | Allocations: 6344)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check %h3 Risultati della ricerca
+- @results.each do |result|
+%ul
+    %li 
+        Titolo:
+        = result.title
+    %li 
+        Release date:
+        = result.release_date&.strftime("%B %d %Y")      
+    %li
+        Testo articolo:
+        = result.text
+    %li
+        Autore articolo:
+        = result.author
+%br
+%br
+=link_to 'Edilnews', articles_path
+%br
+%br 
+
+):
+1:    %h3 Risultati della ricerca
+2:    - @results.each do |result|
+3:    %ul
+4:        %li 
+5:            Titolo:
+6:            = result.title
+7:        %li 
+8:            Release date:
+9:            = result.release_date&.strftime("%B %d %Y")      
+10:        %li
+11:            Testo articolo:
+12:            = result.text
+13:        %li
+14:            Autore articolo:
+15:            = result.author
+16:    %br
+17:    %br
+18:    =link_to 'Edilnews', articles_path
+19:    %br
+20:    %br 
+  
+app/views/articles/search.html.haml:21: syntax error, unexpected end-of-input, expecting `end'
+app/views/articles/search.html.haml:21: syntax error, unexpected end-of-input, expecting `end'
+app/views/articles/search.html.haml:21: syntax error, unexpected end-of-input, expecting `end'
+app/views/articles/search.html.haml:21: syntax error, unexpected end-of-input, expecting `end'
+app/views/articles/search.html.haml:21: syntax error, unexpected end-of-input, expecting `end'
+app/views/articles/search.html.haml:21: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/search?search=Bonus&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:33:39 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"Bonus", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (lower(title) LIKE '%bonus%')[0m
+  ↳ app/views/articles/search.html.haml:2
+  Rendered articles/search.html.haml within layouts/application (Duration: 10.5ms | Allocations: 3663)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 7188)
+Completed 200 OK in 35ms (Views: 25.3ms | ActiveRecord: 0.8ms | Allocations: 9981)
+
+
+Started GET "/search?search=Bonus&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:34:03 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"Bonus", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (lower(title) LIKE '%bonus%')[0m
+  ↳ app/views/articles/search.html.haml:2
+  Rendered articles/search.html.haml within layouts/application (Duration: 9.4ms | Allocations: 3742)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 7255)
+Completed 200 OK in 30ms (Views: 22.1ms | ActiveRecord: 0.5ms | Allocations: 9996)
+
+
+Started GET "/search?search=Bonus&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:34:19 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"Bonus", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (lower(title) LIKE '%bonus%')[0m
+  ↳ app/views/articles/search.html.haml:2
+  Rendered articles/search.html.haml within layouts/application (Duration: 9.0ms | Allocations: 3822)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 7335)
+Completed 200 OK in 33ms (Views: 23.4ms | ActiveRecord: 0.6ms | Allocations: 10076)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-02 16:34:25 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 14.2ms | Allocations: 5727)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 8964)
+Completed 200 OK in 34ms (Views: 26.0ms | ActiveRecord: 0.5ms | Allocations: 10849)
+
+
+Started GET "/articles/17" for 127.0.0.1 at 2022-01-02 16:34:28 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 17], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:23
+  Rendered articles/show.html.haml within layouts/application (Duration: 14.6ms | Allocations: 5033)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 8270)
+Completed 200 OK in 44ms (Views: 26.0ms | ActiveRecord: 1.3ms | Allocations: 11334)
+
+
+Started GET "/articles/17/edit" for 127.0.0.1 at 2022-01-02 16:34:30 +0100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:32:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.haml within layouts/application
+  Rendered articles/_article_form.html.haml (Duration: 7.3ms | Allocations: 3363)
+  Rendered articles/edit.html.haml within layouts/application (Duration: 13.8ms | Allocations: 5667)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 8880)
+Completed 200 OK in 34ms (Views: 24.2ms | ActiveRecord: 0.4ms | Allocations: 11282)
+
+
+Started PUT "/articles/17" for 127.0.0.1 at 2022-01-02 16:36:20 +0100
+Processing by ArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"Bollette", "release_date(1i)"=>"2021", "release_date(2i)"=>"12", "release_date(3i)"=>"25", "text"=>"Aumento dell'IVA del calcolo delle bollette", "author"=>"Nicola Marchi"}, "commit"=>"Save Changes", "id"=>"17"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:37:in `update'
+  [1m[36mArticle Update (0.4ms)[0m  [1m[33mUPDATE "articles" SET "title" = ?, "text" = ?, "author" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["title", "Bollette"], ["text", "Aumento dell'IVA del calcolo delle bollette"], ["author", "Nicola Marchi"], ["updated_at", "2022-01-02 15:36:20.345257"], ["id", 17]]
+  ↳ app/controllers/articles_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (231.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:37:in `update'
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 263ms (ActiveRecord: 232.1ms | Allocations: 6894)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-02 16:36:20 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 6.1ms | Allocations: 1545)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 4899)
+Completed 200 OK in 25ms (Views: 17.3ms | ActiveRecord: 0.6ms | Allocations: 6524)
+
+
+Started GET "/search?search=Bollette&commit=Cerca+articolo" for 127.0.0.1 at 2022-01-02 16:36:28 +0100
+Processing by ArticlesController#search as HTML
+  Parameters: {"search"=>"Bollette", "commit"=>"Cerca articolo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/search.html.haml within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE (lower(title) LIKE '%bollette%')[0m
+  ↳ app/views/articles/search.html.haml:2
+  Rendered articles/search.html.haml within layouts/application (Duration: 5.8ms | Allocations: 1004)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 4348)
+Completed 200 OK in 26ms (Views: 16.0ms | ActiveRecord: 0.8ms | Allocations: 6115)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-02 16:36:30 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 5.7ms | Allocations: 1544)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 4883)
+Completed 200 OK in 23ms (Views: 15.4ms | ActiveRecord: 0.5ms | Allocations: 6607)
+
+
