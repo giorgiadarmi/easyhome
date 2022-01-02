@@ -2,12 +2,12 @@
 %table#ads
  %thead 
   %tr
-   %th Owner
-   %th Type
-   %th Title
-   %th Notice
-   %th Location
-   %th More Info 
+   %th Proprietario
+   %th Tipo
+   %th Titolo
+   %th Notizia
+   %th Locazione
+   %th Maggiori Info 
  %tbody 
   - @all.each do |ad|
    %tr
@@ -23,6 +23,9 @@
 %br
 %br
 #{link_to 'Edil News', articles_path}
+%br
+%br
+#{link_to 'Servizi utenti', services_path}
 %br 
 %br
 =link_to 'Profilo', user_session_path

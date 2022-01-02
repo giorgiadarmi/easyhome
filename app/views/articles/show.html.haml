@@ -36,6 +36,6 @@
 #{link_to 'Aggiungi commento', new_article_comment_path(@article)}
 #{link_to 'Torna a edilnews', articles_path}
 %br
-= link_to "Destroy", article_path(@article), method: :delete, data: { confirm: "Are you sure?" }
+= link_to "Cancella articolo", article_path(@article), method: :delete, data: { confirm: "Are you sure?" }
 #{link_to 'Modifica Articolo', edit_article_path(@article)}
 %br

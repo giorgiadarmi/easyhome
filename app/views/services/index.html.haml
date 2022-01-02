@@ -1,0 +1,32 @@
+%h1 Servizi riservati agli utenti 
+%table#services
+ %thead
+  %tr
+ %tbody
+  - @all.each do |service|
+   %tr
+%h7 Servizio che permette la ricerca di giardinieri e il calcolo di un preventivo per il lavoro da svolgere
+%br
+<a href="https://www.giardinieri-24.it/">Servizio di ricerca giardinieri</a>
+%br
+%br
+%br
+%h7 Servizio che permette la ricerca di una baby sitter
+%br
+<a href="https://www.sitly.it/">Servizio di ricerca baby sitter</a>
+%br
+%br
+%br
+%h7 Servizio che permette il calcolo delle bollette
+%br
+<a href="https://quantoconsumo.luce-gas.it/">Servizio calcolo utenze</a>
+
+%br
+%br
+%br
+%br
+=link_to 'Profilo', mates_path
+%br
+%br 
+=link_to 'Home', ads_path
+

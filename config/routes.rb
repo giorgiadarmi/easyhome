@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :articles
   resources :ads
   resources :mates
+  resources :services
   
   resources :articles do
   	resources :comments, only: [:new, :create, :destroy]
