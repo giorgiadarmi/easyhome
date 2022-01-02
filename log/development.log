@@ -20176,3 +20176,90 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 26ms (Views: 18.4ms | ActiveRecord: 0.5ms | Allocations: 6576)
 
 
+Started GET "/" for 127.0.0.1 at 2022-01-02 16:04:58 +0100
+  [1m[35m (16.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 18ms (ActiveRecord: 0.0ms | Allocations: 2490)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-02 16:04:58 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 4.1ms | Allocations: 848)
+  Rendered /home/giorgia/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 66.0ms | Allocations: 4064)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 357.1ms | Allocations: 11153)
+Completed 200 OK in 449ms (Views: 426.0ms | ActiveRecord: 3.8ms | Allocations: 19879)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2022-01-02 16:05:20 +0100
+Started GET "/users/auth/google_oauth2/callback?state=9c5cfa0a43b4868b21e66b85e71b4427a7aa0915ab40889c&code=4/0AX4XfWgwFa_SbbinC2jdDoOMh1cZzS-aK6jx29s3dm3StBMiLOL8Rgitz2JK7JK7g9fN_A&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&authuser=0&hd=studenti.uniroma1.it&prompt=none" for 127.0.0.1 at 2022-01-02 16:05:23 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"9c5cfa0a43b4868b21e66b85e71b4427a7aa0915ab40889c", "code"=>"4/0AX4XfWgwFa_SbbinC2jdDoOMh1cZzS-aK6jx29s3dm3StBMiLOL8Rgitz2JK7JK7g9fN_A", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"0", "hd"=>"studenti.uniroma1.it", "prompt"=>"none"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "darmiento.1711864@studenti.uniroma1.it"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 27ms (ActiveRecord: 0.6ms | Allocations: 2305)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-02 16:05:23 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.4ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 75.2ms | Allocations: 11020)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 172.1ms | Allocations: 14305)
+Completed 200 OK in 303ms (Views: 175.4ms | ActiveRecord: 1.9ms | Allocations: 17154)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-02 16:05:31 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 22.1ms | Allocations: 9124)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 12390)
+Completed 200 OK in 72ms (Views: 33.8ms | ActiveRecord: 1.6ms | Allocations: 15875)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2022-01-02 16:05:35 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (8.5ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:23
+  [1m[36mComment Load (1.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 3]]
+  ↳ app/views/articles/show.html.haml:28
+  Rendered articles/show.html.haml within layouts/application (Duration: 177.6ms | Allocations: 14512)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 188.1ms | Allocations: 17756)
+Completed 200 OK in 204ms (Views: 177.7ms | ActiveRecord: 12.5ms | Allocations: 21087)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-02 16:05:42 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 8.1ms | Allocations: 1501)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 4842)
+Completed 200 OK in 32ms (Views: 20.3ms | ActiveRecord: 0.8ms | Allocations: 6667)
+
+

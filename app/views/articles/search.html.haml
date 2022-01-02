@@ -1,6 +1,21 @@
 %h3 Search Results
 - @results.each do |result|
-	= result.title
+%ul#details 
+    %li 
+        Titolo:
+        = @result.title
+    %li 
+        Release date:
+        = @result&.release_date&.strftime("%B %d %Y")
+        
+    %li
+        Testo articolo:
+        = @result.text
+    
+    %li
+        Autore articolo:
+        = @result.author
+    
 %br
 %br
 =link_to 'Edilnews', articles_path
