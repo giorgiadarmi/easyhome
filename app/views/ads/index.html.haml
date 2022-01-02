@@ -16,7 +16,7 @@
     %td= ad.title
     %td= ad.notice
     %td= ad.location
-    %td= link_to "Details", ad_path(ad)
+    %td= link_to "Dettagli", ad_path(ad)
 %br
 %br
 #{link_to 'Crea un nuovo Annuncio', new_ad_path}
@@ -28,4 +28,6 @@
 #{link_to 'Servizi utenti', services_path}
 %br 
 %br
-=link_to 'Profilo', user_session_path
+=link_to 'Profilo', mates_path
+%br 
+%br
