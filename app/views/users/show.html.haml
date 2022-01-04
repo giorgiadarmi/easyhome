@@ -1,0 +1,15 @@
+%h1 Profilo: #{@user.name}
+
+%br
+%br
+
+= link_to "Settings", edit_user_path(current_user)
+%br
+%br
+#{link_to 'Crea un nuovo Annuncio', new_ad_path}
+%br
+%br
+#{link_to 'Edil News', articles_path}
+%br
+%br
+#{link_to 'Servizi utenti', services_path}

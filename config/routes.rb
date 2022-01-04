@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get '/users/comments/:id', to: 'comments#user_comments', :as => :user_comments
   resources :articles
   resources :ads
-  resources :mates
+  resources :users
   resources :services
   
   resources :articles do
