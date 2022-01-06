@@ -21,12 +21,12 @@
  = text_field_tag(:search, params[:search], placeholder: "Type", class: "form-control")
  = submit_tag 'Cerca articolo', :class => 'btn btn-info glyphicon glyphicon-search' , :title => nil
 %br
-#{link_to 'Crea nuovo articolo', new_article_path}
-%br
-%br
-#{link_to "Profile", current_user}
-%br
-%br 
-=link_to 'Home', ads_path
-%br 
-%br
+%nav.navbar.navbar-default
+ .containter-fluid
+  .navbar-header
+   %button.navbar-toggle.collapsed{ type: :button, 'data-toggle' => :collapse, 'data-target' => "#bs-example-navbar-collapse-1" }
+    %span.sr-only Toggle Navigation
+    %span.icon-bar
+    %span.icon-bar
+    %span.icon-bar
+    = link_to 'Crea Articolo', new_article_path, class: 'navbar-brand'

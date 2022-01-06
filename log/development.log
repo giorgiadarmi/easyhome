@@ -28002,3 +28002,2425 @@ Processing by AdsController#index as HTML
 Completed 200 OK in 22ms (Views: 16.7ms | ActiveRecord: 0.3ms | Allocations: 6289)
 
 
+Started GET "/" for 127.0.0.1 at 2022-01-06 11:12:10 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms | Allocations: 2563)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-06 11:12:10 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 841)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3962)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 11797)
+Completed 200 OK in 41ms (Views: 26.2ms | ActiveRecord: 0.7ms | Allocations: 20800)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-01-06 11:12:11 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"antonia.passaretti.96@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "antonia.passaretti.96@gmail.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 319ms (ActiveRecord: 0.4ms | Allocations: 5996)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 11:12:11 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 30.1ms | Allocations: 11515)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.6ms | Allocations: 14902)
+Completed 200 OK in 44ms (Views: 37.3ms | ActiveRecord: 0.9ms | Allocations: 17849)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2022-01-06 11:12:14 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.haml within layouts/application
+  Rendered users/show.html.haml within layouts/application (Duration: 7.2ms | Allocations: 3094)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 6473)
+Completed 200 OK in 55ms (Views: 26.7ms | ActiveRecord: 1.4ms | Allocations: 10689)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-06 11:12:16 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 25.5ms | Allocations: 9309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.3ms | Allocations: 12664)
+Completed 200 OK in 67ms (Views: 39.0ms | ActiveRecord: 1.7ms | Allocations: 16995)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2022-01-06 11:12:18 +0100
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.haml within layouts/application
+  Rendered articles/_article_form.html.haml (Duration: 6.1ms | Allocations: 3637)
+  Rendered articles/new.html.haml within layouts/application (Duration: 11.9ms | Allocations: 5933)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 9361)
+Completed 200 OK in 28ms (Views: 21.8ms | ActiveRecord: 0.2ms | Allocations: 11253)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2022-01-06 12:06:31 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1660)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 1734)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 2.2ms | Allocations: 6766)
+
+
+  
+ActionView::Template::Error (undefined method `profile_photo' for nil:NilClass):
+    3: </div>
+    4: 
+    5: <div class="user-image">
+    6:   <%= image_tag @profile.profile_photo('medium') %>
+    7: </div>
+    8: 
+    9: 
+  
+app/views/users/show.html.erb:6
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:11:17 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.5ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 23.6ms | Allocations: 5808)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 9437)
+Completed 200 OK in 52ms (Views: 39.8ms | ActiveRecord: 0.9ms | Allocations: 12197)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2022-01-06 12:11:18 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.haml within layouts/application
+  Rendered users/show.html.haml within layouts/application (Duration: 13.3ms | Allocations: 4572)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 4773)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.6ms | Allocations: 8273)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check %h1 Profilo: #{@user.name}
+= gravatar_for @user
+      %a{href: "http://gravatar.com/emails", target: "_blank"}
+%br
+%br
+=link_to 'Home', ads_path
+%br
+%br
+= link_to "Settings", edit_user_path(current_user)
+%br
+%br
+#{link_to 'Crea un nuovo Annuncio', new_ad_path}
+%br
+%br
+#{link_to 'Edil News', articles_path}
+%br
+%br
+#{link_to 'Servizi utenti', services_path}
+):
+1:    %h1 Profilo: #{@user.name}
+2:    = gravatar_for @user
+3:          %a{href: "http://gravatar.com/emails", target: "_blank"}
+4:    %br
+5:    %br
+6:    =link_to 'Home', ads_path
+7:    %br
+8:    %br
+9:    = link_to "Settings", edit_user_path(current_user)
+10:    %br
+11:    %br
+12:    #{link_to 'Crea un nuovo Annuncio', new_ad_path}
+13:    %br
+14:    %br
+15:    #{link_to 'Edil News', articles_path}
+16:    %br
+17:    %br
+18:    #{link_to 'Servizi utenti', services_path}
+  
+app/views/users/show.html.haml:20: syntax error, unexpected `end', expecting end-of-input
+app/views/users/show.html.haml:20: syntax error, unexpected `end', expecting end-of-input
+app/views/users/show.html.haml:20: syntax error, unexpected `end', expecting end-of-input
+app/views/users/show.html.haml:20: syntax error, unexpected `end', expecting end-of-input
+app/views/users/show.html.haml:20: syntax error, unexpected `end', expecting end-of-input
+app/views/users/show.html.haml:20: syntax error, unexpected `end', expecting end-of-input
+Started GET "/users/5" for 127.0.0.1 at 2022-01-06 12:11:43 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.haml within layouts/application
+  Rendered users/show.html.haml within layouts/application (Duration: 2.4ms | Allocations: 1936)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2010)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.8ms | Allocations: 5274)
+
+
+  
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %h1 and nested within it.):
+    1: %h1 Profilo: #{@user.name}
+    2:     = gravatar_for @user
+    3:       %a{href: "http://gravatar.com/emails", target: "_blank"}
+    4: %br
+    5: %br
+  
+app/views/users/show.html.haml:2
+Started GET "/users/5" for 127.0.0.1 at 2022-01-06 12:12:12 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.haml within layouts/application
+  Rendered users/show.html.haml within layouts/application (Duration: 4.8ms | Allocations: 1929)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2003)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.5ms | Allocations: 5265)
+
+
+  
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %h1 and nested within it.):
+    1: %h1 Profilo: #{@user.name}
+    2:     .gravatar_edit
+    3:     = gravatar_for @user
+    4:       %a{href: "http://gravatar.com/emails", target: "_blank"}
+    5: %br
+  
+app/views/users/show.html.haml:2
+Started GET "/users/5" for 127.0.0.1 at 2022-01-06 12:12:31 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.haml within layouts/application
+  Rendered users/show.html.haml within layouts/application (Duration: 6.3ms | Allocations: 1929)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 2003)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.5ms | Allocations: 5265)
+
+
+  
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %h1 and nested within it.):
+    1: %h1 Profilo: #{@user.name}
+    2:     .gravatar_edit
+    3:         = gravatar_for @user
+    4:         %a{href: "http://gravatar.com/emails", target: "_blank"}
+    5: %br
+  
+app/views/users/show.html.haml:2
+Started GET "/users/5" for 127.0.0.1 at 2022-01-06 12:12:48 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.haml within layouts/application
+  Rendered users/show.html.haml within layouts/application (Duration: 5.2ms | Allocations: 4112)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 7744)
+Completed 200 OK in 30ms (Views: 19.6ms | ActiveRecord: 0.5ms | Allocations: 11052)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2022-01-06 12:30:22 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.haml within layouts/application
+  Rendered users/show.html.haml within layouts/application (Duration: 2.8ms | Allocations: 2904)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2978)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.5ms | Allocations: 7355)
+
+
+  
+ActionView::Template::Error (Inconsistent indentation: 2 spaces used for indentation, but the rest of the document was indented using 4 spaces.):
+     8:     = gravatar_for @user
+     9:     %a{href: "http://gravatar.com/emails", target: "_blank"}
+    10: .cover-content
+    11:   %p.cover-name
+    12:     = @user.name
+    13: .user-info-left-background
+    14: .user-info-left
+  
+app/views/users/show.html.haml:11
+Started GET "/users/5" for 127.0.0.1 at 2022-01-06 12:30:41 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.haml within layouts/application
+  Rendered users/show.html.haml within layouts/application (Duration: 7.5ms | Allocations: 2760)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 2834)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.9ms | Allocations: 6096)
+
+
+  
+ActionView::Template::Error (Inconsistent indentation: 2 spaces used for indentation, but the rest of the document was indented using 4 spaces.):
+    3:     = gravatar_for @user
+    4:     %a{href: "http://gravatar.com/emails", target: "_blank"}
+    5: .cover-content
+    6:   %p.cover-name
+    7:     = @user.name
+    8: .user-info-left-background
+    9: .user-info-left
+  
+app/views/users/show.html.haml:6
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:30:53 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 17.7ms | Allocations: 11972)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.9ms | Allocations: 22625)
+Completed 200 OK in 77ms (Views: 48.2ms | ActiveRecord: 2.0ms | Allocations: 35488)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2022-01-06 12:30:55 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.haml within layouts/application
+  Rendered users/show.html.haml within layouts/application (Duration: 6.3ms | Allocations: 3162)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3269)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 1.0ms | Allocations: 7323)
+
+
+  
+ActionView::Template::Error (Inconsistent indentation: 2 spaces used for indentation, but the rest of the document was indented using 4 spaces.):
+    3:     = gravatar_for @user
+    4:     %a{href: "http://gravatar.com/emails", target: "_blank"}
+    5: .cover-content
+    6:   %p.cover-name
+    7:     = @user.name
+    8: .user-info-left-background
+    9: .user-info-left
+  
+app/views/users/show.html.haml:6
+Started GET "/users/5" for 127.0.0.1 at 2022-01-06 12:31:13 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.haml within layouts/application
+  Rendered users/show.html.haml within layouts/application (Duration: 26.4ms | Allocations: 13829)
+  Rendered layout layouts/application.html.erb (Duration: 27.8ms | Allocations: 13913)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.5ms | Allocations: 17211)
+
+
+  
+ActionView::Template::Error (undefined method `count' for nil:NilClass):
+    20:     %strong About Me:
+    21: 
+    22: .user-articles
+    23:   - if @articles.count > 0
+    24:     - @articles.each do |post|
+    25:       .post
+    26:         %p.post-header
+  
+app/views/users/show.html.haml:23
+Started GET "/users/5" for 127.0.0.1 at 2022-01-06 12:32:10 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.haml within layouts/application
+  Rendered users/show.html.haml within layouts/application (Duration: 8.1ms | Allocations: 3309)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3384)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.7ms | Allocations: 6669)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    29:         = link_to "#{post.user.first_name}", post.user.profile, class: "user-name"
+    30:           = link_to distance_of_time_in_words(Time.now, post.created_at)+ ' ago', post, class: 'timestamp'
+    31:         - if current_user.id == post.user_id
+    32:             %span.edit-delete-post
+    33:               = link_to 'Edit Post', edit_post_path(post)
+    34:               = link_to 'Delete', post, method: :delete, data: {confirm: "Are you sure?"}
+    35:         %p.post-content
+  
+app/views/users/show.html.haml:32
+Started GET "/users/5" for 127.0.0.1 at 2022-01-06 12:32:24 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.haml within layouts/application
+  Rendered users/show.html.haml within layouts/application (Duration: 12.4ms | Allocations: 13031)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 13106)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.3ms | Allocations: 16373)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check .cover-background
+.gravatar_edit
+  = gravatar_for @user
+  %a{href: "http://gravatar.com/emails", target: "_blank"}
+.cover-content
+  %p.cover-name
+    = @user.name
+.user-info-left-background
+.user-info-left
+  %p
+    %strong Date of Birth:
+    
+    %br/
+    %strong Gender:
+    
+    %br/
+    %strong City:
+    
+    %br/
+    %strong About Me:
+
+.user-articles
+  - @articles.each do |post|
+    .post
+      %p.post-header
+      %span
+        = link_to(post.user.profile) do
+          = image_tag post.user.profile.profile_photo('tac'), class:'tac-image'
+        = link_to "#{post.user.first_name}", post.user.profile, class: "user-name"
+          = link_to distance_of_time_in_words(Time.now, post.created_at)+ ' ago', post, class: 'timestamp'
+        - if current_user.id == post.user_id
+          %span.edit-delete-post
+            = link_to 'Edit Post', edit_post_path(post)
+            = link_to 'Delete', post, method: :delete, data: {confirm: "Are you sure?"}
+        %p.post-content
+          = post.content
+          %br/
+          - if post.image.exists?
+            = image_tag post.image.url(:medium)
+            %br/
+        .like-comment-buttons
+          - like = post.likes.where("user_id = ?", current_user.id)
+          - if like.empty?
+            = button_to likes_path(like: {post_id: post.id} ), method: :post, class: "like-button" do
+              = fa_icon('thumbs-up', type: :regular, text: "Like")
+          - else
+            = button_to like.first, method: :delete, class: "like-button unlike" do
+              = fa_icon('thumbs-up', type: :solid, text: "Like")
+          %button.comment-button
+            %i.far.fa-comment-alt
+            Comment
+        - if post.likes.count > 0
+          %p.liked-by
+            = fa_icon('thumbs-up', type: :solid, style: 'color:rgb(66,103,178)')
+            - case post.likes.count
+            - when 1
+              - user = User.find(post.likes.first.user_id)
+              %strong
+                = link_to "#{user.first_name} #{user.last_name}", user.profile, class: "user-name"
+            - when 2
+              - post.likes.each_with_index do |like, index|
+                - user = User.find(like.user_id)
+                %strong
+                  - unless index == post.likes.count - 1
+                    = link_to "#{user.first_name} #{user.last_name}", user.profile, class: "user-name"
+                    and
+                  - else
+                    = link_to "#{user.first_name} #{user.last_name}", user.profile, class: "user-name"
+            - else
+              - user1 = User.find(post.likes.first.user_id)
+              - user2 = User.find(post.likes.second.user_id)
+              %strong
+                = link_to "#{user1.first_name} #{user1.last_name}", user1.profile, class: "user-name"
+                ,
+                \#{link_to "#{user2.first_name} #{user2.last_name}", user2.profile, class: "user-name"}
+                \#{"and " + pluralize(post.likes.count - 2, "other")}
+        - if post.comments.count > 0
+          .all-comments
+            - post.comments.each do |comment|
+              - user = User.find(comment.user_id)
+              = link_to(user.profile) do
+                = image_tag user.profile.profile_photo('tac'), class: 'tac-image comment-image'
+              %p.comment
+                %span.comment-content
+                  %strong= link_to "#{user.first_name} #{user.last_name}", user.profile, class: "user-name"
+                  = comment.content
+                - if current_user.id == comment.user_id
+                  %span.edit-delete-comment
+                    = link_to 'Edit', edit_comment_path(comment)
+                    = link_to 'Delete', comment, method: :delete, data: {confirm: "Are you sure?"}
+        = form_for(@comment) do |f|
+          = link_to(current_user.profile) do
+            = image_tag current_user.profile.profile_photo('tac'), class: 'tac-image new-comment-image'
+          = f.text_area :content, class: "comment-field", placeholder: "Write a comment...", rows: "1"
+          = f.hidden_field :post_id, value: post.id
+          = f.submit "Comment"
+
+
+=link_to 'Home', ads_path
+%br
+%br
+= link_to "Settings", edit_user_path(current_user)
+%br
+%br
+#{link_to 'Crea un nuovo Annuncio', new_ad_path}
+%br
+%br
+#{link_to 'Edil News', articles_path}
+%br
+%br
+#{link_to 'Servizi utenti', services_path}
+):
+1:    .cover-background
+2:    .gravatar_edit
+3:      = gravatar_for @user
+4:      %a{href: "http://gravatar.com/emails", target: "_blank"}
+5:    .cover-content
+6:      %p.cover-name
+7:        = @user.name
+8:    .user-info-left-background
+9:    .user-info-left
+10:      %p
+11:        %strong Date of Birth:
+12:        
+13:        %br/
+14:        %strong Gender:
+15:        
+16:        %br/
+17:        %strong City:
+18:        
+19:        %br/
+20:        %strong About Me:
+21:    
+22:    .user-articles
+23:      - @articles.each do |post|
+24:        .post
+25:          %p.post-header
+26:          %span
+27:            = link_to(post.user.profile) do
+28:              = image_tag post.user.profile.profile_photo('tac'), class:'tac-image'
+29:            = link_to "#{post.user.first_name}", post.user.profile, class: "user-name"
+30:              = link_to distance_of_time_in_words(Time.now, post.created_at)+ ' ago', post, class: 'timestamp'
+31:            - if current_user.id == post.user_id
+32:              %span.edit-delete-post
+33:                = link_to 'Edit Post', edit_post_path(post)
+34:                = link_to 'Delete', post, method: :delete, data: {confirm: "Are you sure?"}
+35:            %p.post-content
+36:              = post.content
+37:              %br/
+38:              - if post.image.exists?
+39:                = image_tag post.image.url(:medium)
+40:                %br/
+41:            .like-comment-buttons
+42:              - like = post.likes.where("user_id = ?", current_user.id)
+43:              - if like.empty?
+44:                = button_to likes_path(like: {post_id: post.id} ), method: :post, class: "like-button" do
+45:                  = fa_icon('thumbs-up', type: :regular, text: "Like")
+46:              - else
+47:                = button_to like.first, method: :delete, class: "like-button unlike" do
+48:                  = fa_icon('thumbs-up', type: :solid, text: "Like")
+49:              %button.comment-button
+50:                %i.far.fa-comment-alt
+51:                Comment
+52:            - if post.likes.count > 0
+53:              %p.liked-by
+54:                = fa_icon('thumbs-up', type: :solid, style: 'color:rgb(66,103,178)')
+55:                - case post.likes.count
+56:                - when 1
+57:                  - user = User.find(post.likes.first.user_id)
+58:                  %strong
+59:                    = link_to "#{user.first_name} #{user.last_name}", user.profile, class: "user-name"
+60:                - when 2
+61:                  - post.likes.each_with_index do |like, index|
+62:                    - user = User.find(like.user_id)
+63:                    %strong
+64:                      - unless index == post.likes.count - 1
+65:                        = link_to "#{user.first_name} #{user.last_name}", user.profile, class: "user-name"
+66:                        and
+67:                      - else
+68:                        = link_to "#{user.first_name} #{user.last_name}", user.profile, class: "user-name"
+69:                - else
+70:                  - user1 = User.find(post.likes.first.user_id)
+71:                  - user2 = User.find(post.likes.second.user_id)
+72:                  %strong
+73:                    = link_to "#{user1.first_name} #{user1.last_name}", user1.profile, class: "user-name"
+74:                    ,
+75:                    \#{link_to "#{user2.first_name} #{user2.last_name}", user2.profile, class: "user-name"}
+76:                    \#{"and " + pluralize(post.likes.count - 2, "other")}
+77:            - if post.comments.count > 0
+78:              .all-comments
+79:                - post.comments.each do |comment|
+80:                  - user = User.find(comment.user_id)
+81:                  = link_to(user.profile) do
+82:                    = image_tag user.profile.profile_photo('tac'), class: 'tac-image comment-image'
+83:                  %p.comment
+84:                    %span.comment-content
+85:                      %strong= link_to "#{user.first_name} #{user.last_name}", user.profile, class: "user-name"
+86:                      = comment.content
+87:                    - if current_user.id == comment.user_id
+88:                      %span.edit-delete-comment
+89:                        = link_to 'Edit', edit_comment_path(comment)
+90:                        = link_to 'Delete', comment, method: :delete, data: {confirm: "Are you sure?"}
+91:            = form_for(@comment) do |f|
+92:              = link_to(current_user.profile) do
+93:                = image_tag current_user.profile.profile_photo('tac'), class: 'tac-image new-comment-image'
+94:              = f.text_area :content, class: "comment-field", placeholder: "Write a comment...", rows: "1"
+95:              = f.hidden_field :post_id, value: post.id
+96:              = f.submit "Comment"
+97:    
+98:    
+99:    =link_to 'Home', ads_path
+100:    %br
+101:    %br
+102:    = link_to "Settings", edit_user_path(current_user)
+103:    %br
+104:    %br
+105:    #{link_to 'Crea un nuovo Annuncio', new_ad_path}
+106:    %br
+107:    %br
+108:    #{link_to 'Edil News', articles_path}
+109:    %br
+110:    %br
+111:    #{link_to 'Servizi utenti', services_path}
+  
+app/views/users/show.html.haml:113: syntax error, unexpected `end', expecting end-of-input
+app/views/users/show.html.haml:113: syntax error, unexpected `end', expecting end-of-input
+app/views/users/show.html.haml:113: syntax error, unexpected `end', expecting end-of-input
+app/views/users/show.html.haml:113: syntax error, unexpected `end', expecting end-of-input
+app/views/users/show.html.haml:113: syntax error, unexpected `end', expecting end-of-input
+app/views/users/show.html.haml:113: syntax error, unexpected `end', expecting end-of-input
+Started GET "/users/5" for 127.0.0.1 at 2022-01-06 12:32:45 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.haml within layouts/application
+  Rendered users/show.html.haml within layouts/application (Duration: 32.3ms | Allocations: 13244)
+  Rendered layout layouts/application.html.erb (Duration: 33.0ms | Allocations: 13328)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 1.0ms | Allocations: 16615)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    20:     %strong About Me:
+    21: 
+    22: .user-articles
+    23:   - @articles.each do |post|
+    24:     .post
+    25:       %p.post-header
+    26:       %span
+  
+app/views/users/show.html.haml:23
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:33:15 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 9.1ms | Allocations: 5783)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 9414)
+Completed 200 OK in 27ms (Views: 22.0ms | ActiveRecord: 0.3ms | Allocations: 12162)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2022-01-06 12:33:16 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.haml within layouts/application
+  Rendered users/show.html.haml within layouts/application (Duration: 13.3ms | Allocations: 5997)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 9392)
+Completed 200 OK in 62ms (Views: 38.6ms | ActiveRecord: 1.0ms | Allocations: 13045)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:33:31 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 14.7ms | Allocations: 5778)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 9409)
+Completed 200 OK in 30ms (Views: 25.2ms | ActiveRecord: 0.3ms | Allocations: 12187)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2022-01-06 12:33:33 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.haml within layouts/application
+  Rendered users/show.html.haml within layouts/application (Duration: 11.4ms | Allocations: 5656)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 9174)
+Completed 200 OK in 52ms (Views: 31.2ms | ActiveRecord: 0.7ms | Allocations: 12699)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2022-01-06 12:34:09 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.haml within layouts/application
+  Rendered users/show.html.haml within layouts/application (Duration: 4.7ms | Allocations: 4100)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 7712)
+Completed 200 OK in 24ms (Views: 17.3ms | ActiveRecord: 0.3ms | Allocations: 11049)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:38:42 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 7.0ms | Allocations: 5772)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 9925)
+Completed 200 OK in 29ms (Views: 21.0ms | ActiveRecord: 0.4ms | Allocations: 12707)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:38:47 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 3.6ms | Allocations: 1218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 4824)
+Completed 200 OK in 20ms (Views: 13.5ms | ActiveRecord: 0.5ms | Allocations: 6547)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:38:49 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 5.2ms | Allocations: 1218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 4822)
+Completed 200 OK in 24ms (Views: 16.7ms | ActiveRecord: 0.5ms | Allocations: 6544)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2022-01-06 12:38:49 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.7ms | Allocations: 266)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 21.8ms | Allocations: 5320)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.8ms | Allocations: 8882)
+Completed 200 OK in 51ms (Views: 41.9ms | ActiveRecord: 0.4ms | Allocations: 12175)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-01-06 12:38:54 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 19ms (ActiveRecord: 0.3ms | Allocations: 3337)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:38:54 +0100
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms | Allocations: 365)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-06 12:38:54 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 4.2ms | Allocations: 812)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.3ms | Allocations: 2752)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 6420)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.0ms | Allocations: 8182)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-01-06 12:39:00 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"antonia.passaretti.96@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "antonia.passaretti.96@gmail.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 318ms (ActiveRecord: 0.5ms | Allocations: 4695)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:39:00 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 2.3ms | Allocations: 1221)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 4839)
+Completed 200 OK in 15ms (Views: 10.5ms | ActiveRecord: 0.3ms | Allocations: 6619)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-06 12:39:04 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 29.9ms | Allocations: 9337)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.2ms | Allocations: 13001)
+Completed 200 OK in 76ms (Views: 48.4ms | ActiveRecord: 2.2ms | Allocations: 17135)
+
+
+Started GET "/ads" for 127.0.0.1 at 2022-01-06 12:39:17 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 10.2ms | Allocations: 1219)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.3ms | Allocations: 5590)
+Completed 200 OK in 48ms (Views: 37.5ms | ActiveRecord: 0.6ms | Allocations: 7314)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:46:15 +0100
+Processing by AdsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 9.7ms | Allocations: 5799)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.8ms | Allocations: 22815)
+Completed 200 OK in 64ms (Views: 51.3ms | ActiveRecord: 1.4ms | Allocations: 26590)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap"):
+  
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:46:17 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 7.2ms | Allocations: 1221)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 5401)
+Completed 200 OK in 57ms (Views: 21.5ms | ActiveRecord: 0.7ms | Allocations: 7167)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:46:18 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 6.6ms | Allocations: 1218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 5361)
+Completed 200 OK in 25ms (Views: 18.2ms | ActiveRecord: 0.5ms | Allocations: 7083)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2022-01-06 12:46:19 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.8ms | Allocations: 219)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 14.2ms | Allocations: 2429)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 6554)
+Completed 200 OK in 57ms (Views: 43.9ms | ActiveRecord: 0.4ms | Allocations: 10065)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:46:27 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.5ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 9.6ms | Allocations: 1219)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | Allocations: 6130)
+Completed 200 OK in 48ms (Views: 36.7ms | ActiveRecord: 0.9ms | Allocations: 7907)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2022-01-06 12:46:28 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.haml within layouts/application
+  Rendered users/show.html.haml within layouts/application (Duration: 12.0ms | Allocations: 4111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 8172)
+Completed 200 OK in 58ms (Views: 36.3ms | ActiveRecord: 1.1ms | Allocations: 11996)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:47:29 +0100
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.4ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 19.9ms | Allocations: 12088)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5570.8ms | Allocations: 66672)
+Completed 200 OK in 5607ms (Views: 5572.5ms | ActiveRecord: 3.9ms | Allocations: 79745)
+
+
+Started GET "/ads/1" for 127.0.0.1 at 2022-01-06 12:47:40 +0100
+Processing by AdsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mAd Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:10:in `show'
+  [1m[36mAd Load (0.5ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ads_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering ads/show.html.haml within layouts/application
+  Rendered ads/show.html.haml within layouts/application (Duration: 10.6ms | Allocations: 3727)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 8010)
+Completed 200 OK in 49ms (Views: 22.6ms | ActiveRecord: 1.5ms | Allocations: 12140)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:47:43 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 6.7ms | Allocations: 1218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 5543)
+Completed 200 OK in 29ms (Views: 22.0ms | ActiveRecord: 0.5ms | Allocations: 7338)
+
+
+Started GET "/services" for 127.0.0.1 at 2022-01-06 12:47:46 +0100
+Processing by ServicesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering services/index.html.haml within layouts/application
+  [1m[36mService Load (0.3ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
+  ↳ app/views/services/index.html.haml:6
+  Rendered services/index.html.haml within layouts/application (Duration: 71.1ms | Allocations: 7371)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 79.8ms | Allocations: 11668)
+Completed 200 OK in 154ms (Views: 103.8ms | ActiveRecord: 1.5ms | Allocations: 15274)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:47:49 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.5ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 11.8ms | Allocations: 1219)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.5ms | Allocations: 6327)
+Completed 200 OK in 53ms (Views: 36.9ms | ActiveRecord: 0.9ms | Allocations: 8072)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:47:50 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 2.7ms | Allocations: 1218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 5543)
+Completed 200 OK in 18ms (Views: 11.9ms | ActiveRecord: 0.3ms | Allocations: 7262)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:48:21 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 7.3ms | Allocations: 1218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 5555)
+Completed 200 OK in 28ms (Views: 22.2ms | ActiveRecord: 0.6ms | Allocations: 7298)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:48:22 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 8.6ms | Allocations: 1218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 5543)
+Completed 200 OK in 36ms (Views: 25.6ms | ActiveRecord: 0.7ms | Allocations: 7265)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:48:45 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 5.5ms | Allocations: 5787)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 10611)
+Completed 200 OK in 24ms (Views: 17.0ms | ActiveRecord: 0.3ms | Allocations: 13316)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:48:46 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 7.4ms | Allocations: 1218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 5543)
+Completed 200 OK in 34ms (Views: 25.8ms | ActiveRecord: 0.5ms | Allocations: 7263)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:49:54 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 8.7ms | Allocations: 5771)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 10475)
+Completed 200 OK in 26ms (Views: 20.2ms | ActiveRecord: 0.3ms | Allocations: 13171)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2022-01-06 12:50:00 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 270)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 15.9ms | Allocations: 5346)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 9589)
+Completed 200 OK in 41ms (Views: 32.5ms | ActiveRecord: 0.4ms | Allocations: 12841)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:50:02 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.5ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 12.8ms | Allocations: 1219)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 46.5ms | Allocations: 6275)
+Completed 200 OK in 63ms (Views: 48.1ms | ActiveRecord: 0.9ms | Allocations: 8075)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2022-01-06 12:50:08 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 9.2ms | Allocations: 1417)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.6ms | Allocations: 6059)
+Completed 200 OK in 48ms (Views: 36.4ms | ActiveRecord: 0.4ms | Allocations: 7820)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:50:31 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 10.0ms | Allocations: 1219)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.4ms | Allocations: 6313)
+Completed 200 OK in 49ms (Views: 34.2ms | ActiveRecord: 0.8ms | Allocations: 7905)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:51:34 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.5ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 15.6ms | Allocations: 5784)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 10353)
+Completed 200 OK in 46ms (Views: 33.4ms | ActiveRecord: 1.2ms | Allocations: 13055)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:54:04 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 18.0ms | Allocations: 11824)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | Allocations: 20747)
+Completed 200 OK in 71ms (Views: 40.7ms | ActiveRecord: 2.4ms | Allocations: 33815)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:54:06 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 7.7ms | Allocations: 1219)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 5502)
+Completed 200 OK in 41ms (Views: 30.2ms | ActiveRecord: 0.6ms | Allocations: 7338)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:54:27 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 21.6ms | Allocations: 12063)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.4ms | Allocations: 23340)
+Completed 200 OK in 79ms (Views: 46.9ms | ActiveRecord: 1.5ms | Allocations: 36866)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:54:28 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 7.0ms | Allocations: 1220)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.8ms | Allocations: 5504)
+Completed 200 OK in 55ms (Views: 45.9ms | ActiveRecord: 0.5ms | Allocations: 7356)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:56:08 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 17.5ms | Allocations: 12085)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 40.6ms | Allocations: 23262)
+Completed 200 OK in 91ms (Views: 44.5ms | ActiveRecord: 3.1ms | Allocations: 36359)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:56:39 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 13.3ms | Allocations: 5786)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 10447)
+Completed 200 OK in 62ms (Views: 30.7ms | ActiveRecord: 0.5ms | Allocations: 13282)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:56:46 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 19.1ms | Allocations: 12085)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.6ms | Allocations: 23233)
+Completed 200 OK in 76ms (Views: 45.5ms | ActiveRecord: 2.2ms | Allocations: 36743)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:56:47 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.4ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 38.2ms | Allocations: 1221)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.0ms | Allocations: 5530)
+Completed 200 OK in 67ms (Views: 53.5ms | ActiveRecord: 0.9ms | Allocations: 7385)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:59:12 +0100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 19.5ms | Allocations: 14641)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 60.1ms | Allocations: 31535)
+Completed 200 OK in 95ms (Views: 62.9ms | ActiveRecord: 1.6ms | Allocations: 44535)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:59:47 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 16.4ms | Allocations: 5784)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.0ms | Allocations: 10854)
+Completed 200 OK in 47ms (Views: 36.5ms | ActiveRecord: 0.5ms | Allocations: 13689)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 12:59:54 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 18.0ms | Allocations: 5780)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.9ms | Allocations: 10848)
+Completed 200 OK in 57ms (Views: 40.8ms | ActiveRecord: 0.8ms | Allocations: 13577)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-06 12:59:58 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 26.6ms | Allocations: 9371)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | Allocations: 14000)
+Completed 200 OK in 54ms (Views: 40.9ms | ActiveRecord: 1.7ms | Allocations: 17653)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:01:17 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 5.9ms | Allocations: 5780)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 10855)
+Completed 200 OK in 24ms (Views: 18.4ms | ActiveRecord: 0.3ms | Allocations: 13558)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:06:06 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  Rendered ads/index.html.haml within layouts/application (Duration: 3.0ms | Allocations: 3454)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3631)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.9ms | Allocations: 17132)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    20: %br
+    21: %br
+    22: %nav.navbar.navbar-default
+    23:   .containter-fluid
+    24:     .navbar-header
+    25:       %button.navbar-toggle.collapsed{ type: :button, 'data-toggle' => :collapse, 'data-target' => "#bs-example-navbar-collapse-1" }
+    26:         %span.sr-only Toggle Navigation
+  
+app/views/ads/index.html.haml:23
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:08:11 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  Rendered ads/index.html.haml within layouts/application (Duration: 2.8ms | Allocations: 3149)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 3224)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.6ms | Allocations: 5967)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    27:     %span.icon-bar
+    28:     %span.icon-bar
+    29:     %span.icon-bar
+    30:       = link_to 'Edil News', articles_path, class: 'navbar-brand'
+    31: 
+    32:     / Navbar content
+    33:     .collapse.navbar-collapse#bs-example-navbar-collapse-1
+  
+app/views/ads/index.html.haml:30
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:08:20 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  Rendered ads/index.html.haml within layouts/application (Duration: 3.1ms | Allocations: 3164)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3239)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.1ms | Allocations: 5968)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    31: 
+    32:     / Navbar content
+    33:     .collapse.navbar-collapse#bs-example-navbar-collapse-1
+    34:       %ul.nav.navbar-nav.navbar-right
+    35: 
+    36:         / Sample links
+    37:         %li.active= link_to 'Crea un nuovo Annuncio', new_ad_path
+  
+app/views/ads/index.html.haml:34
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:08:51 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  Rendered ads/index.html.haml within layouts/application (Duration: 2.8ms | Allocations: 3209)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 3284)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.5ms | Allocations: 6013)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    33:  .collapse.navbar-collapse#bs-example-navbar-collapse-1
+    34:   %ul.nav.navbar-nav.navbar-right
+    35: 
+    36:     / Sample links
+    37:   %li.active= link_to 'Crea un nuovo Annuncio', new_ad_path
+    38:   %li.active= link_to "Profile", current_user
+    39:   %li.active= link_to  'Servizi', services_path
+  
+app/views/ads/index.html.haml:36
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:08:59 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 26.0ms | Allocations: 15130)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.7ms | Allocations: 24718)
+Completed 200 OK in 59ms (Views: 50.4ms | ActiveRecord: 1.4ms | Allocations: 27491)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-06 13:09:02 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 23.3ms | Allocations: 9396)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.1ms | Allocations: 14115)
+Completed 200 OK in 65ms (Views: 42.9ms | ActiveRecord: 1.5ms | Allocations: 18257)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:09:04 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.5ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 12.6ms | Allocations: 1229)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 40.5ms | Allocations: 11112)
+Completed 200 OK in 55ms (Views: 42.1ms | ActiveRecord: 1.0ms | Allocations: 13004)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:09:39 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  Rendered ads/index.html.haml within layouts/application (Duration: 32.2ms | Allocations: 8531)
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 8606)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.7ms | Allocations: 11268)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check %h1 HOME
+%table#ads
+ %thead 
+  %tr
+   %th Proprietario
+   %th Tipo
+   %th Titolo
+   %th Notizia
+   %th Locazione
+   %th Maggiori Info 
+ %tbody 
+  - @all.each do |ad|
+   %tr
+    %td= ad.owner
+    %td= ad.adtype
+    %td= ad.title
+    %td= ad.notice
+    %td= ad.location
+    %td= link_to "Dettagli", ad_path(ad)
+%br
+%br
+%nav.navbar.navbar-default
+ .containter-fluid
+  .navbar-header
+   %button.navbar-toggle.collapsed{ type: :button, 'data-toggle' => :collapse, 'data-target' => "#bs-example-navbar-collapse-1" }
+    %span.sr-only Toggle Navigation
+    %span.icon-bar
+    %span.icon-bar
+    %span.icon-bar
+    = link_to 'Edil News', articles_path, class: 'navbar-brand'
+
+    / Navbar content
+ .collapse.navbar-collapse#bs-example-navbar-collapse-1
+  %ul.nav.navbar-nav.navbar-right
+
+  / Sample links
+  %li.active= link_to 'Crea un nuovo Annuncio', new_ad_path %li.active= link_to "Profile", current_user %li.active= link_to  'Servizi', services_path
+ 
+
+
+):
+1:    %h1 HOME
+2:    %table#ads
+3:     %thead 
+4:      %tr
+5:       %th Proprietario
+6:       %th Tipo
+7:       %th Titolo
+8:       %th Notizia
+9:       %th Locazione
+10:       %th Maggiori Info 
+11:     %tbody 
+12:      - @all.each do |ad|
+13:       %tr
+14:        %td= ad.owner
+15:        %td= ad.adtype
+16:        %td= ad.title
+17:        %td= ad.notice
+18:        %td= ad.location
+19:        %td= link_to "Dettagli", ad_path(ad)
+20:    %br
+21:    %br
+22:    %nav.navbar.navbar-default
+23:     .containter-fluid
+24:      .navbar-header
+25:       %button.navbar-toggle.collapsed{ type: :button, 'data-toggle' => :collapse, 'data-target' => "#bs-example-navbar-collapse-1" }
+26:        %span.sr-only Toggle Navigation
+27:        %span.icon-bar
+28:        %span.icon-bar
+29:        %span.icon-bar
+30:        = link_to 'Edil News', articles_path, class: 'navbar-brand'
+31:    
+32:        / Navbar content
+33:     .collapse.navbar-collapse#bs-example-navbar-collapse-1
+34:      %ul.nav.navbar-nav.navbar-right
+35:    
+36:      / Sample links
+37:      %li.active= link_to 'Crea un nuovo Annuncio', new_ad_path %li.active= link_to "Profile", current_user %li.active= link_to  'Servizi', services_path
+38:     
+  
+app/views/ads/index.html.haml:37: unknown type of %string
+app/views/ads/index.html.haml:37: syntax error, unexpected end-of-input, expecting ')'
+app/views/ads/index.html.haml:37: unknown type of %string
+app/views/ads/index.html.haml:37: syntax error, unexpected end-of-input, expecting ')'
+app/views/ads/index.html.haml:37: unknown type of %string
+app/views/ads/index.html.haml:37: syntax error, unexpected end-of-input, expecting ')'
+app/views/ads/index.html.haml:37: unknown type of %string
+app/views/ads/index.html.haml:37: syntax error, unexpected end-of-input, expecting ')'
+app/views/ads/index.html.haml:37: unknown type of %string
+app/views/ads/index.html.haml:37: syntax error, unexpected end-of-input, expecting ')'
+app/views/ads/index.html.haml:37: unknown type of %string
+app/views/ads/index.html.haml:37: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:09:49 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  Rendered ads/index.html.haml within layouts/application (Duration: 17.7ms | Allocations: 8393)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 8462)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.3ms | Allocations: 10189)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check %h1 HOME
+%table#ads
+ %thead 
+  %tr
+   %th Proprietario
+   %th Tipo
+   %th Titolo
+   %th Notizia
+   %th Locazione
+   %th Maggiori Info 
+ %tbody 
+  - @all.each do |ad|
+   %tr
+    %td= ad.owner
+    %td= ad.adtype
+    %td= ad.title
+    %td= ad.notice
+    %td= ad.location
+    %td= link_to "Dettagli", ad_path(ad)
+%br
+%br
+%nav.navbar.navbar-default
+ .containter-fluid
+  .navbar-header
+   %button.navbar-toggle.collapsed{ type: :button, 'data-toggle' => :collapse, 'data-target' => "#bs-example-navbar-collapse-1" }
+    %span.sr-only Toggle Navigation
+    %span.icon-bar
+    %span.icon-bar
+    %span.icon-bar
+    = link_to 'Edil News', articles_path, class: 'navbar-brand'
+
+    / Navbar content
+ .collapse.navbar-collapse#bs-example-navbar-collapse-1
+  %ul.nav.navbar-nav.navbar-right
+
+  / Sample links
+  %li.active= link_to 'Crea un nuovo Annuncio', new_ad_path %li.active= link_to "Profile", current_user %li.active= link_to  'Servizi', services_path
+ 
+
+
+):
+1:    %h1 HOME
+2:    %table#ads
+3:     %thead 
+4:      %tr
+5:       %th Proprietario
+6:       %th Tipo
+7:       %th Titolo
+8:       %th Notizia
+9:       %th Locazione
+10:       %th Maggiori Info 
+11:     %tbody 
+12:      - @all.each do |ad|
+13:       %tr
+14:        %td= ad.owner
+15:        %td= ad.adtype
+16:        %td= ad.title
+17:        %td= ad.notice
+18:        %td= ad.location
+19:        %td= link_to "Dettagli", ad_path(ad)
+20:    %br
+21:    %br
+22:    %nav.navbar.navbar-default
+23:     .containter-fluid
+24:      .navbar-header
+25:       %button.navbar-toggle.collapsed{ type: :button, 'data-toggle' => :collapse, 'data-target' => "#bs-example-navbar-collapse-1" }
+26:        %span.sr-only Toggle Navigation
+27:        %span.icon-bar
+28:        %span.icon-bar
+29:        %span.icon-bar
+30:        = link_to 'Edil News', articles_path, class: 'navbar-brand'
+31:    
+32:        / Navbar content
+33:     .collapse.navbar-collapse#bs-example-navbar-collapse-1
+34:      %ul.nav.navbar-nav.navbar-right
+35:    
+36:      / Sample links
+37:      %li.active= link_to 'Crea un nuovo Annuncio', new_ad_path %li.active= link_to "Profile", current_user %li.active= link_to  'Servizi', services_path
+38:     
+  
+app/views/ads/index.html.haml:37: unknown type of %string
+app/views/ads/index.html.haml:37: syntax error, unexpected end-of-input, expecting ')'
+app/views/ads/index.html.haml:37: unknown type of %string
+app/views/ads/index.html.haml:37: syntax error, unexpected end-of-input, expecting ')'
+app/views/ads/index.html.haml:37: unknown type of %string
+app/views/ads/index.html.haml:37: syntax error, unexpected end-of-input, expecting ')'
+app/views/ads/index.html.haml:37: unknown type of %string
+app/views/ads/index.html.haml:37: syntax error, unexpected end-of-input, expecting ')'
+app/views/ads/index.html.haml:37: unknown type of %string
+app/views/ads/index.html.haml:37: syntax error, unexpected end-of-input, expecting ')'
+app/views/ads/index.html.haml:37: unknown type of %string
+app/views/ads/index.html.haml:37: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:09:56 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 24.2ms | Allocations: 9393)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.4ms | Allocations: 14477)
+Completed 200 OK in 59ms (Views: 46.7ms | ActiveRecord: 0.8ms | Allocations: 17022)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:11:02 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 4.5ms | Allocations: 1228)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 5913)
+Completed 200 OK in 18ms (Views: 13.7ms | ActiveRecord: 0.3ms | Allocations: 7633)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-06 13:11:04 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 20.6ms | Allocations: 6006)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 45.0ms | Allocations: 11362)
+Completed 200 OK in 61ms (Views: 50.6ms | ActiveRecord: 0.7ms | Allocations: 13804)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-06 13:11:12 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 8.1ms | Allocations: 1507)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 6975)
+Completed 200 OK in 50ms (Views: 33.2ms | ActiveRecord: 0.9ms | Allocations: 9315)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:12:32 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  Rendered ads/index.html.haml within layouts/application (Duration: 3.5ms | Allocations: 3129)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3203)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms | Allocations: 5866)
+
+
+  
+ActionView::Template::Error (The line was indented 4 levels deeper than the previous line.):
+    30:     = link_to 'Edil News', articles_path, class: 'navbar-brand'
+    31: 
+    32: .container
+    33:     %h1#logo HM
+    34:     %nav#navbar
+    35:       %ul
+    36:   %li.active= link_to 'Crea un nuovo Annuncio', new_ad_path
+  
+app/views/ads/index.html.haml:33
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:12:46 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  Rendered ads/index.html.haml within layouts/application (Duration: 4.5ms | Allocations: 3134)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3208)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms | Allocations: 5912)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    30:     = link_to 'Edil News', articles_path, class: 'navbar-brand'
+    31: 
+    32: .container
+    33:   %h1#logo HM
+    34:   %nav#navbar
+    35:     %ul
+    36:   %li.active= link_to 'Crea un nuovo Annuncio', new_ad_path
+  
+app/views/ads/index.html.haml:33
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:13:07 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  Rendered ads/index.html.haml within layouts/application (Duration: 2.6ms | Allocations: 3126)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 3200)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.1ms | Allocations: 5904)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    30:     = link_to 'Edil News', articles_path, class: 'navbar-brand'
+    31: 
+    32:   .container
+    33:     %nav#navbar
+    34:       %ul
+    35:     %li.active= link_to 'Crea un nuovo Annuncio', new_ad_path
+    36:     %li.active= link_to "Profile", current_user
+  
+app/views/ads/index.html.haml:33
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:13:30 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  Rendered ads/index.html.haml within layouts/application (Duration: 2.2ms | Allocations: 3120)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 3194)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms | Allocations: 5898)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    29:     %span.icon-bar
+    30:     = link_to 'Edil News', articles_path, class: 'navbar-brand'
+    31: %nav#navbar
+    32:   .container
+    33:       %ul
+    34:     %li.active= link_to 'Crea un nuovo Annuncio', new_ad_path
+    35:     %li.active= link_to "Profile", current_user
+  
+app/views/ads/index.html.haml:32
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:13:51 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  Rendered ads/index.html.haml within layouts/application (Duration: 3.8ms | Allocations: 3151)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3225)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms | Allocations: 5929)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    30:     = link_to 'Edil News', articles_path, class: 'navbar-brand'
+    31: %nav#navbar
+    32:  .container
+    33:    %ul
+    34:  %li.active= link_to 'Crea un nuovo Annuncio', new_ad_path
+    35:  %li.active= link_to "Profile", current_user
+    36:  %li.active= link_to  'Servizi', services_path
+  
+app/views/ads/index.html.haml:33
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:13:58 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 16.5ms | Allocations: 9217)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 14303)
+Completed 200 OK in 39ms (Views: 30.7ms | ActiveRecord: 0.3ms | Allocations: 17071)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:16:47 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.7ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 10.4ms | Allocations: 4599)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 9739)
+Completed 200 OK in 41ms (Views: 27.5ms | ActiveRecord: 1.0ms | Allocations: 12436)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:17:30 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 8.6ms | Allocations: 4598)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 9893)
+Completed 200 OK in 35ms (Views: 27.3ms | ActiveRecord: 0.5ms | Allocations: 12590)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2022-01-06 13:17:50 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.haml within layouts/application
+  Rendered users/show.html.haml within layouts/application (Duration: 8.2ms | Allocations: 4088)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 9405)
+Completed 200 OK in 39ms (Views: 26.4ms | ActiveRecord: 0.6ms | Allocations: 13053)
+
+
+Started GET "/ads/new" for 127.0.0.1 at 2022-01-06 13:17:58 +0100
+Processing by AdsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/new.html.haml within layouts/application
+  Rendered ads/_ad_form.html.haml (Duration: 7.6ms | Allocations: 3402)
+  Rendered ads/new.html.haml within layouts/application (Duration: 17.1ms | Allocations: 6654)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 11366)
+Completed 200 OK in 33ms (Views: 28.6ms | ActiveRecord: 0.1ms | Allocations: 13882)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:18:13 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.6ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 19.3ms | Allocations: 5305)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.9ms | Allocations: 15387)
+Completed 200 OK in 56ms (Views: 44.6ms | ActiveRecord: 0.9ms | Allocations: 17341)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:18:15 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 8.8ms | Allocations: 1094)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.6ms | Allocations: 11288)
+Completed 200 OK in 55ms (Views: 43.9ms | ActiveRecord: 0.6ms | Allocations: 13010)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:18:16 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 5.6ms | Allocations: 1094)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 9250)
+Completed 200 OK in 49ms (Views: 31.3ms | ActiveRecord: 0.7ms | Allocations: 12815)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-06 13:18:19 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 25.1ms | Allocations: 6700)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.4ms | Allocations: 11430)
+Completed 200 OK in 50ms (Views: 39.3ms | ActiveRecord: 0.8ms | Allocations: 13872)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:18:21 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 4.5ms | Allocations: 1094)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.4ms | Allocations: 12012)
+Completed 200 OK in 57ms (Views: 49.2ms | ActiveRecord: 0.4ms | Allocations: 13736)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:18:34 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 6.6ms | Allocations: 4601)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 9893)
+Completed 200 OK in 26ms (Views: 19.3ms | ActiveRecord: 0.4ms | Allocations: 12596)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:18:35 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.5ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 9.8ms | Allocations: 1094)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 5951)
+Completed 200 OK in 43ms (Views: 28.1ms | ActiveRecord: 0.9ms | Allocations: 7674)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-06 13:18:37 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 17.1ms | Allocations: 6507)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.5ms | Allocations: 11386)
+Completed 200 OK in 48ms (Views: 38.4ms | ActiveRecord: 0.6ms | Allocations: 13821)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:20:08 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.5ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 13.4ms | Allocations: 4598)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.9ms | Allocations: 9919)
+Completed 200 OK in 53ms (Views: 43.5ms | ActiveRecord: 0.7ms | Allocations: 12617)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-06 13:20:10 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 66.9ms | Allocations: 13767)
+  Rendered layout layouts/application.html.erb (Duration: 67.8ms | Allocations: 13860)
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 0.6ms | Allocations: 16261)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_articles_path' for #<ActionView::Base:0x0000000000eb78>
+Did you mean?  new_article_path
+               new_service_path
+               new_article_url
+               edit_article_path):
+    29:     %span.icon-bar
+    30:     %span.icon-bar
+    31:     %span.icon-bar
+    32:     = link_to 'Crea Articolo', new_articles_path, class: 'navbar-brand'
+  
+app/views/articles/index.html.haml:32
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:20:18 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 9.3ms | Allocations: 4605)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 9943)
+Completed 200 OK in 34ms (Views: 26.5ms | ActiveRecord: 0.5ms | Allocations: 12614)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-06 13:20:19 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 30.8ms | Allocations: 8863)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 46.4ms | Allocations: 13772)
+Completed 200 OK in 60ms (Views: 51.6ms | ActiveRecord: 0.6ms | Allocations: 16212)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2022-01-06 13:20:41 +0100
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.haml within layouts/application
+  Rendered articles/_article_form.html.haml (Duration: 21.0ms | Allocations: 7787)
+  Rendered articles/new.html.haml within layouts/application (Duration: 28.6ms | Allocations: 10088)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.0ms | Allocations: 14850)
+Completed 200 OK in 50ms (Views: 39.2ms | ActiveRecord: 0.3ms | Allocations: 17186)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-06 13:20:42 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 18.6ms | Allocations: 3020)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 55.9ms | Allocations: 12302)
+Completed 200 OK in 75ms (Views: 57.6ms | ActiveRecord: 1.1ms | Allocations: 14095)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:20:49 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 4.4ms | Allocations: 1094)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 40.5ms | Allocations: 11914)
+Completed 200 OK in 49ms (Views: 41.2ms | ActiveRecord: 0.6ms | Allocations: 13639)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-06 13:20:54 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 12.7ms | Allocations: 1444)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 54.7ms | Allocations: 11374)
+Completed 200 OK in 71ms (Views: 56.4ms | ActiveRecord: 0.8ms | Allocations: 13129)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2022-01-06 13:20:57 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:23
+  Rendered articles/show.html.haml within layouts/application (Duration: 32.4ms | Allocations: 9321)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 59.3ms | Allocations: 14089)
+Completed 200 OK in 95ms (Views: 61.7ms | ActiveRecord: 2.8ms | Allocations: 17827)
+
+
+Started GET "/articles/1/comments/new" for 127.0.0.1 at 2022-01-06 13:21:01 +0100
+Processing by CommentsController#new as HTML
+  Parameters: {"article_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering comments/new.html.haml within layouts/application
+  [1m[36mMate Load (0.3ms)[0m  [1m[34mSELECT "mates".* FROM "mates"[0m
+  ↳ app/views/comments/new.html.haml:10
+  Rendered comments/new.html.haml within layouts/application (Duration: 18.0ms | Allocations: 5084)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 9856)
+Completed 200 OK in 56ms (Views: 43.9ms | ActiveRecord: 1.1ms | Allocations: 13035)
+
+
+Started POST "/articles/1/comments" for 127.0.0.1 at 2022-01-06 13:21:09 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"body"=>"questo è un commento"}, "commit"=>"Add Comment", "article_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:22:in `create'
+  [1m[36mComment Create (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("article_id", "created_at", "updated_at", "user_id", "body") VALUES (?, ?, ?, ?, ?)[0m  [["article_id", 1], ["created_at", "2022-01-06 12:21:09.320226"], ["updated_at", "2022-01-06 12:21:09.320226"], ["user_id", 5], ["body", "questo è un commento"]]
+  ↳ app/controllers/comments_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:22:in `create'
+Redirected to http://127.0.0.1:3000/articles/1
+Completed 302 Found in 52ms (ActiveRecord: 11.4ms | Allocations: 12333)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2022-01-06 13:21:09 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:23
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.haml:28
+  Rendered articles/show.html.haml within layouts/application (Duration: 8.3ms | Allocations: 2776)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 7589)
+Completed 200 OK in 29ms (Views: 20.5ms | ActiveRecord: 0.9ms | Allocations: 10495)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:21:12 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 8.6ms | Allocations: 1095)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 40.9ms | Allocations: 6666)
+Completed 200 OK in 54ms (Views: 43.4ms | ActiveRecord: 0.7ms | Allocations: 8466)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-01-06 13:21:20 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms | Allocations: 3041)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:21:20 +0100
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms | Allocations: 366)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-06 13:21:20 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.9ms | Allocations: 818)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.6ms | Allocations: 3263)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | Allocations: 9036)
+Completed 200 OK in 39ms (Views: 36.4ms | ActiveRecord: 0.0ms | Allocations: 11112)
+
+
+Started GET "/ads/new" for 127.0.0.1 at 2022-01-06 13:21:32 +0100
+Processing by AdsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-06 13:21:32 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 233)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1133)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 5786)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 6528)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-06 13:21:34 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.4ms | Allocations: 233)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.1ms | Allocations: 10660)
+Completed 200 OK in 49ms (Views: 46.1ms | ActiveRecord: 0.0ms | Allocations: 11344)
+
+
+Started GET "/services" for 127.0.0.1 at 2022-01-06 13:21:36 +0100
+Processing by ServicesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 345)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-06 13:21:36 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 241)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1193)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 5927)
+Completed 200 OK in 22ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 6680)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:21:38 +0100
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 241)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-06 13:21:38 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 233)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 5735)
+Completed 200 OK in 25ms (Views: 21.8ms | ActiveRecord: 0.0ms | Allocations: 6424)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:21:39 +0100
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 241)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-06 13:21:39 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 233)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 5758)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.0ms | Allocations: 6449)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-01-06 13:22:18 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"antonia.passaretti.96@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "antonia.passaretti.96@gmail.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 328ms (ActiveRecord: 0.4ms | Allocations: 6925)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:22:18 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 2.3ms | Allocations: 1097)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 5968)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.3ms | Allocations: 7748)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-06 13:22:23 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 11.9ms | Allocations: 1444)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.3ms | Allocations: 7058)
+Completed 200 OK in 56ms (Views: 44.9ms | ActiveRecord: 0.6ms | Allocations: 8782)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2022-01-06 13:22:25 +0100
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.haml within layouts/application
+  Rendered articles/_article_form.html.haml (Duration: 6.9ms | Allocations: 1354)
+  Rendered articles/new.html.haml within layouts/application (Duration: 12.4ms | Allocations: 2327)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 7330)
+Completed 200 OK in 52ms (Views: 35.9ms | ActiveRecord: 0.7ms | Allocations: 9045)
+
+
+Started POST "/articles" for 127.0.0.1 at 2022-01-06 13:22:32 +0100
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"prova", "release_date(1i)"=>"2022", "release_date(2i)"=>"1", "release_date(3i)"=>"6", "text"=>"dvdvdv", "author"=>"vdvvv"}, "commit"=>"Salva cambiamenti"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:11:in `create'
+  [1m[36mArticle Create (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "release_date", "text", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "prova"], ["release_date", "2022-01-06 00:00:00"], ["text", "dvdvdv"], ["author", "vdvvv"], ["created_at", "2022-01-06 12:22:32.560109"], ["updated_at", "2022-01-06 12:22:32.560109"]]
+  ↳ app/controllers/articles_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (9.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:11:in `create'
+Redirected to http://127.0.0.1:3000/articles
+Completed 302 Found in 45ms (ActiveRecord: 11.1ms | Allocations: 6370)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-06 13:22:32 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 3.2ms | Allocations: 1514)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 6319)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 0.2ms | Allocations: 7936)
+
+
+Started GET "/articles/20" for 127.0.0.1 at 2022-01-06 13:22:36 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mComment Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 20], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:23
+  Rendered articles/show.html.haml within layouts/application (Duration: 14.4ms | Allocations: 1343)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.4ms | Allocations: 6376)
+Completed 200 OK in 82ms (Views: 52.9ms | ActiveRecord: 2.2ms | Allocations: 9705)
+
+
+Started DELETE "/articles/20" for 127.0.0.1 at 2022-01-06 13:22:41 +0100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"20"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:43:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:43:in `destroy'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 20]]
+  ↳ app/controllers/articles_controller.rb:43:in `destroy'
+  [1m[36mArticle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 20]]
+  ↳ app/controllers/articles_controller.rb:43:in `destroy'
+  [1m[36mTRANSACTION (8.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:43:in `destroy'
+Redirected to http://127.0.0.1:3000/articles
+Completed 302 Found in 43ms (ActiveRecord: 9.7ms | Allocations: 6908)
+
+
+Started GET "/articles" for 127.0.0.1 at 2022-01-06 13:22:41 +0100
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.haml within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.haml:11
+  Rendered articles/index.html.haml within layouts/application (Duration: 5.1ms | Allocations: 1444)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 6294)
+Completed 200 OK in 29ms (Views: 21.7ms | ActiveRecord: 0.4ms | Allocations: 7913)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:22:45 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.4ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 10.3ms | Allocations: 1094)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 40.1ms | Allocations: 6715)
+Completed 200 OK in 56ms (Views: 41.8ms | ActiveRecord: 0.8ms | Allocations: 8438)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-06 13:22:46 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.5ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  ↳ app/views/ads/index.html.haml:12
+  Rendered ads/index.html.haml within layouts/application (Duration: 11.4ms | Allocations: 1094)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.7ms | Allocations: 5908)
+Completed 200 OK in 44ms (Views: 31.5ms | ActiveRecord: 0.9ms | Allocations: 7630)
+
+
