@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'comments/new'
   get 'comments/create'
   get 'comments/destroy'
+  get 'users/favorites'
   
   root 'ads#index'
   post '/articles/:id' => 'articles#create'
@@ -17,6 +18,10 @@ Rails.application.routes.draw do
   
   resources :articles do
   	resources :comments, only: [:new, :create, :destroy]
+  end
+  
+  resources :ads do
+  	put :favorite, on: :member
   end
   
 

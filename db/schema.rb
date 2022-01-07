@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_04_163028) do
+ActiveRecord::Schema.define(version: 2022_01_07_103301) do
 
   create_table "ads", force: :cascade do |t|
     t.string "owner"
@@ -33,6 +33,13 @@ ActiveRecord::Schema.define(version: 2022_01_04_163028) do
 
 # Could not dump table "comments" because of following StandardError
 #   Unknown type 'reference' for column 'user_id'
+
+  create_table "favorite_ads", force: :cascade do |t|
+    t.integer "ad_id"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "mates", force: :cascade do |t|
     t.string "name"

@@ -21,7 +21,8 @@
         Indirizzo:
         =@ad.location
 
-
+= link_to "favorite",   favorite_ad_path(@ad, type: "favorite"), method: :put 
+= link_to "unfavorite", favorite_ad_path(@ad, type: "unfavorite"), method: :put
 
 
 %br

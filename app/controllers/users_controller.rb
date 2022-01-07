@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-
+	
 
     def show
         @user = User.find(params[:id])
@@ -33,7 +33,13 @@ class UsersController < ApplicationController
         else
           render 'edit'
         end
-      end        
+      end
+      
+      def favorites
+		authenticate_user!
+        @ads = current_user.favorites
+      end
+          
 
 
       private

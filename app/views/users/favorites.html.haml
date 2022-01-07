@@ -1,0 +1,13 @@
+%h2 Favorite Ads
+
+- if @ads.empty?
+    %p No ads saved as favorite
+- else
+    %br
+    - @ads.each do |c|
+        = link_to "#{c.title}", ad_path(c.id), :class => 'btn btn-outline-success'
+        = link_to "Remove from Favorites", favorite_ad_path(c, type: "unfavorite"), :method => :put
+        %br
+        %br
+    
+#{link_to 'Back to ads list', ads_path}
