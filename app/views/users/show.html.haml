@@ -16,53 +16,47 @@
             %li{style: "text-align:left;"}  
                 Tipo:
                 = Ad.find(ad.id).adtype
-            %br
+        
             %li{style: "text-align:left;"} 
                 Titolo:
                 = Ad.find(ad.id).title
-            %br
+            
             %li{style: "text-align:left;"} 
                 Descrizione:
                 = Ad.find(ad.id).notice
-            %br
+            
             %li{style: "text-align:left;"} 
                 Indirizzo:
                 = Ad.find(ad.id).location
-            %br
+            
             %br
             %br
 %br
 %br
-%h3 Favorite Ads:
-- if @user.favorite_ads.empty?
+%h3 Articoli che piacciono a #{@user.name}:
+- if @user.likes.empty?
     %p No ads saved as favorite
 - else
     %br
-    - @user.favorite_ads do |c|
-        %li 
-            Proprietario Annuncio:
-            = @ad.owner
-        %br
-        %li 
-            Tipo:
-            = @ad.adtype
-        %br
+    - @user.likes.each do |c|
         %li 
             Titolo:
-            = @ad.title
-        %br
+            = Article.find(c.article_id).title
         %li 
-            Descrizione:
-            =@ad.notice
+            Release date:
+            = Article.find(c.article_id)&.release_date&.strftime("%B %d %Y")
+        
+        %li
+            Testo articolo:
+            = Article.find(c.article_id).text
+        %li
+            Autore articolo:
+            = Article.find(c.article_id).author
         %br
-        %li 
-            Indirizzo:
-            =@ad.location
+        = Article.find(c.article_id).likes.count
+        = (Article.find(c.article_id).likes.count) == 1 ? 'Like' : 'Likes'
+        = button_to 'Unlike', article_like_path(Article.find(c.article_id)), method: :delete
         %br
-        = link_to "Remove from Favorites", favorite_ad_path(c, type: "unfavorite"), :method => :put
-        %br
-        %br
-%br
-%br
+        %b
 = link_to "Settings", edit_user_path(current_user)
 %br

@@ -24,6 +24,9 @@ Rails.application.routes.draw do
   resources :ads do
   	put :favorite, on: :member
   end
-  
+
+  resources :articles do
+    resources :likes
+  end
 
 end

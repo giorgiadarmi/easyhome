@@ -17,6 +17,13 @@
         = @article.author
     
     	
+    - pre_like = @article.likes.find { |like| like.user_id == current_user.id}
+    - if pre_like
+        = button_to 'Unlike', article_like_path(@article, pre_like), method: :delete
+    - else
+        = button_to 'Like', article_likes_path(@article), method: :post
+    = @article.likes.count
+    = (@article.likes.count) == 1 ? 'Like' : 'Likes'
 
 %h3 comments:
 

@@ -15,6 +15,8 @@
     %td=article.text
     %td=article.author
     %td=link_to "Dettagli", article_path(article)
+    %td= article.likes.count
+    %td= (article.likes.count) == 1 ? 'Like' : 'Likes'
 %br
 %h4 Ricerca per titolo
 = form_tag search_path, :method => :get do
