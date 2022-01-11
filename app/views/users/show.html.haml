@@ -1,8 +1,18 @@
+:css
+    h1 {text-align: center;}
+    p {text-align: left;}
+    div {text-align: left;}
+    .center {
+        display: flex;
+        justify-content: center;
+    }
 %h1 Profilo: #{@user.name}
-
-.gravatar_edit
-    = gravatar_for @user
-    %a{href: "http://gravatar.com/emails", target: "_blank"}
+.center
+    .gravatar_edit
+        = gravatar_for @user
+        %a{href: "http://gravatar.com/emails", target: "_blank"}
+%br
+= link_to "Settings", edit_user_path(current_user)
 %br
 %br
 %h3{style: "text-align:left;"}  Annunci di #{@user.name} :
@@ -52,11 +62,10 @@
         %li
             Autore articolo:
             = Article.find(c.article_id).author
-        %br
         = Article.find(c.article_id).likes.count
         = (Article.find(c.article_id).likes.count) == 1 ? 'Like' : 'Likes'
-        = button_to 'Unlike', article_like_path(Article.find(c.article_id)), method: :delete
         %br
-        %b
-= link_to "Settings", edit_user_path(current_user)
+        %br
+        
+
 %br

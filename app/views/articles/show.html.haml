@@ -1,5 +1,7 @@
 %h1 Dettagli riguardo l'articolo: #{@article.title}
-
+%br
+#{link_to '< Torna a edilnews', articles_path}
+%br
 %ul#details 
     %li 
         Titolo:
@@ -25,11 +27,16 @@
     = @article.likes.count
     = (@article.likes.count) == 1 ? 'Like' : 'Likes'
 
-%h3 comments:
+%h3 Commenti:
 
 - if @article.comments.empty?
     %p
         No comments fot this article...
+    %p
+    = form_with model: [ @article, @article.comments.build ] do |form|
+        = label :comment, :body, 'Commento'
+        = text_field :comment, :body
+        = form.submit "Pubblica"
 - else
     %p
         - @article.comments.each do |r|
@@ -38,12 +45,14 @@
             = link_to 'Cancella commento', [r.article, r], method: :delete,data: { confirm: "Are you sure?" }
     
             %br
+    %p
+    = form_with model: [ @article, @article.comments.build ] do |form|
+        = label :comment, :body, 'Commento'
+        = text_field :comment, :body
+        = form.submit "Pubblica"
 
 
 
-#{link_to 'Aggiungi commento', new_article_comment_path(@article)}
-#{link_to 'Torna a edilnews', articles_path}
-%br
 = link_to "Cancella articolo", article_path(@article), method: :delete, data: { confirm: "Are you sure?" }
 #{link_to 'Modifica Articolo', edit_article_path(@article)}
 %br

@@ -28,6 +28,6 @@ class LikesController < ApplicationController
         params[:article_id]).exists?
     end
     def find_like
-        @like = @article.likes.find(params[:id])
+        @like = @article.likes.find(params[:id]) 
     end
 end

@@ -4,8 +4,12 @@
   <html>
     <style>
     h1 {text-align: center;}
-    p {text-align: center;}
-    div {text-align: center;}
+    p {text-align: left;}
+    div {text-align: left;}
+    .center {
+      display: flex;
+      justify-content: center;
+    }   
     </style>
     </head>
     <body>
@@ -17,7 +21,6 @@
       <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
       <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
- 
   <body>
   	<% if flash[:notice] %>
   		<div class="notification is-primary global-notification">
@@ -30,48 +33,34 @@
   		</div>
   	<% end %>
   	<nav class="navbar is-info">
-  		<div class="navbar-brand">
+  		<div style="width:800px; margin:0 auto;" class="navbar-brand" >
   		<%= link_to root_path, class: "navbar-item" do %>
   			<h1 class="title is-5">Easy Home</h1>
-        <%= image_tag("favicon.png", width: 150) %>
+        <div class="center">
+          <%= image_tag("favicon.png", width: 200) %> 
+        </div>
   		<% end %>
-			<div class="navbar-burger burger" data-target="navbarExample">
-					<span></span>
-					<span></span>
-					<span></span>
-  		</div>
-  	 </div>
+      <nav class="navbar is-info">
+  		  <div class="navbar-brand">
+  		    <%= link_to articles_path, class: "navbar-item" do %>
+  			  <h1 class="title is-5">Edil News</h1>
+  		<% end %>
+    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default">
+        <div class="containter-fluid">
+          <div class="navbar-header">
+          </div>
+        </div>
+      </nav>
+    </nav>
     <%= yield %>
   </body>
-
-<nav class="navbar navbar-default">
-  <div class="containter-fluid">
-    <div class="navbar-header">
-      <button class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="<%= :collapse %>" type="<%= :button %>">
-        <span class="sr-only">Toggle Navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <%= link_to 'Edil News', articles_path, class: 'navbar-brand' %>
-      </button>
-    </div>
+  <div class="center">    
+    <%= link_to "Profilo", current_user, class: 'navbar-brand' %>
   </div>
-</nav>
-<nav id="navbar">
-  <div class="container">
-    <ul></ul>
+  <div class="center">    
+    <%= link_to 'Servizi', services_path, class: 'navbar-brand' %>
   </div>
-  <li class="active">
-    <%= link_to 'Crea un nuovo Annuncio', new_ad_path %>
-  </li>
-  <li class="active">
-    <%= link_to "Profile", current_user %>
-  </li>
-  <li class="active">
-    <%= link_to  'Servizi', services_path %>
-  </li>
-</nav>
-
 <% if user_signed_in? %>
 Logged in as <%= current_user.email%> [<%= link_to 'Logout', 
 destroy_user_session_path, :method => :delete%>]
