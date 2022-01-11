@@ -16,7 +16,7 @@ class User < ApplicationRecord
   end
   
   has_many :comments
-  has_many :ads, dependent: :destroy 
+  has_many :ads, dependent: :destroy
   has_many :articles
   has_many :favorite_ads, dependent: :destroy
   has_many :favorites, through: :favorite_ads, source: :ad, dependent: :destroy

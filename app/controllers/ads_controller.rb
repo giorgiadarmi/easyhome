@@ -4,6 +4,7 @@ class AdsController < ApplicationController
     def index 
         @all = Ad.all
         @favorites = current_user.favorites
+        @ads = Ad.includes(:user)
     end
 
     def show
@@ -16,13 +17,17 @@ class AdsController < ApplicationController
     end
 
     def new
-        
+        @ad = Ad.new
     end
 
     def create 
-       p=params.require(:ad).permit(:adtype, :title, :notice, :location)
-       Ad.create(p)
-       redirect_to ads_path
+        @ad = Ad.new(ad_params)
+        @ad.user_id = current_user.id
+        if @ad.save 
+            redirect_to ads_path
+        else
+            render 'new'
+        end
     end
 
     def destroy
@@ -35,7 +40,7 @@ class AdsController < ApplicationController
     end
 
     def update
-        Ad.find(params[:id]).update(params[:ad].permit(:adtype, :title, :notice, :location)) 
+        Ad.find(params[:id]).update(params[:ad].permit(:owner , :adtype, :title, :notice, :location)) 
         redirect_to ads_path
     end
     
@@ -55,4 +60,10 @@ class AdsController < ApplicationController
 		  redirect_to ads_path, notice: 'Nothing happened.'
 		end
 	end
+
+    private
+    def ad_params
+        p=params.require(:ad).permit(:owner , :adtype, :title, :notice, :location)
+        {:adtype=>p[:adtype], :title=>p[:title], :notice=>p[:notice], :location=>p[:location], :owner=>current_user.name}
+    end
 end

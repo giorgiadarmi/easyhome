@@ -4,12 +4,13 @@ Rails.application.routes.draw do
   get 'comments/create'
   get 'comments/destroy'
   get 'users/favorites'
-  
+
+
   root 'ads#index'
   post '/articles/:id' => 'articles#create'
-  
+  post '/ads/:id' => 'articles#create'
   get '/search', to: 'articles#search'
-  get '/' => 'mates#show'
+  get '/' => 'users#show'
   get '/users/comments/:id', to: 'comments#user_comments', :as => :user_comments
   resources :articles
   resources :ads

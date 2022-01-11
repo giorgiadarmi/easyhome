@@ -7,8 +7,8 @@ class ArticlesController < ApplicationController
 	
 	#CREATE 2/2
 	def create
-		p=params.require(:article).permit( :title, :release_date, :text, :author)
-		Article.create(p)
+		p=params.require(:article).permit(ad_params)
+		Article.new(p)
 		redirect_to articles_path
 	end
 
