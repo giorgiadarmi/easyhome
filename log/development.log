@@ -49239,3 +49239,156 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 146ms (Views: 134.7ms | ActiveRecord: 3.9ms | Allocations: 41759)
 
 
+Started GET "/articles/1" for 127.0.0.1 at 2022-01-11 17:39:21 +0100
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.haml:20
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.haml:25
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.haml:26
+  [1m[36mComment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:30
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.haml:35
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:36
+  Rendered articles/show.html.haml within layouts/application (Duration: 80.1ms | Allocations: 26483)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 130.7ms | Allocations: 39591)
+Completed 200 OK in 202ms (Views: 128.9ms | ActiveRecord: 10.7ms | Allocations: 58134)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2022-01-11 17:39:40 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.haml:20
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.haml:25
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.haml:26
+  [1m[36mComment Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:30
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.haml:35
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:36
+  Rendered articles/show.html.haml within layouts/application (Duration: 33.9ms | Allocations: 10584)
+  Rendered layout layouts/application.html.erb (Duration: 34.4ms | Allocations: 10668)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 2.7ms | Allocations: 14655)
+
+
+  
+ActionView::Template::Error (You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`.):
+    33: - else
+    34:     %p
+    35:         - @article.comments.each do |r|
+    36:             = User.find(r.user).name
+    37:             = r.body
+    38:             = link_to 'Cancella commento', [r.article, r], method: :delete,data: { confirm: "Are you sure?" }
+    39:     
+  
+app/views/articles/show.html.haml:36
+app/views/articles/show.html.haml:35
+Started GET "/articles/1" for 127.0.0.1 at 2022-01-11 17:39:51 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.haml:20
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.haml:25
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.haml:26
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:30
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.haml:35
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:36
+  Rendered articles/show.html.haml within layouts/application (Duration: 31.3ms | Allocations: 9506)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 55.2ms | Allocations: 14853)
+Completed 200 OK in 72ms (Views: 57.5ms | ActiveRecord: 2.6ms | Allocations: 18813)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2022-01-11 17:41:01 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.haml:20
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.haml:25
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.haml:26
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:30
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.haml:35
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:37
+  Rendered articles/show.html.haml within layouts/application (Duration: 30.3ms | Allocations: 9496)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.4ms | Allocations: 14829)
+Completed 200 OK in 56ms (Views: 44.8ms | ActiveRecord: 1.6ms | Allocations: 18666)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2022-01-11 17:41:17 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (3.5ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:23:in `show'
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.haml:20
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.haml:25
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.haml:26
+  [1m[36mComment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."article_id" = ? LIMIT ?[0m  [["article_id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:30
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.haml:35
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.haml:36
+  Rendered articles/show.html.haml within layouts/application (Duration: 31.3ms | Allocations: 9458)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 46.7ms | Allocations: 14754)
+Completed 200 OK in 65ms (Views: 48.5ms | ActiveRecord: 4.9ms | Allocations: 18562)
+
+
