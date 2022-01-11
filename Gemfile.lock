@@ -114,8 +114,10 @@ GEM
     faraday-patron (1.0.0)
     faraday-rack (1.0.0)
     ffi (1.15.4)
+    geocoder (1.7.2)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    gmaps4rails (2.1.2)
     haml (5.2.2)
       temple (>= 0.8.0)
       tilt
@@ -276,6 +278,8 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   devise
+  geocoder
+  gmaps4rails
   haml
   jbuilder (~> 2.7)
   listen (~> 3.3)

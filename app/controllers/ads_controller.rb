@@ -3,7 +3,7 @@ class AdsController < ApplicationController
 
     def index 
         @all = Ad.all
-        @favorites = current_user.favorites
+        
         @ads = Ad.includes(:user)
     end
 
@@ -39,28 +39,11 @@ class AdsController < ApplicationController
     def edit
         @ad = Ad.find(params[:id])
     end
-
+    
     def update
-        Ad.find(params[:id]).update(params[:ad].permit(:owner , :adtype, :title, :notice, :location)) 
+        Ad.find(params[:id]).update(params[:ad].permit(:adtype, :title, :notice))
         redirect_to ads_path
     end
-    
-    def favorite
-    	@ad = Ad.find(params[:id])
-		type = params[:type]
-		if type == "favorite"
-		  current_user.favorites << @ad
-		  redirect_to ads_path, notice: "You favorited #{@ad.title}"
-
-		elsif type == "unfavorite"
-		  current_user.favorites.delete(@ad)
-		  redirect_to ads_path, notice: "Unfavorited #{@ad.title}"
-
-		else
-		  # Type missing, nothing happens
-		  redirect_to ads_path, notice: 'Nothing happened.'
-		end
-	end
 
     private
     def ad_params

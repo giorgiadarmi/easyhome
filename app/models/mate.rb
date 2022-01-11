@@ -1,2 +1,0 @@
-class Mate < ApplicationRecord
-end

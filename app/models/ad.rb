@@ -1,5 +1,8 @@
 class Ad < ApplicationRecord
-	has_many :favorite_ads, dependent: :destroy
-    has_many :favorited_by, through: :favorite_ads, source: :user, dependent: :destroy
     belongs_to :user
+
+   
+    def google_map(center)
+        "https://maps.googleapis.com/maps/api/staticmap?center=#{center}&size=500x500&zoom=17&key=[YOUR_API_KEY]"
+    end
 end

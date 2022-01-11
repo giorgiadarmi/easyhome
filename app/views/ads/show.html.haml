@@ -20,9 +20,8 @@
     %li 
         Indirizzo:
         =@ad.location
+/= image_tag google(center: @ad.location)
 
-= link_to "favorite",   favorite_ad_path(@ad, type: "favorite"), method: :put 
-= link_to "unfavorite", favorite_ad_path(@ad, type: "unfavorite"), method: :put
 %br
 =link_to 'Modifica Annuncio', edit_ad_path(@ad)
 %br

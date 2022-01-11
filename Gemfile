@@ -29,7 +29,8 @@ gem 'devise'
 gem 'omniauth-google-oauth2'
 gem 'omniauth', '~>1.9.1'
 gem 'bootstrap', '~> 5.1.3'
-
+gem 'gmaps4rails'
+gem "geocoder"
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
