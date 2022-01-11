@@ -5,33 +5,31 @@
     %a{href: "http://gravatar.com/emails", target: "_blank"}
 %br
 %br
-%h3 My Ads:
+%h3{style: "text-align:left;"}  Annunci di #{@user.name} :
 
-- if @user.ads.empty?
+- if current_user.ads.empty?
     %p
         No Ads from this user...
 - else
     %p
-        - @user.ads.each do |ad|
-            %li 
-                Proprietario Annuncio:
-                = @ad.user
-            %br
-            %li 
+        - current_user.ads.each do |ad|
+            %li{style: "text-align:left;"}  
                 Tipo:
-                = @ad.adtype
+                = Ad.find(ad.id).adtype
             %br
-            %li 
+            %li{style: "text-align:left;"} 
                 Titolo:
-                = @ad.title
+                = Ad.find(ad.id).title
             %br
-            %li 
+            %li{style: "text-align:left;"} 
                 Descrizione:
-                =@ad.notice
+                = Ad.find(ad.id).notice
             %br
-            %li 
+            %li{style: "text-align:left;"} 
                 Indirizzo:
-                =@ad.location
+                = Ad.find(ad.id).location
+            %br
+            %br
             %br
 %br
 %br
