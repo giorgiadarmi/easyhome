@@ -4,22 +4,24 @@
 %table#ads
  %thead{style: "text-align:left;"} 
   %tr
-   %th Proprietario
-   %th Tipo
    %th Titolo
-   %th Notizia
+   %th Tipo
+   %th Descrizione
    %th Locazione
    %th Maggiori Info 
+   %th Proprietario
  %tbody 
   - @all.each do |ad|
    %tr
-    %td= ad.owner
     %td= ad.adtype
     %td= ad.title
     %td= ad.notice
     %td= ad.location
     %td= link_to "Dettagli", ad_path(ad)
+    %td= ad.owner
+  %br
 %br
 %br
+
 
    

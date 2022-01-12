@@ -39,9 +39,9 @@ class AdsController < ApplicationController
     def edit
         @ad = Ad.find(params[:id])
     end
-    
-    def update
-        Ad.find(params[:id]).update(params[:ad].permit(:adtype, :title, :notice))
+
+    def update  
+        Ad.find(params[:id]).update(params[:ad].permit(:owner , :adtype, :title, :notice, :location))
         redirect_to ads_path
     end
 
