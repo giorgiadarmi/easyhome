@@ -20,8 +20,10 @@
     %li 
         Indirizzo:
         =@ad.location
-/= image_tag google(center: @ad.location)
-%iframe{allowfullscreen: "", frameborder: "0", height: "300", src: "https://www.google.com/maps/embed/v1/place?key=AIzaSyB-eXpnc1yVaWm-gfNMP8TfGgc_qzXVMNo&q=@ad.location", style: "border:0", width: "300"}
+
+<iframe width="300" height="300" frameborder="0" style="border:0" 
+src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB-eXpnc1yVaWm-gfNMP8TfGgc_qzXVMNo&q=#{@ad.location}" allowfullscreen> 
+</iframe>
 %br
 =link_to 'Modifica Annuncio', edit_ad_path(@ad)
 %br
