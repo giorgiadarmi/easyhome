@@ -11,14 +11,14 @@
       justify-content: center;
     }   
     .topnav {
-    background-color: #333;
+    background-color: #b3d9ff;
     overflow: hidden;
     }
 
     /* Style the links inside the navigation bar */
     .topnav a {
       float: left;
-      color: #f2f2f2;
+      color: #002db3;
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
@@ -48,9 +48,9 @@
       <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
       <div class="topnav">
       	<%= link_to ads_path, class: "navbar-brand" do %>
-          <%= image_tag("favicon.png", width: 70) %> 
-  		<% end %>
-        <%= link_to "Home", ads_path, class: 'navbar-brand' %>
+            <%= image_tag("icona2.png", width: 50) %> 
+  	  	<% end %>
+        <%= link_to "Easy Home", ads_path, class: 'navbar-brand' %>
         <%= link_to "Profilo", current_user, class: 'navbar-brand' %>
         <%= link_to 'Servizi', services_path, class: 'navbar-brand' %>
         <%= link_to 'Edil News', articles_path, class: 'navbar-brand' %>
@@ -69,27 +69,9 @@
   			<p class="alert"><%= alert %></p>
   		</div>
   	<% end %>
-  	<nav class="navbar is-info">
+    <nav class="navbar is-info">
   		<div style="width:800px; margin:0 auto;" class="navbar-brand" >
-  		<%= link_to root_path, class: "navbar-item" do %>
-  			<h1 class="title is-5">Easy Home</h1>
-        <div class="center">
-          <%= image_tag("favicon.png", width: 100) %> 
-        </div>
-  		<% end %>
-      <nav class="navbar is-info">
-  		  <div class="navbar-brand">
-  		    <%= link_to articles_path, class: "navbar-item" do %>
-  			  <h1 class="title is-5">Edil News</h1>
-  		<% end %>
-    <nav class="navbar navbar-default">
-    <nav class="navbar navbar-default">
-        <div class="containter-fluid">
-          <div class="navbar-header">
-          </div>
-        </div>
-      </nav>
-    </nav>
+  	
     <%= yield %>
   </body>
 <% if user_signed_in? %>

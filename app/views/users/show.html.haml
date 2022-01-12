@@ -39,8 +39,8 @@
                 Indirizzo:
                 = Ad.find(ad.id).location
             
-            %br
-            %br
+            - @curr_ad = Ad.find(ad.id)
+            %iframe{allowfullscreen: "", frameborder: "0", height: "150", src: "https://www.google.com/maps/embed/v1/place?key=AIzaSyB-eXpnc1yVaWm-gfNMP8TfGgc_qzXVMNo&q=#{@curr_ad.location}", style: "border:0", width: "200"}
 %br
 %br
 %h3 Articoli che piacciono a #{@user.name}:

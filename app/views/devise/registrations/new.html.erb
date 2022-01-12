@@ -1,4 +1,17 @@
 <h2>Sign up</h2>
+ <style>
+    h1 {text-align: center;}
+    p {text-align: left;}
+    div {text-align: center;}
+  </style>
+	<nav class="navbar is-info">
+  		<div style="width:800px; margin:0 auto;" class="navbar-brand" >
+  		<%= link_to root_path, class: "navbar-item" do %>
+  			<h1 class="title is-5">Easy Home</h1>
+        <div class="center">
+          <%= image_tag("favicon.png", width: 200) %> 
+        </div>
+  		<% end %>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -21,15 +34,16 @@
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
-
+  <br>
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
-
+  <br>
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
+<br>
 
 <%= render "devise/shared/links" %>

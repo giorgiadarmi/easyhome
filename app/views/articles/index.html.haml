@@ -1,4 +1,8 @@
-%h1{style: "text-align:left;"} Edilnews 
+%h1
+= link_to articles_path, class: "navbar-item" do
+ %h1.title.is-5 Edil News
+ .center
+  = image_tag("icona2.png", width: 150)
 %table#articles
  %thead
   %tr
