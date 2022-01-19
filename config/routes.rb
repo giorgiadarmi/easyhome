@@ -16,17 +16,18 @@ Rails.application.routes.draw do
   resources :ads
   resources :users
   resources :services
-  
+
+  resources :ads do
+    resources :favorites
+  end
   resources :articles do
   	resources :comments, only: [:new, :create, :destroy]
-  end
-  
-  resources :ads do
-  	put :favorite, on: :member
   end
 
   resources :articles do
     resources :likes
   end
+
+
 
 end

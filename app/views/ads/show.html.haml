@@ -2,7 +2,16 @@
 %br
 %br
 %ul#details
-    %p{style: "text-align:left;"}   
+    %p{style: "text-align:right;"}   
+        - pre_favorite = @ad.favorites.find { |favorite| favorite.user_id == current_user.id}
+        - if pre_favorite
+            %br= link_to 'Rimuovi dai preferiti', ad_favorite_path(@ad, pre_favorite), method: :delete
+        - else
+            %b Aggiungi ai preferiti 
+            = link_to ad_favorites_path(@ad), method: :post do
+                = image_tag("favorite.png", width: 40)
+    %p{style: "text-align:left;"} 
+        %br
         %b Tipo:
         = @ad.adtype
         %br
@@ -17,6 +26,7 @@
         %br
         %b Indirizzo:
         = @ad.location
+        
 
 <iframe width="500" height="300" frameborder="0" style="border:0" 
 src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB-eXpnc1yVaWm-gfNMP8TfGgc_qzXVMNo&q=#{@ad.location}" allowfullscreen> 

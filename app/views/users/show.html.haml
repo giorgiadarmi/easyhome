@@ -36,6 +36,35 @@
                 =link_to "Dettagli", ad_path(ad)
             %br
 %br
+%h3 Annunci Salvati:
+- if @user.favorites.empty?
+    %p No ads saved as favorite
+- else
+    %br
+    - @user.favorites.each do |f|
+        - pre_favorite = Ad.find(f.ad_id).favorites.find { |favorite| favorite.user_id == current_user.id}
+        
+        .center  
+            %br= link_to 'Rimuovi dai preferiti', ad_favorite_path(Ad.find(f.ad_id), pre_favorite), method: :delete
+        .right
+            - @fav_ad = Ad.find(f.ad_id)
+            %iframe{allowfullscreen: "", frameborder: "0", height: "150", src: "https://www.google.com/maps/embed/v1/place?key=AIzaSyB-eXpnc1yVaWm-gfNMP8TfGgc_qzXVMNo&q=#{@fav_ad.location}", style: "border:10", width: "260"}
+        %p{style: "text-align:left;"}  
+            %b Tipo:
+            = Ad.find(f.ad_id).adtype
+        %p{style: "text-align:left;"} 
+            %b Titolo:
+            = Ad.find(f.ad_id).title        
+        %p{style: "text-align:left;"} 
+            %b Descrizione:
+            = Ad.find(f.ad_id).notice        
+        %p{style: "text-align:left;"} 
+            %b Indirizzo:
+            = Ad.find(f.ad_id).location
+        %br
+            =link_to "Dettagli", ad_path(f.ad_id)
+        %br
+%br
 %h3 Articoli che piacciono a #{@user.name}:
 - if @user.likes.empty?
     %p No ads saved as favorite

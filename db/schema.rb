@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_19_140701) do
+ActiveRecord::Schema.define(version: 2022_01_19_183800) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -73,6 +73,15 @@ ActiveRecord::Schema.define(version: 2022_01_19_140701) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "favorites", force: :cascade do |t|
+    t.integer "ad_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["ad_id"], name: "index_favorites_on_ad_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
   create_table "likes", force: :cascade do |t|
     t.integer "article_id", null: false
     t.integer "user_id", null: false
@@ -124,6 +133,8 @@ ActiveRecord::Schema.define(version: 2022_01_19_140701) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "ads", "users"
   add_foreign_key "comments", "articles"
+  add_foreign_key "favorites", "ads"
+  add_foreign_key "favorites", "users"
   add_foreign_key "likes", "articles"
   add_foreign_key "likes", "users"
   add_foreign_key "reviews", "mates", column: "mates_id"

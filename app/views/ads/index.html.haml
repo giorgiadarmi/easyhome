@@ -15,7 +15,6 @@
    - if User.find(ad.user_id).avatar.attached?
     = image_tag User.find(ad.user_id).avatar, :size => "60x60"
    = Ad.find(ad.id).owner
-
   %p{style: "text-align:left;"}   
    %b Tipo:
    = Ad.find(ad.id).adtype
@@ -29,6 +28,7 @@
    %b Indirizzo:
    = Ad.find(ad.id).location
    =link_to "Dettagli", ad_path(ad)
+   %br
    %br
 %br
 %br

@@ -4,4 +4,5 @@ class Ad < ApplicationRecord
     def address
         [street, city, state, country].compact.join(', ')
     end
+    has_many :favorites
 end
