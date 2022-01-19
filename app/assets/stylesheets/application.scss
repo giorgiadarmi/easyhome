@@ -18,7 +18,7 @@
  img.profile-photo-lg{ height: 80px; width: 80px; border-radius: 50%; }
  h1 {text-align: center; font-size: 18px;}
  p {text-align: left; font-size: 16px;}
- div {text-align: left; font-size: 18px;}
+ div {text-align: left; font-size: 16px;}
  .center {
    display: flex;
    justify-content: center;
@@ -55,3 +55,11 @@
    background-color: #04AA6D;
    color: white;
  }
+
+.table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+.th, td {
+  background-color: #96D4D4;
+}

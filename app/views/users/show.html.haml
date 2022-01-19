@@ -1,3 +1,4 @@
+
 %h1 Profilo: #{@user.name}
 .center
     - if current_user.avatar.attached?
@@ -6,64 +7,68 @@
     = link_to "Settings", edit_user_path(current_user)
 %br
 %br
-%h3{style: "text-align:left;"}  Annunci di #{@user.name} :
+%table#ads
+    %thead 
+        %tr
+            %th Annunci di #{@user.name} :
+            %th Annunci Preferiti:
+    %tbody 
+        %tr
+            %td{style: "width:2000px"}
+                - if current_user.ads.empty?
+                    %p
+                        No Ads from this user...
+                - else
+                    %p
+                        - current_user.ads.each do |ad|
+                            .right
+                                - @curr_ad = Ad.find(ad.id)
+                                %iframe{allowfullscreen: "", frameborder: "0", height: "200", src: "https://www.google.com/maps/embed/v1/place?key=AIzaSyB-eXpnc1yVaWm-gfNMP8TfGgc_qzXVMNo&q=#{@curr_ad.location}", style: "border:10", width: "150"}
+                            %p{style: "text-align:left;"}  
+                                %b Tipo:
+                                = Ad.find(ad.id).adtype
+                        
+                            %p{style: "text-align:left;"} 
+                                %b Titolo:
+                                = Ad.find(ad.id).title
+                            %p{style: "text-align:left;"} 
+                                = Ad.find(ad.id).notice
 
-- if current_user.ads.empty?
-    %p
-        No Ads from this user...
-- else
-    %p
-        - current_user.ads.each do |ad|
-            .right
-                - @curr_ad = Ad.find(ad.id)
-                %iframe{allowfullscreen: "", frameborder: "0", height: "150", src: "https://www.google.com/maps/embed/v1/place?key=AIzaSyB-eXpnc1yVaWm-gfNMP8TfGgc_qzXVMNo&q=#{@curr_ad.location}", style: "border:10", width: "260"}
-            %p{style: "text-align:left;"}  
-                %b Tipo:
-                = Ad.find(ad.id).adtype
-        
-            %p{style: "text-align:left;"} 
-                %b Titolo:
-                = Ad.find(ad.id).title
-            
-            %p{style: "text-align:left;"} 
-                %b Descrizione:
-                = Ad.find(ad.id).notice
-            
-            %p{style: "text-align:left;"} 
-                %b Indirizzo:
-                = Ad.find(ad.id).location
-            %br
-                =link_to "Dettagli", ad_path(ad)
-            %br
-%br
-%h3 Annunci Salvati:
-- if @user.favorites.empty?
-    %p No ads saved as favorite
-- else
-    %br
-    - @user.favorites.each do |f|
-        - pre_favorite = Ad.find(f.ad_id).favorites.find { |favorite| favorite.user_id == current_user.id}
-        
-        .center  
-            %br= link_to 'Rimuovi dai preferiti', ad_favorite_path(Ad.find(f.ad_id), pre_favorite), method: :delete
-        .right
-            - @fav_ad = Ad.find(f.ad_id)
-            %iframe{allowfullscreen: "", frameborder: "0", height: "150", src: "https://www.google.com/maps/embed/v1/place?key=AIzaSyB-eXpnc1yVaWm-gfNMP8TfGgc_qzXVMNo&q=#{@fav_ad.location}", style: "border:10", width: "260"}
-        %p{style: "text-align:left;"}  
-            %b Tipo:
-            = Ad.find(f.ad_id).adtype
-        %p{style: "text-align:left;"} 
-            %b Titolo:
-            = Ad.find(f.ad_id).title        
-        %p{style: "text-align:left;"} 
-            %b Descrizione:
-            = Ad.find(f.ad_id).notice        
-        %p{style: "text-align:left;"} 
-            %b Indirizzo:
-            = Ad.find(f.ad_id).location
-        %br
-            =link_to "Dettagli", ad_path(f.ad_id)
-        %br
+                            =link_to "Dettagli", ad_path(ad)
+                            %br
+                            %br
+                            %br
+                            %br
+                            %br
+            %td{style: "width:50%"}
+                - if @user.favorites.empty?
+                    %p No ads saved as favorite
+                - else
+                    %br
+                    - @user.favorites.each do |f|
+                        - pre_favorite = Ad.find(f.ad_id).favorites.find { |favorite| favorite.user_id == current_user.id}
+                        
+                        .center  
+                            %br= link_to 'Rimuovi dai preferiti', ad_favorite_path(Ad.find(f.ad_id), pre_favorite), method: :delete
+                        .right
+                            - @fav_ad = Ad.find(f.ad_id)
+                            %iframe{allowfullscreen: "", frameborder: "0", height: "200", src: "https://www.google.com/maps/embed/v1/place?key=AIzaSyB-eXpnc1yVaWm-gfNMP8TfGgc_qzXVMNo&q=#{@fav_ad.location}", style: "border:10", width: "150"}
+                        %p{style: "text-align:left;"}  
+                            %b Tipo:
+                            = Ad.find(f.ad_id).adtype
+                        %p{style: "text-align:left;"} 
+                            %b Titolo:
+                            = Ad.find(f.ad_id).title
+                        %p{style: "text-align:left;"} 
+                            = Ad.find(f.ad_id).notice              
+                        %p{style: "text-align:left;"} 
+                            %b Di:
+                            = Ad.find(f.ad_id).owner
+                        =link_to "Dettagli", ad_path(f.ad_id)
+                        %br
+                        %br
+                        %br
+                        %br
 %br
 %h3 Articoli che piacciono a #{@user.name}:
 - if @user.likes.empty?
@@ -89,6 +94,7 @@
         - pre_like = Article.find(c.article_id).likes.find { |like| like.user_id == current_user.id}
         = link_to article_like_path(Article.find(c.article_id), pre_like), method: :delete do
             = image_tag("unlike.jpg", width: 40)
+        %br
         =link_to "Dettagli", article_path(Article.find(c.article_id))
         %br
         %br
