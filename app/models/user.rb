@@ -20,6 +20,7 @@ class User < ApplicationRecord
   has_many :articles
   has_many :liked_articles, :through => :likes, :source => :article
   has_many :likes, dependent: :destroy
-  
+  has_one_attached :avatar
+
   
 end

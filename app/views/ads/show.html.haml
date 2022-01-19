@@ -1,32 +1,30 @@
 %h1 Dettagli: #{@ad.title}
-
+%br
+%br
 %ul#details
-    %li 
-        Proprietario Annuncio:
-        = @ad.owner
-    %br
-    %li 
-        Tipo:
+    %p{style: "text-align:left;"}   
+        %b Tipo:
         = @ad.adtype
-    %br
-    %li 
-        Titolo:
+        %br
+        %br
+        %b Titolo:
         = @ad.title
-    %br
-    %li 
-        Descrizione:
-        =@ad.notice
-    %br
-    %li 
-        Indirizzo:
-        =@ad.location
+        %br
+        %br
+        %b Descrizione:
+        = @ad.notice
+        %br
+        %br
+        %b Indirizzo:
+        = @ad.location
 
-<iframe width="300" height="300" frameborder="0" style="border:0" 
+<iframe width="500" height="300" frameborder="0" style="border:0" 
 src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB-eXpnc1yVaWm-gfNMP8TfGgc_qzXVMNo&q=#{@ad.location}" allowfullscreen> 
 </iframe>
 %br
-=link_to 'Modifica Annuncio', edit_ad_path(@ad)
 %br
+=link_to 'Modifica Annuncio', edit_ad_path(@ad)
+
 #{link_to 'Cancella Annuncio', ad_path(@ad), :method => :delete,data: { confirm: "Are you sure?" }}
 %br
 

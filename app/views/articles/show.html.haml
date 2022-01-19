@@ -1,6 +1,7 @@
 %h1 Dettagli riguardo l'articolo: #{@article.title}
 %br
-#{link_to '< Torna a edilnews', articles_path}
+#{link_to '< Torna a Edil News', articles_path}
+%br
 %br
 %ul#details 
     %li 
@@ -17,17 +18,20 @@
     %li
         Autore articolo:
         = @article.author
-    
-    	
+
+    = @article.likes.count
+    = (@article.likes.count) == 1 ? 'Like' : 'Likes'	
     - pre_like = @article.likes.find { |like| like.user_id == current_user.id}
     - if pre_like
-        = button_to 'Unlike', article_like_path(@article, pre_like), method: :delete
-    - else
-        = button_to 'Like', article_likes_path(@article), method: :post
-    = @article.likes.count
-    = (@article.likes.count) == 1 ? 'Like' : 'Likes'
 
-%h3 Commenti:
+        = link_to article_like_path(@article, pre_like), method: :delete do
+            = image_tag("unlike.jpg", width: 40)
+    - else
+        = link_to article_likes_path(@article), method: :post do
+            = image_tag("like.png", width: 40)
+   
+
+%h5 Commenti:
 
 - if @article.comments.empty?
     %p
@@ -40,10 +44,13 @@
 - else
     %p
         - @article.comments.each do |r|
+            - if current_user.avatar.attached?
+                = image_tag current_user.avatar, :size => "40x40"
             %b= User.find(r.user_id).name
             = r.body
-            = link_to 'Cancella commento', [r.article, r], method: :delete,data: { confirm: "Are you sure?" }
-    
+            = link_to 'X', [r.article, r], method: :delete,data: { confirm: "Cancellare Commento?" }
+            
+            %br
             %br
     %p
     = form_with model: [ @article, @article.comments.build ] do |form|
@@ -52,7 +59,8 @@
         = form.submit "Pubblica"
 
 
-
+%br
+%br
 = link_to "Cancella articolo", article_path(@article), method: :delete, data: { confirm: "Are you sure?" }
 #{link_to 'Modifica Articolo', edit_article_path(@article)}
 %br

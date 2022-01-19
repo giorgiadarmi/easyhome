@@ -1,18 +1,9 @@
-:css
-    h1 {text-align: center;}
-    p {text-align: left;}
-    div {text-align: left;}
-    .center {
-        display: flex;
-        justify-content: center;
-    }
 %h1 Profilo: #{@user.name}
 .center
-    .gravatar_edit
-        = gravatar_for @user
-        %a{href: "http://gravatar.com/emails", target: "_blank"}
-%br
-= link_to "Settings", edit_user_path(current_user)
+    - if current_user.avatar.attached?
+        = image_tag current_user.avatar, :size => "200x200"
+.right
+    = link_to "Settings", edit_user_path(current_user)
 %br
 %br
 %h3{style: "text-align:left;"}  Annunci di #{@user.name} :
@@ -23,25 +14,27 @@
 - else
     %p
         - current_user.ads.each do |ad|
-            %li{style: "text-align:left;"}  
-                Tipo:
+            .right
+                - @curr_ad = Ad.find(ad.id)
+                %iframe{allowfullscreen: "", frameborder: "0", height: "150", src: "https://www.google.com/maps/embed/v1/place?key=AIzaSyB-eXpnc1yVaWm-gfNMP8TfGgc_qzXVMNo&q=#{@curr_ad.location}", style: "border:10", width: "260"}
+            %p{style: "text-align:left;"}  
+                %b Tipo:
                 = Ad.find(ad.id).adtype
         
-            %li{style: "text-align:left;"} 
-                Titolo:
+            %p{style: "text-align:left;"} 
+                %b Titolo:
                 = Ad.find(ad.id).title
             
-            %li{style: "text-align:left;"} 
-                Descrizione:
+            %p{style: "text-align:left;"} 
+                %b Descrizione:
                 = Ad.find(ad.id).notice
             
-            %li{style: "text-align:left;"} 
-                Indirizzo:
+            %p{style: "text-align:left;"} 
+                %b Indirizzo:
                 = Ad.find(ad.id).location
-            
-            - @curr_ad = Ad.find(ad.id)
-            %iframe{allowfullscreen: "", frameborder: "0", height: "150", src: "https://www.google.com/maps/embed/v1/place?key=AIzaSyB-eXpnc1yVaWm-gfNMP8TfGgc_qzXVMNo&q=#{@curr_ad.location}", style: "border:0", width: "200"}
-%br
+            %br
+                =link_to "Dettagli", ad_path(ad)
+            %br
 %br
 %h3 Articoli che piacciono a #{@user.name}:
 - if @user.likes.empty?
@@ -64,6 +57,10 @@
             = Article.find(c.article_id).author
         = Article.find(c.article_id).likes.count
         = (Article.find(c.article_id).likes.count) == 1 ? 'Like' : 'Likes'
+        - pre_like = Article.find(c.article_id).likes.find { |like| like.user_id == current_user.id}
+        = link_to article_like_path(Article.find(c.article_id), pre_like), method: :delete do
+            = image_tag("unlike.jpg", width: 40)
+        =link_to "Dettagli", article_path(Article.find(c.article_id))
         %br
         %br
         

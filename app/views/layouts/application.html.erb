@@ -2,41 +2,6 @@
 <html>
   <head>
   <html>
-    <style>
-    h1 {text-align: center;}
-    p {text-align: left;}
-    div {text-align: left;}
-    .center {
-      display: flex;
-      justify-content: center;
-    }   
-    .topnav {
-    background-color: #b3d9ff;
-    overflow: hidden;
-    }
-
-    /* Style the links inside the navigation bar */
-    .topnav a {
-      float: left;
-      color: #002db3;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 20px;
-    }
-
-    /* Change the color of links on hover */
-    .topnav a:hover {
-      background-color: #ddd;
-      color: black;
-    }
-
-    /* Add a color to the active/current link */
-    .topnav a.active {
-      background-color: #04AA6D;
-      color: white;
-    }
-    </style>
     </head>
     <body>
       <title>Easyhome</title>
@@ -47,8 +12,8 @@
       <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
       <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
       <div class="topnav">
-      	<%= link_to ads_path, class: "navbar-brand" do %>
-            <%= image_tag("icona2.png", width: 50) %> 
+      	<%= link_to ads_path, class: 'navbar-brand' do %>
+            <%= image_tag("logobianco.png", width: 40) %> 
   	  	<% end %>
         <%= link_to "Easy Home", ads_path, class: 'navbar-brand' %>
         <%= link_to "Profilo", current_user, class: 'navbar-brand' %>
@@ -70,7 +35,7 @@
   		</div>
   	<% end %>
     <nav class="navbar is-info">
-  		<div style="width:800px; margin:0 auto;" class="navbar-brand" >
+  		<div style="width:1000px; margin:0 auto;" class="navbar-brand" >
   	
     <%= yield %>
   </body>

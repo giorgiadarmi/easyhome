@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
     @comment=Article.find(params[:article_id]).comments.find(params[:id])
     
     if @comment.update(comment_params)
-      redirect_to @comment.movie
+      redirect_to @comment.article
     else
       render :edit
     end

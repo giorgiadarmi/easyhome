@@ -2,28 +2,34 @@
 = link_to root_path, class: "navbar-item" do
  %h1.title.is-5 Easy Home
  .center
-  = image_tag("icona2.png", width: 150)
-%li #{link_to 'Crea un nuovo Annuncio', new_ad_path}
+  = image_tag("icona2.png", width: 150) 
+.center
+ #{link_to 'Crea un nuovo Annuncio', new_ad_path}
 %br
 %table#ads
- %thead{style: "text-align:left;"} 
-  %tr
-   %th Titolo
-   %th Tipo
-   %th Descrizione
-   %th Locazione
-   %th Maggiori Info 
-   %th Proprietario
- %tbody 
-  - @all.each do |ad|
-   %tr
-    %td= ad.adtype
-    %td= ad.title
-    %td= ad.notice
-    %td= ad.location
-    %td= link_to "Dettagli", ad_path(ad)
-    %td= ad.owner
-  %br
+ - @all.each do |ad|
+  .right
+   - @curr_ad = Ad.find(ad.id)
+   %iframe{allowfullscreen: "", frameborder: "0", height: "150", src: "https://www.google.com/maps/embed/v1/place?key=AIzaSyB-eXpnc1yVaWm-gfNMP8TfGgc_qzXVMNo&q=#{@curr_ad.location}", style: "border:10", width: "260"}
+  %p{style: "text-align:left;"}  
+   - if User.find(ad.user_id).avatar.attached?
+    = image_tag User.find(ad.user_id).avatar, :size => "60x60"
+   = Ad.find(ad.id).owner
+
+  %p{style: "text-align:left;"}   
+   %b Tipo:
+   = Ad.find(ad.id).adtype
+   %br
+   %b Titolo:
+   = Ad.find(ad.id).title
+   %br
+   %b Descrizione:
+   = Ad.find(ad.id).notice
+   %br
+   %b Indirizzo:
+   = Ad.find(ad.id).location
+   =link_to "Dettagli", ad_path(ad)
+   %br
 %br
 %br
 
