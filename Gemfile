@@ -33,6 +33,8 @@ gem 'gmaps4rails'
 gem "geocoder"
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'mail_form'
+gem 'canard', '~> 0.6.2.pre'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

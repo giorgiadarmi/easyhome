@@ -19,8 +19,8 @@
         <%= link_to "Profilo", current_user, class: 'navbar-brand' %>
         <%= link_to 'Servizi', services_path, class: 'navbar-brand' %>
         <%= link_to 'Edil News', articles_path, class: 'navbar-brand' %>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+        <%= link_to 'Contatti', contacts_path, class: 'navbar-brand' %>
+        <%= link_to 'About Us', contacts_show_path , class: 'navbar-brand' %>
       </div>
   </head>
   <body>

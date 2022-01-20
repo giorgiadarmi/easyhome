@@ -1,0 +1,29 @@
+%h1 Contatti
+
+%h3 Scrivici se riscontri qualche problema:
+%br
+%br
+=form_tag contacts_path, :method => :post do
+    = label :contact, :name, 'Nome: '
+    %br
+    = text_field :contact, :name
+    %br
+    %br
+    = label :contact, :email, 'Email: '
+    %br
+    = text_field :contact, :email
+    %br
+    %br
+    = label :contact, :message, 'Testo:'
+    %br
+    = text_area :contact, :message
+    %br
+    =submit_tag "Invia"
+    %br
+    %br
+    =link_to "About Us", contact_path(current_user)
+    %br
+    %br
+    %h1 Send your email to: easyhome0102@gmail.com
+    %br
+    %br

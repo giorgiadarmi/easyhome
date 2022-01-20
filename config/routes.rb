@@ -5,9 +5,10 @@ Rails.application.routes.draw do
   get 'comments/destroy'
   get 'users/favorites'
 
-
+  
   root 'ads#index'
   post '/articles/:id' => 'articles#create'
+  get '/contacts/show' =>'contacts#show'
   post '/ads/:id' => 'articles#create'
   get '/search', to: 'articles#search'
   get '/' => 'users#show'
@@ -16,7 +17,8 @@ Rails.application.routes.draw do
   resources :ads
   resources :users
   resources :services
-
+  resources :contacts
+  resources :contacts, only: [:create]
   resources :ads do
     resources :favorites
   end
