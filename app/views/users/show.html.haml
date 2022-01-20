@@ -98,6 +98,8 @@
         =link_to "Dettagli", article_path(Article.find(c.article_id))
         %br
         %br
-        
-
+.right
+    - if @user.is_admin?
+        %h1= link_to "Gestione Admin", admin_view_path
+%br
 %br

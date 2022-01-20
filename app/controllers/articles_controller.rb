@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-	
+
 	#CREATE 1/2
 	def new
 

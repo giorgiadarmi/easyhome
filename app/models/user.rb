@@ -1,10 +1,19 @@
 class User < ApplicationRecord
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, 
          :omniauthable, omniauth_providers: [:google_oauth2]
 			  
+  acts_as_user :roles => [:admin]
+  has_many :favorites
+  has_many :comments
+  has_many :ads, dependent: :destroy
+  has_many :articles
+  has_many :liked_articles, :through => :likes, :source => :article
+  has_many :likes, dependent: :destroy
+  has_one_attached :avatar
 
   def self.from_omniauth(access_token)
           data = access_token.info
@@ -14,14 +23,43 @@ class User < ApplicationRecord
           end
       user
   end
-  has_many :favorites
-  has_many :comments
-  has_many :ads, dependent: :destroy
-  has_many :articles
-  has_many :liked_articles, :through => :likes, :source => :article
-  has_many :likes, dependent: :destroy
-  has_one_attached :avatar
- 
+
+  def is_admin?
+    return (self.roles_mask & 2) == 2
+  end
+
+ def set_admin
+    self.roles_mask = (self.roles_mask | 2) 
+    self.save
+  end
+
+  def unset_admin
+    self.roles_mask = (self.roles_mask & 1) 
+    self.save
+  end
+
+  def is_banned?
+    return self.roles_mask  == 0
+  end
+
+
+  def set_role
+  	self.roles_mask = (self.roles_mask | 1) 
+  	self.save
+  end
+
+
+  def is_banned?
+    return self.roles_mask  == 1
+  end
+  
+  def unset_user
+  	self.roles_mask = 0 
+  	self.save
+  end
+
+
+
 
   
 end
