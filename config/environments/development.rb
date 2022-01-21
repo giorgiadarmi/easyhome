@@ -45,7 +45,7 @@ Rails.application.configure do
     authentication: 'plain',
     enable_starttls_auto: true,
     user_name: ENV['easyhome0102@gmail.com'],
-    password: ENV['EasyHome.0102']
+    password: ENV['GMAIL_PASSWORD']
 }
   config.action_mailer.perform_caching = false
 

@@ -36,6 +36,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'mail_form'
 gem 'canard', '~> 0.6.2.pre'
 gem 'cancancan'
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

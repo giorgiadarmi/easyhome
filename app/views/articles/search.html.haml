@@ -3,20 +3,20 @@
     %br 
     %br
     %br
-        Titolo:
+        %b Titolo:
         = result.title
     %br
-        Release date:
+        %b Release date:
         = result.release_date&.strftime("%B %d %Y")      
     %br
-        Testo articolo:
+        %b Testo articolo:
         = result.text
     %br
-        Autore articolo:
+        %b Autore articolo:
         = result.author
 
 %br
 %br
-=link_to 'Edilnews', articles_path
+=link_to '< Torna a Edil News', articles_path
 %br
 %br 

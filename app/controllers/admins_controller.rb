@@ -15,7 +15,7 @@ class AdminsController < ActionController::Base
 
 	def unban_user
 		u = User.find(params[:id])
-		u.set_role
+		u.set_user
 		redirect_to :admin_view
 	end
 

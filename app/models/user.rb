@@ -28,7 +28,7 @@ class User < ApplicationRecord
     return (self.roles_mask & 2) == 2
   end
 
- def set_admin
+  def set_admin
     self.roles_mask = (self.roles_mask | 2) 
     self.save
   end
@@ -42,24 +42,18 @@ class User < ApplicationRecord
     return self.roles_mask  == 0
   end
 
+  def is_user?
+    return (self.roles_mask & 1) == 1
+  end
 
-  def set_role
+  def set_user
   	self.roles_mask = (self.roles_mask | 1) 
   	self.save
   end
 
-
-  def is_banned?
-    return self.roles_mask  == 1
-  end
-  
   def unset_user
   	self.roles_mask = 0 
   	self.save
   end
 
-
-
-
-  
 end

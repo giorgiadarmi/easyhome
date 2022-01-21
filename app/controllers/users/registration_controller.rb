@@ -3,7 +3,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
  
      def assign_role
          if not current_user.nil?
-               current_user.set_role
+               current_user.set_user
            end
      end
  

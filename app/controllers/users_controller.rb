@@ -14,6 +14,7 @@ class UsersController < ApplicationController
     end
   
     def create
+      current_user.set_user
       @user = User.new(user_params)
       if @user.save
         redirect_to @user
@@ -22,18 +23,15 @@ class UsersController < ApplicationController
       end
     end
   
-   def edit
+    def edit
       @user= User.find(params[:id])
     end
   
-  def destroy
-      @user= User.find(params[:id])
-      @user.destroy
-  
-      redirect_to root_path
+    def destroy
+      User.find(params[:id]).destroy
     end
   
-   def update
+    def update
       @user = User.find(params[:id])
       if @user.update(user_params)
         redirect_to @user

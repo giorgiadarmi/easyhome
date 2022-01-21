@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
         @current_user[0][:id]
         session[:user]=@current_user[0][:name]
         redirect_to movies_path
-end
+    end
     end
 
     def login_attempt

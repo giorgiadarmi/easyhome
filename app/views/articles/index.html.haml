@@ -2,7 +2,12 @@
  %h1.title.is-5 Edil News
  .center
   = image_tag("icona2.png", width: 150)
-%br 
+%br
+%h4 Ricerca per titolo
+= form_tag search_path, :method => :get do
+ = text_field_tag(:search, params[:search], placeholder: "Type", class: "form-control")
+ = submit_tag 'Cerca articolo', :class => 'btn btn-info glyphicon glyphicon-search' , :title => nil
+%br
 %br
 %table#articles{style: "text-align:center;"}  
  %thead
@@ -28,11 +33,6 @@
        = image_tag("like.png", width: 40)
     %td{style: "text-align:left"}=link_to "Dettagli", article_path(article)
 %br
-%h4 Ricerca per titolo
-= form_tag search_path, :method => :get do
- = text_field_tag(:search, params[:search], placeholder: "Type", class: "form-control")
- = submit_tag 'Cerca articolo', :class => 'btn btn-info glyphicon glyphicon-search' , :title => nil
-%br
 %nav.navbar.navbar-default
  .containter-fluid
   .navbar-header
@@ -41,4 +41,6 @@
     %span.icon-bar
     %span.icon-bar
     %span.icon-bar
-    = link_to 'Crea Articolo', new_article_path, class: 'navbar-brand'
+    = link_to 'Crea Articolo', new_article_path, class: 'navbar-brand' 
+%br
+
