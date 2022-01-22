@@ -5,5 +5,6 @@ Feature: Delete an Article
     Scenario: Admin can delete all recipes
 		Given I am authenticated
 	    Given I am on edilnews page
-        And I click on link "Dettagli"
-        And I click on link "Cancella articolo"
+        Given Article "TEST_MOVIE" with Autore articolo "TEST_AUTHOR" is there
+        When I click on "Dettagli" for Article "TEST_MOVIE" with Autore articolo "TEST_AUTHOR"
+        Then I should see Article "TEST_MOVIE" with Autore articolo "TEST_AUTHOR"

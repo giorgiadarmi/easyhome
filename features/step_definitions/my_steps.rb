@@ -67,8 +67,22 @@ Then('I should see the favorites list') do
   #pending # Write code here that turns the phrase above into concrete actions
 end
 
-When('I click on link {string}') do |string|
-	page.click_link(string)
+Given(/^Article "(.*?)" with Autore articolo "(.*?)" is there$/) do |arg1,arg2|
+  a = Article.new( title: arg1, author: arg2)
+  a.save
+end
+
+When(/^I click on "Dettagli for Article "(.*?)" with Autore articolo "(.*?)"$/) do |string,arg1,arg2|
+	a = Article.find( title: arg1, author: arg2)
+  	a.save
+	click_link(string)
+end 
+
+Then(/^I should see Article "(.*?)" with Autore articolo "(.*?)"$/) do |arg1,arg2|
+	a = Article.find( title: arg1, author: arg2)
+  	a.save
+	current_path = URI.parse(current_url).path
+    current_path == '/articles/show'
 end
 
 Then ('I should not see the ad') do |args1|
