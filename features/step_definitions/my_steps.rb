@@ -50,17 +50,31 @@ Given('I am on edilnews page') do
     #pending # Write code here that turns the phrase above into concrete actions
 end
 
+Given('I am on my profile') do
+    visit '/' 
+    #pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then('I should be on my profile') do
+    current_path = URI.parse(current_url).path
+    current_path == '/users'
+    #pending # Write code here that turns the phrase above into concrete actions
+end
+
 Then('I should see the favorites list') do
   	current_path = URI.parse(current_url).path
     current_path == '/users/show'
   #pending # Write code here that turns the phrase above into concrete actions
 end
 
-Then(/^I should see table heading "(.*?)"$/) do |arg1|
-   expect(page).to have_selector("th", text:arg1)
+When('I click on link {string}') do |string|
+	page.click_link(string)
 end
-  
-  
+
+Then ('I should not see the ad') do |args1|
+    expect(page).not_to have_link(text:/\A#{args1}\Z/)
+    #save_and_open_page
+end
 
   
   
