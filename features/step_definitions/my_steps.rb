@@ -28,7 +28,7 @@ When('I fill in {string} with {string}') do |field, value|
 	fill_in(field, :with => value)
     #pending # Write code here that turns the phrase above into concrete actions
 end
-  
+
 When('I press {string}') do |string|
     click_button(string)
     #pending # Write code here that turns the phrase above into concrete actions
@@ -44,10 +44,21 @@ Then('I should see {string}') do |string|
     assert page.has_content?(string)
     #pending # Write code here that turns the phrase above into concrete actions
 end
-  
-  
-  
-  
+
+Given('I am on edilnews page') do
+    visit 'articles' 
+    #pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then('I should see the favorites list') do
+  	current_path = URI.parse(current_url).path
+    current_path == '/users/show'
+  #pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I should see table heading "(.*?)"$/) do |arg1|
+   expect(page).to have_selector("th", text:arg1)
+end
   
   
 
