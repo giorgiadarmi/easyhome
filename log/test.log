@@ -466,3 +466,598 @@ Processing by Devise::SessionsController#new as HTML
   Rendered layout layouts/application.html.erb (Duration: 11239.7ms | Allocations: 61825)
 Completed 200 OK in 11263ms (Views: 11246.2ms | ActiveRecord: 0.7ms | Allocations: 70558)
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/ads" for 127.0.0.1 at 2022-01-22 13:08:38 +0100
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 18ms (ActiveRecord: 0.0ms | Allocations: 2442)
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:08:39 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.0ms | Allocations: 787)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12316.9ms | Allocations: 58323)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/giorgia/easyhome/easyhome/public/packs-test
+[Webpacker] warning ../../package.json: No license field
+
+[Webpacker] Hash: 136125f11e5621d168a5
+Version: webpack 4.46.0
+Time: 4147ms
+Built at: 22/01/2022 13:08:59
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-6a3d7ee8842fc9a8a864.js    125 KiB  application  [emitted] [immutable]  application
+js/application-6a3d7ee8842fc9a8a864.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  384 bytes               [emitted]              
+Entrypoint application = js/application-6a3d7ee8842fc9a8a864.js js/application-6a3d7ee8842fc9a8a864.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 19409.2ms | Allocations: 67121)
+Completed 200 OK in 19498ms (Views: 19430.5ms | ActiveRecord: 0.6ms | Allocations: 75865)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/ads" for 127.0.0.1 at 2022-01-22 13:10:01 +0100
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms | Allocations: 2442)
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:10:01 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.7ms | Allocations: 787)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12488.4ms | Allocations: 57970)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12507.5ms | Allocations: 66003)
+Completed 200 OK in 12534ms (Views: 12514.7ms | ActiveRecord: 0.5ms | Allocations: 74738)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/ads" for 127.0.0.1 at 2022-01-22 13:11:09 +0100
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms | Allocations: 2442)
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:11:09 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.8ms | Allocations: 787)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12255.2ms | Allocations: 58065)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12276.9ms | Allocations: 66098)
+Completed 200 OK in 12302ms (Views: 12283.6ms | ActiveRecord: 0.5ms | Allocations: 74847)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/ads" for 127.0.0.1 at 2022-01-22 13:13:51 +0100
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms | Allocations: 2442)
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:13:51 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.1ms | Allocations: 787)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11960.4ms | Allocations: 58190)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11978.8ms | Allocations: 66223)
+Completed 200 OK in 12003ms (Views: 11985.7ms | ActiveRecord: 0.5ms | Allocations: 74966)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/ads" for 127.0.0.1 at 2022-01-22 13:17:38 +0100
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms | Allocations: 2442)
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:17:38 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.7ms | Allocations: 787)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11483.0ms | Allocations: 58315)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11501.3ms | Allocations: 66348)
+Completed 200 OK in 11525ms (Views: 11508.4ms | ActiveRecord: 0.5ms | Allocations: 75102)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/ads" for 127.0.0.1 at 2022-01-22 13:18:37 +0100
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms | Allocations: 2442)
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:18:37 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 787)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12373.9ms | Allocations: 58435)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12392.2ms | Allocations: 66468)
+Completed 200 OK in 12419ms (Views: 12400.2ms | ActiveRecord: 1.4ms | Allocations: 75223)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/ads" for 127.0.0.1 at 2022-01-22 13:19:50 +0100
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 16ms (ActiveRecord: 0.0ms | Allocations: 2442)
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:19:50 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.9ms | Allocations: 787)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12104.2ms | Allocations: 58535)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12124.4ms | Allocations: 66568)
+Completed 200 OK in 12152ms (Views: 12132.3ms | ActiveRecord: 0.7ms | Allocations: 75319)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/ads" for 127.0.0.1 at 2022-01-22 13:21:35 +0100
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms | Allocations: 2442)
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:21:35 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.5ms | Allocations: 787)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12164.5ms | Allocations: 58655)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12183.2ms | Allocations: 66688)
+Completed 200 OK in 12208ms (Views: 12190.5ms | ActiveRecord: 0.5ms | Allocations: 75449)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/ads" for 127.0.0.1 at 2022-01-22 13:22:35 +0100
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms | Allocations: 2442)
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:22:35 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.7ms | Allocations: 787)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12008.3ms | Allocations: 58790)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12027.2ms | Allocations: 66823)
+Completed 200 OK in 12056ms (Views: 12035.2ms | ActiveRecord: 0.7ms | Allocations: 75566)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/ads" for 127.0.0.1 at 2022-01-22 13:24:28 +0100
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms | Allocations: 2442)
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:24:28 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.0ms | Allocations: 787)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12179.0ms | Allocations: 58905)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12199.0ms | Allocations: 66938)
+Completed 200 OK in 12225ms (Views: 12206.1ms | ActiveRecord: 0.7ms | Allocations: 75683)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "easyhome0102@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "roles_mask") VALUES (?, ?, ?, ?, ?)[0m  [["email", "easyhome0102@gmail.com"], ["encrypted_password", "$2a$04$zbW5kJy1T8OUwkpWKwPb0uOnE7IsKra9CoPGgE2ofl2GdKL9DQ0Ki"], ["created_at", "2022-01-22 12:36:40.875935"], ["updated_at", "2022-01-22 12:36:40.875935"], ["roles_mask", 0]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2022-01-22 13:36:40 +0100
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms | Allocations: 2431)
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:36:40 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.4ms | Allocations: 787)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11542.6ms | Allocations: 59012)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11562.5ms | Allocations: 67045)
+Completed 200 OK in 11572ms (Views: 11568.9ms | ActiveRecord: 0.0ms | Allocations: 70631)
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:36:52 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"easyhome0102@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "easyhome0102@gmail.com"], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 11ms (ActiveRecord: 0.3ms | Allocations: 3322)
+Started GET "/" for 127.0.0.1 at 2022-01-22 13:36:52 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  Rendered ads/index.html.haml within layouts/application (Duration: 14.5ms | Allocations: 9277)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 15401)
+Completed 200 OK in 38ms (Views: 29.7ms | ActiveRecord: 0.5ms | Allocations: 18495)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "easyhome0102@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "roles_mask") VALUES (?, ?, ?, ?, ?)[0m  [["email", "easyhome0102@gmail.com"], ["encrypted_password", "$2a$04$b.lzOFUwreYsHNQHSxFzcekLRaCn6iJiLuJCwu1rngJLMumITXpUq"], ["created_at", "2022-01-22 12:40:12.215584"], ["updated_at", "2022-01-22 12:40:12.215584"], ["roles_mask", 0]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2022-01-22 13:40:12 +0100
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms | Allocations: 2431)
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:40:12 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.0ms | Allocations: 787)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12097.7ms | Allocations: 59132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12117.4ms | Allocations: 67165)
+Completed 200 OK in 12127ms (Views: 12124.4ms | ActiveRecord: 0.0ms | Allocations: 70747)
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:40:24 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"easyhome0102@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "easyhome0102@gmail.com"], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 11ms (ActiveRecord: 0.3ms | Allocations: 3314)
+Started GET "/" for 127.0.0.1 at 2022-01-22 13:40:24 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.4ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  Rendered ads/index.html.haml within layouts/application (Duration: 15.3ms | Allocations: 9277)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.8ms | Allocations: 15401)
+Completed 200 OK in 41ms (Views: 33.2ms | ActiveRecord: 0.8ms | Allocations: 18507)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "easyhome0102@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "roles_mask") VALUES (?, ?, ?, ?, ?)[0m  [["email", "easyhome0102@gmail.com"], ["encrypted_password", "$2a$04$CG0dxHCTPAj7U97eFkCyvOIEJp1jROOf.wnN3oOK1I2RI5ZIbRnei"], ["created_at", "2022-01-22 12:41:26.885975"], ["updated_at", "2022-01-22 12:41:26.885975"], ["roles_mask", 0]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2022-01-22 13:41:26 +0100
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms | Allocations: 2431)
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:41:26 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.5ms | Allocations: 787)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11642.4ms | Allocations: 59247)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11660.8ms | Allocations: 67280)
+Completed 200 OK in 11672ms (Views: 11669.2ms | ActiveRecord: 0.0ms | Allocations: 70874)
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:41:38 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"easyhome0102@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "easyhome0102@gmail.com"], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 11ms (ActiveRecord: 0.5ms | Allocations: 3308)
+Started GET "/" for 127.0.0.1 at 2022-01-22 13:41:38 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  Rendered ads/index.html.haml within layouts/application (Duration: 15.6ms | Allocations: 9277)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 15401)
+Completed 200 OK in 40ms (Views: 32.2ms | ActiveRecord: 0.6ms | Allocations: 18505)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "easyhome0102@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "roles_mask") VALUES (?, ?, ?, ?, ?)[0m  [["email", "easyhome0102@gmail.com"], ["encrypted_password", "$2a$04$QkrDjMFWvTz4hFgtcOgVVu.cym6/lU3C0u6J8xNlpvT3fYeEhqMo6"], ["created_at", "2022-01-22 12:43:13.632629"], ["updated_at", "2022-01-22 12:43:13.632629"], ["roles_mask", 0]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2022-01-22 13:43:13 +0100
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms | Allocations: 2431)
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:43:13 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 4.5ms | Allocations: 787)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12138.9ms | Allocations: 59362)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12161.4ms | Allocations: 67395)
+Completed 200 OK in 12172ms (Views: 12168.3ms | ActiveRecord: 0.0ms | Allocations: 70995)
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:43:25 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"easyhome0102@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "easyhome0102@gmail.com"], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 11ms (ActiveRecord: 0.4ms | Allocations: 3312)
+Started GET "/" for 127.0.0.1 at 2022-01-22 13:43:25 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  Rendered ads/index.html.haml within layouts/application (Duration: 15.1ms | Allocations: 9277)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 15401)
+Completed 200 OK in 41ms (Views: 32.0ms | ActiveRecord: 0.6ms | Allocations: 18493)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "easyhome0102@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "roles_mask") VALUES (?, ?, ?, ?, ?)[0m  [["email", "easyhome0102@gmail.com"], ["encrypted_password", "$2a$04$OmT8OY5oD7cJsWrvNXcOZ.EFN23ibvUvuwYbC0E0jzmt7XaZsniEK"], ["created_at", "2022-01-22 12:43:43.950529"], ["updated_at", "2022-01-22 12:43:43.950529"], ["roles_mask", 0]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2022-01-22 13:43:43 +0100
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms | Allocations: 2431)
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:43:44 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.3ms | Allocations: 787)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11946.6ms | Allocations: 59492)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11973.7ms | Allocations: 67525)
+Completed 200 OK in 11988ms (Views: 11984.0ms | ActiveRecord: 0.0ms | Allocations: 71129)
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:43:56 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"easyhome0102@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "easyhome0102@gmail.com"], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 15ms (ActiveRecord: 0.4ms | Allocations: 3308)
+Started GET "/" for 127.0.0.1 at 2022-01-22 13:43:56 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  Rendered ads/index.html.haml within layouts/application (Duration: 17.1ms | Allocations: 9277)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 15401)
+Completed 200 OK in 45ms (Views: 34.9ms | ActiveRecord: 0.6ms | Allocations: 18491)
+Started GET "/ads" for 127.0.0.1 at 2022-01-22 13:43:56 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  Rendered ads/index.html.haml within layouts/application (Duration: 3.6ms | Allocations: 1013)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 7092)
+Completed 200 OK in 28ms (Views: 25.1ms | ActiveRecord: 0.3ms | Allocations: 7987)
+Started GET "/ads/new" for 127.0.0.1 at 2022-01-22 13:43:56 +0100
+Processing by AdsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/new.html.haml within layouts/application
+  Rendered ads/_ad_form.html.haml (Duration: 6.7ms | Allocations: 2584)
+  Rendered ads/new.html.haml within layouts/application (Duration: 10.9ms | Allocations: 4355)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | Allocations: 10672)
+Completed 200 OK in 57ms (Views: 32.4ms | ActiveRecord: 1.4ms | Allocations: 16914)
+Started POST "/ads" for 127.0.0.1 at 2022-01-22 13:43:56 +0100
+Processing by AdsController#create as HTML
+  Parameters: {"ad"=>{"title"=>"", "adtype"=>"Affitto", "location"=>"", "notice"=>""}, "commit"=>"Save Changes"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAd Create (0.4ms)[0m  [1m[32mINSERT INTO "ads" ("adtype", "title", "notice", "location", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["adtype", "Affitto"], ["title", ""], ["notice", ""], ["location", ""], ["created_at", "2022-01-22 12:43:56.257068"], ["updated_at", "2022-01-22 12:43:56.257068"], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/ads
+Completed 302 Found in 17ms (ActiveRecord: 1.3ms | Allocations: 3830)
+Started GET "/ads" for 127.0.0.1 at 2022-01-22 13:43:56 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.2ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[36mCACHE Ad Load (0.0ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Ad Load (0.0ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Ad Load (0.0ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Ad Load (0.0ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered ads/index.html.haml within layouts/application (Duration: 23.2ms | Allocations: 4745)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.2ms | Allocations: 10899)
+Completed 200 OK in 48ms (Views: 42.5ms | ActiveRecord: 2.0ms | Allocations: 11749)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "easyhome0102@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "roles_mask") VALUES (?, ?, ?, ?, ?)[0m  [["email", "easyhome0102@gmail.com"], ["encrypted_password", "$2a$04$eJljdbeQV0hFC3HKrwXp4.YGKQ2ZPd2ieFTtQM.OnW5nXF6ZDujW6"], ["created_at", "2022-01-22 12:45:56.327669"], ["updated_at", "2022-01-22 12:45:56.327669"], ["roles_mask", 0]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2022-01-22 13:45:56 +0100
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 16ms (ActiveRecord: 0.0ms | Allocations: 2431)
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:45:56 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.4ms | Allocations: 787)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11975.2ms | Allocations: 59612)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11993.4ms | Allocations: 67645)
+Completed 200 OK in 12006ms (Views: 12002.4ms | ActiveRecord: 0.0ms | Allocations: 71231)
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:46:08 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"easyhome0102@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "easyhome0102@gmail.com"], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 11ms (ActiveRecord: 0.3ms | Allocations: 3314)
+Started GET "/" for 127.0.0.1 at 2022-01-22 13:46:08 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  Rendered ads/index.html.haml within layouts/application (Duration: 15.6ms | Allocations: 9277)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 15401)
+Completed 200 OK in 41ms (Views: 33.4ms | ActiveRecord: 0.6ms | Allocations: 18487)
+Started GET "/ads" for 127.0.0.1 at 2022-01-22 13:46:08 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  Rendered ads/index.html.haml within layouts/application (Duration: 3.2ms | Allocations: 1013)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 7092)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.3ms | Allocations: 7979)
+Started GET "/ads/new" for 127.0.0.1 at 2022-01-22 13:46:08 +0100
+Processing by AdsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/new.html.haml within layouts/application
+  Rendered ads/_ad_form.html.haml (Duration: 6.3ms | Allocations: 2585)
+  Rendered ads/new.html.haml within layouts/application (Duration: 11.0ms | Allocations: 4360)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 10684)
+Completed 200 OK in 161ms (Views: 27.6ms | ActiveRecord: 13.2ms | Allocations: 16920)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "easyhome0102@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "roles_mask") VALUES (?, ?, ?, ?, ?)[0m  [["email", "easyhome0102@gmail.com"], ["encrypted_password", "$2a$04$s5.rYBdb/vInJ4YpeDoQOO0gjfpG2QXxk7yPB/tnz/aocpX4TpkE."], ["created_at", "2022-01-22 12:50:04.279791"], ["updated_at", "2022-01-22 12:50:04.279791"], ["roles_mask", 0]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2022-01-22 13:50:04 +0100
+Processing by AdsController#index as HTML
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms | Allocations: 2431)
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:50:04 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.5ms | Allocations: 787)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11618.9ms | Allocations: 59712)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11637.3ms | Allocations: 67745)
+Completed 200 OK in 11648ms (Views: 11644.1ms | ActiveRecord: 0.0ms | Allocations: 71343)
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-01-22 13:50:16 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"easyhome0102@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "easyhome0102@gmail.com"], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 11ms (ActiveRecord: 0.4ms | Allocations: 3316)
+Started GET "/" for 127.0.0.1 at 2022-01-22 13:50:16 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.3ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  Rendered ads/index.html.haml within layouts/application (Duration: 14.7ms | Allocations: 9277)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 15401)
+Completed 200 OK in 39ms (Views: 31.1ms | ActiveRecord: 0.6ms | Allocations: 18493)
+Started GET "/ads" for 127.0.0.1 at 2022-01-22 13:50:16 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  Rendered ads/index.html.haml within layouts/application (Duration: 3.2ms | Allocations: 1013)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 7092)
+Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 0.3ms | Allocations: 7977)
+Started GET "/ads/new" for 127.0.0.1 at 2022-01-22 13:50:16 +0100
+Processing by AdsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/new.html.haml within layouts/application
+  Rendered ads/_ad_form.html.haml (Duration: 5.8ms | Allocations: 2585)
+  Rendered ads/new.html.haml within layouts/application (Duration: 10.9ms | Allocations: 4360)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 10684)
+Completed 200 OK in 162ms (Views: 27.8ms | ActiveRecord: 13.8ms | Allocations: 16918)
+Started POST "/ads" for 127.0.0.1 at 2022-01-22 13:50:16 +0100
+Processing by AdsController#create as HTML
+  Parameters: {"ad"=>{"title"=>"Mansarda", "adtype"=>"Affitto", "location"=>"", "notice"=>""}, "commit"=>"Save Changes"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAd Create (0.7ms)[0m  [1m[32mINSERT INTO "ads" ("adtype", "title", "notice", "location", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["adtype", "Affitto"], ["title", "Mansarda"], ["notice", ""], ["location", ""], ["created_at", "2022-01-22 12:50:16.346948"], ["updated_at", "2022-01-22 12:50:16.346948"], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/ads
+Completed 302 Found in 17ms (ActiveRecord: 1.6ms | Allocations: 3836)
+Started GET "/ads" for 127.0.0.1 at 2022-01-22 13:50:16 +0100
+Processing by AdsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering ads/index.html.haml within layouts/application
+  [1m[36mAd Load (0.1ms)[0m  [1m[34mSELECT "ads".* FROM "ads"[0m
+  [1m[36mAd Load (0.4ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[36mCACHE Ad Load (0.0ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Ad Load (0.0ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Ad Load (0.0ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Ad Load (0.0ms)[0m  [1m[34mSELECT "ads".* FROM "ads" WHERE "ads"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered ads/index.html.haml within layouts/application (Duration: 18.1ms | Allocations: 4747)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | Allocations: 10901)
+Completed 200 OK in 37ms (Views: 32.5ms | ActiveRecord: 1.9ms | Allocations: 11759)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
