@@ -72,25 +72,38 @@ Given(/^Article "(.*?)" with Autore articolo "(.*?)" is there$/) do |arg1,arg2|
   a.save
 end
 
-When(/^I click on "Dettagli for Article "(.*?)" with Autore articolo "(.*?)"$/) do |string,arg1,arg2|
-	a = Article.find( title: arg1, author: arg2)
-  	a.save
-	click_link(string)
-end 
+When(/^I click on "(.*?)" for Article "(.*?)" with Autore articolo "(.*?)"$/) do |arg1,arg2,arg3|
+	a = Article.find_by( title: arg2, author: arg3)
+    a.save
+	visit 'articles'
+    click_link(arg1)
+end
 
-Then(/^I should see Article "(.*?)" with Autore articolo "(.*?)"$/) do |arg1,arg2|
-	a = Article.find( title: arg1, author: arg2)
-  	a.save
+Then(/^I should see "(.*?)" for Article "(.*?)" with Autore articolo "(.*?)"$/) do |arg1,arg2,arg3|
+	a = Article.find_by( title: arg2, author: arg3)
+    a.save
 	current_path = URI.parse(current_url).path
     current_path == '/articles/show'
+end 
+
+
+
+When(/^I click link "(.*?)" for Article "(.*?)" with Autore "(.*?)"$/) do |arg1,arg2,arg3|
+	a = Article.find_by( title: arg2, author: arg3)
+    a.save
+    click_link(arg1)
 end
 
-Then ('I should not see the ad') do |args1|
-    expect(page).not_to have_link(text:/\A#{args1}\Z/)
-    #save_and_open_page
+Then('I should be on the edilnews page') do
+    current_path = URI.parse(current_url).path
+    current_path == '/articles'
+    #pending # Write code here that turns the phrase above into concrete actions
 end
 
-  
+Then('I should not see Article {string}') do |string|
+    assert page.has_no_content?(string)
+    #pending # Write code here that turns the phrase above into concrete actions
+end
   
   
 
