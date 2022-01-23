@@ -26,11 +26,11 @@
     - if pre_like
 
         = link_to article_like_path(@article, pre_like), method: :delete do
-            = image_tag("unlike.jpg", width: 40)
+            = image_tag("unlike.jpg", width: 40, alt: "Unlike")
     
     - else
         = link_to article_likes_path(@article), method: :post do
-            = image_tag("like.png", width: 40)
+            = image_tag("like.png", width: 40, alt: "Like")
    
 
 %h5 Commenti:

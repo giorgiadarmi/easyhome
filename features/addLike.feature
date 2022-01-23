@@ -8,7 +8,7 @@ Feature: Like to an Article
         Given Article "TEST_ARTICLE" with Autore articolo "TEST_AUTHOR" is there
         When I click on "Dettagli" for Article "TEST_ARTICLE" with Autore articolo "TEST_AUTHOR"
         Then I should see "Dettagli" for Article "TEST_ARTICLE" with Autore articolo "TEST_AUTHOR"
-        When I click image_tag "like.png" for Article "TEST_ARTICLE" with Autore "TEST_AUTHOR"
+        When I follow image link "Like"
 
     Scenario: User can view his like 
         Given I am on my profile

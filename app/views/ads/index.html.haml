@@ -3,7 +3,8 @@
  %h1.title.is-5 Easy Home
  .center
   = image_tag("icona2.png", width: 150) 
- #{link_to 'Crea Annuncio', new_ad_path}
+ %h1.center
+  #{link_to 'Crea Annuncio', new_ad_path}
 %br
 %table#ads
  - @all.each do |ad|

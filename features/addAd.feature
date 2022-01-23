@@ -1,6 +1,6 @@
 Feature: User can manually add a ads
 
-Scenario: Add a articles
+Scenario: Add an ad
 	Given I am authenticated
 	Given I am on app homepage
 	When I follow "Crea Annuncio"

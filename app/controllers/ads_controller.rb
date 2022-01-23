@@ -33,7 +33,6 @@ class AdsController < ApplicationController
 
     def destroy
         Ad.find(params[:id]).destroy
-        redirect_to ads_path
     end
 
     def edit

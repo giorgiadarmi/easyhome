@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-
+  skip_before_action :verify_authenticity_token
     def index
        @users = User.all
     end
@@ -14,8 +14,8 @@ class UsersController < ApplicationController
     end
   
     def create
-      current_user.set_user
       @user = User.new(user_params)
+      @user.set_user
       if @user.save
         redirect_to @user
       else
@@ -28,13 +28,17 @@ class UsersController < ApplicationController
     end
   
     def destroy
-      User.find(params[:id]).destroy
+      @us = User.find(params[:id])
+      @us.destroy
+
+      redirect_to admin_view_path
+
     end
   
     def update
       @user = User.find(params[:id])
       if @user.update(user_params)
-        redirect_to @user
+        redirect_to current_user
       else
         render :edit
       end

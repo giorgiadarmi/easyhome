@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/contacts/show' =>'contacts#show'
   post '/ads/:id' => 'ads#create'
   get '/search', to: 'articles#search'
+  post '/articles/:id' => 'articles#show'
   get '/' => 'users#show'
   get '/users/comments/:id', to: 'comments#user_comments', :as => :user_comments
   resources :articles

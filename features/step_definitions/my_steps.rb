@@ -41,7 +41,7 @@ Then('I should be on the app homepage') do
 end
 
 Then('I should see {string}') do |string|
-    assert page.has_content?(string)
+    expect(page).to have_content(string)
     #pending # Write code here that turns the phrase above into concrete actions
 end
 
@@ -82,7 +82,7 @@ Then('I should be on the edilnews page') do
 end
 
 Then('I should not see Article {string}') do |string|
-    assert page.has_no_content?(string)
+    expect(page).to have_no_content(string)
     #pending # Write code here that turns the phrase above into concrete actions
 end
 
@@ -128,11 +128,10 @@ Then('I should see the favorites list') do
   #pending # Write code here that turns the phrase above into concrete actions
 end
 
-When(/^I click image_tag "(.*?)" for Article "(.*?)" with Autore "(.*?)"$/) do |arg1,arg2,arg3|
-	a = Article.find_by( title: arg2, author: arg3)
-    a.save
-    click_
+When /^I follow image link "([^"]*)"$/ do |img_alt|
+    find(:xpath, "//img[@alt = '#{img_alt}']/parent::a").click()
 end
+
 
 Then('I should see the like of the articles') do
   	current_path = URI.parse(current_url).path
@@ -152,7 +151,7 @@ end
 
 When('I press button {string}') do |string|
    visit 'articles#show'
-   click_button(string)
+   click_link(string)
     #pending # Write code here that turns the phrase above into concrete actions
 end
 
