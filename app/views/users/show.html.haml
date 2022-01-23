@@ -31,7 +31,10 @@
                             %p{style: "text-align:left;"} 
                                 %b Titolo:
                                 = Ad.find(ad.id).title
-                            %p{style: "text-align:left;"} 
+                                
+                            %p{style: "text-align:left;"}    
+                                %b Descrizione:
+          
                                 = Ad.find(ad.id).notice
 
                             =link_to "Dettagli", ad_path(ad)
@@ -59,7 +62,8 @@
                         %p{style: "text-align:left;"} 
                             %b Titolo:
                             = Ad.find(f.ad_id).title
-                        %p{style: "text-align:left;"} 
+                        %p{style: "text-align:left;"}
+                            %b Descrizione: 
                             = Ad.find(f.ad_id).notice              
                         %p{style: "text-align:left;"} 
                             %b Di:

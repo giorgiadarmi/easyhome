@@ -2,7 +2,7 @@ Feature: Delete an Article
     As an User
     So that I can delete an article
 
-    Scenario: Admin can delete all recipes
+    Scenario: User can delete all articles
 		Given I am authenticated
 	    Given I am on edilnews page
         Given Article "TEST_ARTICLE" with Autore articolo "TEST_AUTHOR" is there
