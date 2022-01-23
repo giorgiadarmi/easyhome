@@ -150,8 +150,7 @@ When('I write a comment {string}') do |string|
 end
 
 When('I press button {string}') do |string|
-   visit 'articles#show'
-   click_link(string)
+   click_button(string)
     #pending # Write code here that turns the phrase above into concrete actions
 end
 
