@@ -1,7 +1,11 @@
 require 'rails_helper'
 require "./app/models/article.rb"
+require "./app/models/user.rb"
+
 
 describe Article do
+	fixtures :all
+
 	before(:all) do
 		Article.all.each do  |at|
 			at.destroy
@@ -23,19 +27,19 @@ describe Article do
 		end
 	end
 
-	#Registered Users
-	context "with Registered User privileges" do
+	#Banned
+	context "with Banned privileges" do
 		before :each do
-			user = users(:registered)
-			sign_in user
+			banned = users(:banned)
+			sign_in banned
 		end
 
 		#Create
-		it "should create article" do
-			params = {:article=>{:title => "Title"}}
+		it "should not create article" do
+			params = {:article=>{:title => "Title", :text => "Text", :author => "Autore"}}
 			get :create, :params => params
-			r_tst = Article.where(:title => "Title")
-			expect(r_tst).not_to be_empty
+			a_tst = Article.where(:title => "Title")
+			expect(a_tst).to be_empty
 		end
 	end
 

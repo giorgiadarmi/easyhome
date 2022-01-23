@@ -10057,3 +10057,273 @@ Completed 200 OK in 32ms (Views: 28.2ms | ActiveRecord: 0.3ms | Allocations: 824
   [1m[35m (0.6ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'reviews';[0m
   [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
   [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_blobs"[0m
+  [1m[35m (91.8ms)[0m  [1m[31mDELETE FROM "active_storage_blobs"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_blobs';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "articles"[0m
+  [1m[35m (75.5ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'articles';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "contacts"[0m
+  [1m[35m (86.2ms)[0m  [1m[31mDELETE FROM "contacts"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'contacts';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "favorite_ads"[0m
+  [1m[35m (86.3ms)[0m  [1m[31mDELETE FROM "favorite_ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorite_ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "mates"[0m
+  [1m[35m (86.7ms)[0m  [1m[31mDELETE FROM "mates"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'mates';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "services"[0m
+  [1m[35m (86.1ms)[0m  [1m[31mDELETE FROM "services"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'services';[0m
+  [1m[35m (0.9ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (74.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_attachments"[0m
+  [1m[35m (73.9ms)[0m  [1m[31mDELETE FROM "active_storage_attachments"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_attachments';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_variant_records"[0m
+  [1m[35m (75.3ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_variant_records';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "ads"[0m
+  [1m[35m (63.9ms)[0m  [1m[31mDELETE FROM "ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "comments"[0m
+  [1m[35m (86.5ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'comments';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "favorites"[0m
+  [1m[35m (63.9ms)[0m  [1m[31mDELETE FROM "favorites"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorites';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "likes"[0m
+  [1m[35m (64.4ms)[0m  [1m[31mDELETE FROM "likes"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'likes';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "reviews"[0m
+  [1m[35m (75.5ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'reviews';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_blobs"[0m
+  [1m[35m (84.1ms)[0m  [1m[31mDELETE FROM "active_storage_blobs"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_blobs';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "articles"[0m
+  [1m[35m (64.3ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'articles';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "contacts"[0m
+  [1m[35m (86.2ms)[0m  [1m[31mDELETE FROM "contacts"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'contacts';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "favorite_ads"[0m
+  [1m[35m (64.4ms)[0m  [1m[31mDELETE FROM "favorite_ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorite_ads';[0m
+  [1m[35m (0.6ms)[0m  [1m[35mTRUNCATE TABLE "mates"[0m
+  [1m[35m (74.8ms)[0m  [1m[31mDELETE FROM "mates"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'mates';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "services"[0m
+  [1m[35m (75.1ms)[0m  [1m[31mDELETE FROM "services"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'services';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (64.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.6ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_attachments"[0m
+  [1m[35m (85.0ms)[0m  [1m[31mDELETE FROM "active_storage_attachments"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_attachments';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_variant_records"[0m
+  [1m[35m (75.2ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_variant_records';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "ads"[0m
+  [1m[35m (86.3ms)[0m  [1m[31mDELETE FROM "ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "comments"[0m
+  [1m[35m (75.4ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'comments';[0m
+  [1m[35m (0.6ms)[0m  [1m[35mTRUNCATE TABLE "favorites"[0m
+  [1m[35m (75.6ms)[0m  [1m[31mDELETE FROM "favorites"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorites';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "likes"[0m
+  [1m[35m (64.1ms)[0m  [1m[31mDELETE FROM "likes"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'likes';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "reviews"[0m
+  [1m[35m (64.0ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'reviews';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_blobs"[0m
+  [1m[35m (90.7ms)[0m  [1m[31mDELETE FROM "active_storage_blobs"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_blobs';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "articles"[0m
+  [1m[35m (97.5ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'articles';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "contacts"[0m
+  [1m[35m (86.5ms)[0m  [1m[31mDELETE FROM "contacts"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'contacts';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "favorite_ads"[0m
+  [1m[35m (53.3ms)[0m  [1m[31mDELETE FROM "favorite_ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorite_ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "mates"[0m
+  [1m[35m (86.7ms)[0m  [1m[31mDELETE FROM "mates"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'mates';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "services"[0m
+  [1m[35m (108.8ms)[0m  [1m[31mDELETE FROM "services"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'services';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (108.9ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.8ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_attachments"[0m
+  [1m[35m (84.8ms)[0m  [1m[31mDELETE FROM "active_storage_attachments"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_attachments';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_variant_records"[0m
+  [1m[35m (64.1ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_variant_records';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "ads"[0m
+  [1m[35m (75.4ms)[0m  [1m[31mDELETE FROM "ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "comments"[0m
+  [1m[35m (64.3ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'comments';[0m
+  [1m[35m (0.6ms)[0m  [1m[35mTRUNCATE TABLE "favorites"[0m
+  [1m[35m (64.2ms)[0m  [1m[31mDELETE FROM "favorites"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorites';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "likes"[0m
+  [1m[35m (86.8ms)[0m  [1m[31mDELETE FROM "likes"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'likes';[0m
+  [1m[35m (0.6ms)[0m  [1m[35mTRUNCATE TABLE "reviews"[0m
+  [1m[35m (86.4ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'reviews';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_blobs"[0m
+  [1m[35m (71.3ms)[0m  [1m[31mDELETE FROM "active_storage_blobs"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_blobs';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "articles"[0m
+  [1m[35m (64.2ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'articles';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "contacts"[0m
+  [1m[35m (75.4ms)[0m  [1m[31mDELETE FROM "contacts"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'contacts';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "favorite_ads"[0m
+  [1m[35m (64.1ms)[0m  [1m[31mDELETE FROM "favorite_ads"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.5ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorite_ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "mates"[0m
+  [1m[35m (75.2ms)[0m  [1m[31mDELETE FROM "mates"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'mates';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "services"[0m
+  [1m[35m (119.8ms)[0m  [1m[31mDELETE FROM "services"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'services';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (64.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_attachments"[0m
+  [1m[35m (85.0ms)[0m  [1m[31mDELETE FROM "active_storage_attachments"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_attachments';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_variant_records"[0m
+  [1m[35m (75.3ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.4ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_variant_records';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "ads"[0m
+  [1m[35m (64.2ms)[0m  [1m[31mDELETE FROM "ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "comments"[0m
+  [1m[35m (75.5ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'comments';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "favorites"[0m
+  [1m[35m (75.4ms)[0m  [1m[31mDELETE FROM "favorites"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorites';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "likes"[0m
+  [1m[35m (75.5ms)[0m  [1m[31mDELETE FROM "likes"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'likes';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "reviews"[0m
+  [1m[35m (86.5ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'reviews';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
