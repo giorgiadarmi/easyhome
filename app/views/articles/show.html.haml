@@ -42,7 +42,7 @@
     = form_with model: [ @article, @article.comments.build ] do |form|
         = label :comment, :body, 'Commento'
         = text_field :comment, :body
-        = submit_tag "Pubblica"
+        = submit_tag 'Pubblica'
 - else
     %p
         - @article.comments.each do |r|
@@ -58,7 +58,7 @@
     = form_with model: [ @article, @article.comments.build ] do |form|
         = label :comment, :body, 'Commento'
         = text_field :comment, :body
-        = submit_tag "Pubblica"
+        = submit_tag 'Pubblica'
 
 
 %br
