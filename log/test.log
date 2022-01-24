@@ -18078,3 +18078,1932 @@ Completed 302 Found in 8ms (ActiveRecord: 1.6ms | Allocations: 1150)
   [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'reviews';[0m
   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_blobs"[0m
+  [1m[35m (151.2ms)[0m  [1m[31mDELETE FROM "active_storage_blobs"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_blobs';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "articles"[0m
+  [1m[35m (97.3ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'articles';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "contacts"[0m
+  [1m[35m (86.2ms)[0m  [1m[31mDELETE FROM "contacts"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'contacts';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "favorite_ads"[0m
+  [1m[35m (97.4ms)[0m  [1m[31mDELETE FROM "favorite_ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorite_ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "mates"[0m
+  [1m[35m (86.2ms)[0m  [1m[31mDELETE FROM "mates"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'mates';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "services"[0m
+  [1m[35m (96.6ms)[0m  [1m[31mDELETE FROM "services"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'services';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (885.6ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_attachments"[0m
+  [1m[35m (108.5ms)[0m  [1m[31mDELETE FROM "active_storage_attachments"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_attachments';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_variant_records"[0m
+  [1m[35m (121.5ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_variant_records';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "ads"[0m
+  [1m[35m (117.1ms)[0m  [1m[31mDELETE FROM "ads"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "comments"[0m
+  [1m[35m (99.8ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'comments';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "favorites"[0m
+  [1m[35m (105.7ms)[0m  [1m[31mDELETE FROM "favorites"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorites';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "likes"[0m
+  [1m[35m (86.1ms)[0m  [1m[31mDELETE FROM "likes"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'likes';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "reviews"[0m
+  [1m[35m (74.9ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.6ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'reviews';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.8ms)[0m  [1m[31mDELETE FROM "ads";
+DELETE FROM "articles";
+DELETE FROM "users";
+INSERT INTO "ads" ("id", "title", "created_at", "updated_at") VALUES (980190962, 'Mansarda', '2022-01-24 09:08:34.994969', '2022-01-24 09:08:34.994969');
+INSERT INTO "articles" ("id", "title", "created_at", "updated_at") VALUES (980190962, 'Bonus 110%', '2022-01-24 09:08:34.998291', '2022-01-24 09:08:34.998291');
+INSERT INTO "users" ("id", "email", "created_at", "updated_at", "roles_mask") VALUES (457772472, 'banned@user.it', '2022-01-24 09:08:34.998392', '2022-01-24 09:08:34.998392', 0);
+INSERT INTO "users" ("id", "email", "created_at", "updated_at", "roles_mask") VALUES (201253217, 'user@user.it', '2022-01-24 09:08:34.998392', '2022-01-24 09:08:34.998392', 1);
+INSERT INTO "users" ("id", "email", "created_at", "updated_at", "roles_mask") VALUES (135138680, 'admin@user.it', '2022-01-24 09:08:34.998392', '2022-01-24 09:08:34.998392', 2)[0m
+  [1m[36mTRANSACTION (108.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Bonus 110%"], ["created_at", "2022-01-24 09:08:35.208024"], ["updated_at", "2022-01-24 09:08:35.208024"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 16ms (ActiveRecord: 1.1ms | Allocations: 4034)
+  [1m[36mArticle Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Bonus 110%"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/show.html.haml within layouts/application (Duration: 1.2ms | Allocations: 259)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 366)
+Completed 200 OK in 15ms (Views: 7.1ms | ActiveRecord: 0.7ms | Allocations: 3466)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://test.host/articles
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms | Allocations: 900)
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (0.6ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 19ms (ActiveRecord: 2.2ms | Allocations: 2998)
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Bonus 110%"], ["created_at", "2022-01-24 09:08:35.304048"], ["updated_at", "2022-01-24 09:08:35.304048"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms | Allocations: 1017)
+  [1m[36mArticle Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Bonus 110%"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/show.html.haml within layouts/application (Duration: 0.3ms | Allocations: 65)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 157)
+Completed 200 OK in 7ms (Views: 1.8ms | ActiveRecord: 0.5ms | Allocations: 1069)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://test.host/articles
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 824)
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (0.6ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 9ms (ActiveRecord: 1.3ms | Allocations: 1150)
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? /* loading for inspect */ LIMIT ?[0m  [["id", 980190962], ["LIMIT", 11]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? /* loading for inspect */ LIMIT ?[0m  [["id", 980190962], ["LIMIT", 11]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? /* loading for inspect */ LIMIT ?[0m  [["id", 980190962], ["LIMIT", 11]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Bonus 110%"], ["created_at", "2022-01-24 09:08:35.405557"], ["updated_at", "2022-01-24 09:08:35.405557"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 9ms (ActiveRecord: 1.2ms | Allocations: 1018)
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Bonus 110%"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/show.html.haml within layouts/application (Duration: 0.3ms | Allocations: 65)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 157)
+Completed 200 OK in 6ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 1067)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://test.host/articles
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms | Allocations: 824)
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (0.7ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 7ms (ActiveRecord: 1.4ms | Allocations: 1150)
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (0.9ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (101.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_blobs"[0m
+  [1m[35m (84.0ms)[0m  [1m[31mDELETE FROM "active_storage_blobs"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_blobs';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "articles"[0m
+  [1m[35m (87.1ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (65.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'articles';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "contacts"[0m
+  [1m[35m (98.5ms)[0m  [1m[31mDELETE FROM "contacts"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'contacts';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "favorite_ads"[0m
+  [1m[35m (75.0ms)[0m  [1m[31mDELETE FROM "favorite_ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorite_ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "mates"[0m
+  [1m[35m (75.1ms)[0m  [1m[31mDELETE FROM "mates"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'mates';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "services"[0m
+  [1m[35m (75.1ms)[0m  [1m[31mDELETE FROM "services"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'services';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (74.6ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (87.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_attachments"[0m
+  [1m[35m (120.4ms)[0m  [1m[31mDELETE FROM "active_storage_attachments"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_attachments';[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_variant_records"[0m
+  [1m[35m (112.2ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_variant_records';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "ads"[0m
+  [1m[35m (95.3ms)[0m  [1m[31mDELETE FROM "ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "comments"[0m
+  [1m[35m (88.7ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'comments';[0m
+  [1m[35m (1.1ms)[0m  [1m[35mTRUNCATE TABLE "favorites"[0m
+  [1m[35m (94.0ms)[0m  [1m[31mDELETE FROM "favorites"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorites';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "likes"[0m
+  [1m[35m (86.1ms)[0m  [1m[31mDELETE FROM "likes"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'likes';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "reviews"[0m
+  [1m[35m (97.4ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'reviews';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_blobs"[0m
+  [1m[35m (115.6ms)[0m  [1m[31mDELETE FROM "active_storage_blobs"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_blobs';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "articles"[0m
+  [1m[35m (98.1ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'articles';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "contacts"[0m
+  [1m[35m (74.8ms)[0m  [1m[31mDELETE FROM "contacts"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'contacts';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "favorite_ads"[0m
+  [1m[35m (86.2ms)[0m  [1m[31mDELETE FROM "favorite_ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorite_ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "mates"[0m
+  [1m[35m (130.9ms)[0m  [1m[31mDELETE FROM "mates"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'mates';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "services"[0m
+  [1m[35m (227.0ms)[0m  [1m[31mDELETE FROM "services"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'services';[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (184.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_attachments"[0m
+  [1m[35m (179.9ms)[0m  [1m[31mDELETE FROM "active_storage_attachments"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_attachments';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_variant_records"[0m
+  [1m[35m (111.1ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_variant_records';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "ads"[0m
+  [1m[35m (106.7ms)[0m  [1m[31mDELETE FROM "ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ads';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "comments"[0m
+  [1m[35m (99.9ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'comments';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "favorites"[0m
+  [1m[35m (94.7ms)[0m  [1m[31mDELETE FROM "favorites"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorites';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "likes"[0m
+  [1m[35m (97.3ms)[0m  [1m[31mDELETE FROM "likes"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.4ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'likes';[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "reviews"[0m
+  [1m[35m (97.3ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'reviews';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.8ms)[0m  [1m[31mDELETE FROM "ads";
+DELETE FROM "articles";
+DELETE FROM "users";
+INSERT INTO "ads" ("id", "title", "created_at", "updated_at") VALUES (980190962, 'Mansarda', '2022-01-24 09:09:52.983865', '2022-01-24 09:09:52.983865');
+INSERT INTO "articles" ("id", "title", "created_at", "updated_at") VALUES (980190962, 'Bonus 110%', '2022-01-24 09:09:52.987122', '2022-01-24 09:09:52.987122');
+INSERT INTO "users" ("id", "email", "created_at", "updated_at", "roles_mask") VALUES (457772472, 'banned@user.it', '2022-01-24 09:09:52.987218', '2022-01-24 09:09:52.987218', 0);
+INSERT INTO "users" ("id", "email", "created_at", "updated_at", "roles_mask") VALUES (201253217, 'user@user.it', '2022-01-24 09:09:52.987218', '2022-01-24 09:09:52.987218', 1);
+INSERT INTO "users" ("id", "email", "created_at", "updated_at", "roles_mask") VALUES (135138680, 'admin@user.it', '2022-01-24 09:09:52.987218', '2022-01-24 09:09:52.987218', 2)[0m
+  [1m[36mTRANSACTION (107.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Bonus 110%"], ["created_at", "2022-01-24 09:09:53.189812"], ["updated_at", "2022-01-24 09:09:53.189812"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 15ms (ActiveRecord: 1.0ms | Allocations: 4034)
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Bonus 110%"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/show.html.haml within layouts/application (Duration: 1.0ms | Allocations: 259)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 366)
+Completed 200 OK in 13ms (Views: 6.2ms | ActiveRecord: 0.5ms | Allocations: 3466)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://test.host/articles
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms | Allocations: 900)
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 15ms (ActiveRecord: 1.8ms | Allocations: 2998)
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Bonus 110%"], ["created_at", "2022-01-24 09:09:53.267405"], ["updated_at", "2022-01-24 09:09:53.267405"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms | Allocations: 1017)
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Bonus 110%"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/show.html.haml within layouts/application (Duration: 0.3ms | Allocations: 65)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 157)
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.5ms | Allocations: 1068)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://test.host/articles
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 824)
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 7ms (ActiveRecord: 1.1ms | Allocations: 1150)
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? /* loading for inspect */ LIMIT ?[0m  [["id", 980190962], ["LIMIT", 11]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? /* loading for inspect */ LIMIT ?[0m  [["id", 980190962], ["LIMIT", 11]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? /* loading for inspect */ LIMIT ?[0m  [["id", 980190962], ["LIMIT", 11]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Bonus 110%"], ["created_at", "2022-01-24 09:09:53.361232"], ["updated_at", "2022-01-24 09:09:53.361232"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 7ms (ActiveRecord: 0.8ms | Allocations: 1018)
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Bonus 110%"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/show.html.haml within layouts/application (Duration: 0.3ms | Allocations: 65)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 157)
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 1068)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://test.host/articles
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms | Allocations: 824)
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms | Allocations: 1150)
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (95.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_blobs"[0m
+  [1m[35m (95.2ms)[0m  [1m[31mDELETE FROM "active_storage_blobs"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_blobs';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "articles"[0m
+  [1m[35m (97.5ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (65.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'articles';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "contacts"[0m
+  [1m[35m (85.0ms)[0m  [1m[31mDELETE FROM "contacts"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'contacts';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "favorite_ads"[0m
+  [1m[35m (67.1ms)[0m  [1m[31mDELETE FROM "favorite_ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorite_ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "mates"[0m
+  [1m[35m (75.7ms)[0m  [1m[31mDELETE FROM "mates"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'mates';[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "services"[0m
+  [1m[35m (75.6ms)[0m  [1m[31mDELETE FROM "services"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.4ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'services';[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (96.9ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (65.4ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.9ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_attachments"[0m
+  [1m[35m (86.3ms)[0m  [1m[31mDELETE FROM "active_storage_attachments"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_attachments';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_variant_records"[0m
+  [1m[35m (99.9ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_variant_records';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "ads"[0m
+  [1m[35m (81.4ms)[0m  [1m[31mDELETE FROM "ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ads';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "comments"[0m
+  [1m[35m (91.6ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'comments';[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "favorites"[0m
+  [1m[35m (115.1ms)[0m  [1m[31mDELETE FROM "favorites"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorites';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "likes"[0m
+  [1m[35m (97.8ms)[0m  [1m[31mDELETE FROM "likes"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'likes';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "reviews"[0m
+  [1m[35m (77.1ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'reviews';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_blobs"[0m
+  [1m[35m (138.4ms)[0m  [1m[31mDELETE FROM "active_storage_blobs"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_blobs';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "articles"[0m
+  [1m[35m (108.5ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'articles';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "contacts"[0m
+  [1m[35m (64.0ms)[0m  [1m[31mDELETE FROM "contacts"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.4ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'contacts';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "favorite_ads"[0m
+  [1m[35m (105.4ms)[0m  [1m[31mDELETE FROM "favorite_ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorite_ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "mates"[0m
+  [1m[35m (77.9ms)[0m  [1m[31mDELETE FROM "mates"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'mates';[0m
+  [1m[35m (0.8ms)[0m  [1m[35mTRUNCATE TABLE "services"[0m
+  [1m[35m (96.7ms)[0m  [1m[31mDELETE FROM "services"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'services';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (86.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_attachments"[0m
+  [1m[35m (96.8ms)[0m  [1m[31mDELETE FROM "active_storage_attachments"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_attachments';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_variant_records"[0m
+  [1m[35m (121.2ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_variant_records';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "ads"[0m
+  [1m[35m (84.3ms)[0m  [1m[31mDELETE FROM "ads"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "comments"[0m
+  [1m[35m (88.6ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.4ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'comments';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "favorites"[0m
+  [1m[35m (91.9ms)[0m  [1m[31mDELETE FROM "favorites"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorites';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "likes"[0m
+  [1m[35m (86.4ms)[0m  [1m[31mDELETE FROM "likes"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.4ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'likes';[0m
+  [1m[35m (0.6ms)[0m  [1m[35mTRUNCATE TABLE "reviews"[0m
+  [1m[35m (96.8ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'reviews';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.7ms)[0m  [1m[31mDELETE FROM "ads";
+DELETE FROM "articles";
+DELETE FROM "users";
+INSERT INTO "ads" ("id", "title", "created_at", "updated_at") VALUES (980190962, 'Mansarda', '2022-01-24 09:10:33.451611', '2022-01-24 09:10:33.451611');
+INSERT INTO "articles" ("id", "title", "created_at", "updated_at") VALUES (980190962, 'Bonus 110%', '2022-01-24 09:10:33.455254', '2022-01-24 09:10:33.455254');
+INSERT INTO "users" ("id", "email", "created_at", "updated_at", "roles_mask") VALUES (457772472, 'banned@user.it', '2022-01-24 09:10:33.455355', '2022-01-24 09:10:33.455355', 0);
+INSERT INTO "users" ("id", "email", "created_at", "updated_at", "roles_mask") VALUES (201253217, 'user@user.it', '2022-01-24 09:10:33.455355', '2022-01-24 09:10:33.455355', 1);
+INSERT INTO "users" ("id", "email", "created_at", "updated_at", "roles_mask") VALUES (135138680, 'admin@user.it', '2022-01-24 09:10:33.455355', '2022-01-24 09:10:33.455355', 2)[0m
+  [1m[36mTRANSACTION (108.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Bonus 110%"], ["created_at", "2022-01-24 09:10:33.658478"], ["updated_at", "2022-01-24 09:10:33.658478"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 16ms (ActiveRecord: 1.1ms | Allocations: 4034)
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Bonus 110%"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/show.html.haml within layouts/application (Duration: 1.0ms | Allocations: 259)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 366)
+Completed 200 OK in 13ms (Views: 6.2ms | ActiveRecord: 0.5ms | Allocations: 3466)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://test.host/articles
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 900)
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 15ms (ActiveRecord: 1.8ms | Allocations: 2998)
+  [1m[36mArticle Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Bonus 110%"], ["created_at", "2022-01-24 09:10:33.738931"], ["updated_at", "2022-01-24 09:10:33.738931"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms | Allocations: 1017)
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Bonus 110%"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/show.html.haml within layouts/application (Duration: 0.3ms | Allocations: 65)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 157)
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 0.5ms | Allocations: 1069)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://test.host/articles
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 824)
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (0.6ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms | Allocations: 1150)
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? /* loading for inspect */ LIMIT ?[0m  [["id", 980190962], ["LIMIT", 11]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? /* loading for inspect */ LIMIT ?[0m  [["id", 980190962], ["LIMIT", 11]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? /* loading for inspect */ LIMIT ?[0m  [["id", 980190962], ["LIMIT", 11]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Bonus 110%"], ["created_at", "2022-01-24 09:10:33.836964"], ["updated_at", "2022-01-24 09:10:33.836964"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms | Allocations: 1018)
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Bonus 110%"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/show.html.haml within layouts/application (Duration: 0.5ms | Allocations: 65)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 157)
+Completed 200 OK in 8ms (Views: 2.2ms | ActiveRecord: 1.1ms | Allocations: 1067)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://test.host/articles
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 824)
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms | Allocations: 1150)
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (108.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_blobs"[0m
+  [1m[35m (116.0ms)[0m  [1m[31mDELETE FROM "active_storage_blobs"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_blobs';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "articles"[0m
+  [1m[35m (108.3ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (87.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'articles';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "contacts"[0m
+  [1m[35m (95.8ms)[0m  [1m[31mDELETE FROM "contacts"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'contacts';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "favorite_ads"[0m
+  [1m[35m (75.0ms)[0m  [1m[31mDELETE FROM "favorite_ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorite_ads';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "mates"[0m
+  [1m[35m (97.7ms)[0m  [1m[31mDELETE FROM "mates"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'mates';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "services"[0m
+  [1m[35m (97.5ms)[0m  [1m[31mDELETE FROM "services"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'services';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (108.5ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (78.6ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_attachments"[0m
+  [1m[35m (182.1ms)[0m  [1m[31mDELETE FROM "active_storage_attachments"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_attachments';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_variant_records"[0m
+  [1m[35m (126.5ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_variant_records';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "ads"[0m
+  [1m[35m (106.2ms)[0m  [1m[31mDELETE FROM "ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ads';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "comments"[0m
+  [1m[35m (111.1ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'comments';[0m
+  [1m[35m (1.1ms)[0m  [1m[35mTRUNCATE TABLE "favorites"[0m
+  [1m[35m (127.2ms)[0m  [1m[31mDELETE FROM "favorites"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorites';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "likes"[0m
+  [1m[35m (97.3ms)[0m  [1m[31mDELETE FROM "likes"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'likes';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "reviews"[0m
+  [1m[35m (97.4ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'reviews';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_blobs"[0m
+  [1m[35m (112.1ms)[0m  [1m[31mDELETE FROM "active_storage_blobs"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_blobs';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "articles"[0m
+  [1m[35m (75.4ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'articles';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "contacts"[0m
+  [1m[35m (84.3ms)[0m  [1m[31mDELETE FROM "contacts"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'contacts';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "favorite_ads"[0m
+  [1m[35m (77.9ms)[0m  [1m[31mDELETE FROM "favorite_ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorite_ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "mates"[0m
+  [1m[35m (75.3ms)[0m  [1m[31mDELETE FROM "mates"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.4ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'mates';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "services"[0m
+  [1m[35m (116.8ms)[0m  [1m[31mDELETE FROM "services"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.4ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'services';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (98.5ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.6ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_attachments"[0m
+  [1m[35m (85.6ms)[0m  [1m[31mDELETE FROM "active_storage_attachments"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_attachments';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_variant_records"[0m
+  [1m[35m (98.9ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_variant_records';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "ads"[0m
+  [1m[35m (72.5ms)[0m  [1m[31mDELETE FROM "ads"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.5ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ads';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "comments"[0m
+  [1m[35m (88.2ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'comments';[0m
+  [1m[35m (0.6ms)[0m  [1m[35mTRUNCATE TABLE "favorites"[0m
+  [1m[35m (94.3ms)[0m  [1m[31mDELETE FROM "favorites"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorites';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "likes"[0m
+  [1m[35m (96.9ms)[0m  [1m[31mDELETE FROM "likes"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.4ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'likes';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "reviews"[0m
+  [1m[35m (107.8ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'reviews';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "ads";
+DELETE FROM "articles";
+DELETE FROM "users";
+INSERT INTO "ads" ("id", "title", "created_at", "updated_at") VALUES (980190962, 'Mansarda', '2022-01-24 09:12:54.488862', '2022-01-24 09:12:54.488862');
+INSERT INTO "articles" ("id", "title", "created_at", "updated_at") VALUES (980190962, 'Bonus 110%', '2022-01-24 09:12:54.492005', '2022-01-24 09:12:54.492005');
+INSERT INTO "users" ("id", "email", "created_at", "updated_at", "roles_mask") VALUES (457772472, 'banned@user.it', '2022-01-24 09:12:54.492098', '2022-01-24 09:12:54.492098', 0);
+INSERT INTO "users" ("id", "email", "created_at", "updated_at", "roles_mask") VALUES (201253217, 'user@user.it', '2022-01-24 09:12:54.492098', '2022-01-24 09:12:54.492098', 1);
+INSERT INTO "users" ("id", "email", "created_at", "updated_at", "roles_mask") VALUES (135138680, 'admin@user.it', '2022-01-24 09:12:54.492098', '2022-01-24 09:12:54.492098', 2)[0m
+  [1m[36mTRANSACTION (108.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Bonus 110%"], ["created_at", "2022-01-24 09:12:54.695192"], ["updated_at", "2022-01-24 09:12:54.695192"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 16ms (ActiveRecord: 1.2ms | Allocations: 4034)
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Bonus 110%"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/show.html.haml within layouts/application (Duration: 1.0ms | Allocations: 259)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 366)
+Completed 200 OK in 14ms (Views: 6.1ms | ActiveRecord: 0.5ms | Allocations: 3466)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://test.host/articles
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 900)
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 14ms (ActiveRecord: 1.7ms | Allocations: 2998)
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Bonus 110%"], ["created_at", "2022-01-24 09:12:54.775905"], ["updated_at", "2022-01-24 09:12:54.775905"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms | Allocations: 1017)
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Bonus 110%"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/show.html.haml within layouts/application (Duration: 0.3ms | Allocations: 65)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 157)
+Completed 200 OK in 30ms (Views: 1.5ms | ActiveRecord: 0.6ms | Allocations: 1069)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://test.host/articles
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 824)
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (0.6ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms | Allocations: 1150)
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? /* loading for inspect */ LIMIT ?[0m  [["id", 980190962], ["LIMIT", 11]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? /* loading for inspect */ LIMIT ?[0m  [["id", 980190962], ["LIMIT", 11]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? /* loading for inspect */ LIMIT ?[0m  [["id", 980190962], ["LIMIT", 11]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Bonus 110%"], ["created_at", "2022-01-24 09:12:54.874232"], ["updated_at", "2022-01-24 09:12:54.874232"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms | Allocations: 1018)
+  [1m[36mArticle Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Bonus 110%"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/show.html.haml within layouts/application (Duration: 0.3ms | Allocations: 65)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 157)
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.5ms | Allocations: 1067)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://test.host/articles
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 824)
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 7ms (ActiveRecord: 1.1ms | Allocations: 1150)
+  [1m[36mArticle Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (93.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_blobs"[0m
+  [1m[35m (84.4ms)[0m  [1m[31mDELETE FROM "active_storage_blobs"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_blobs';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "articles"[0m
+  [1m[35m (86.8ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (76.4ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'articles';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "contacts"[0m
+  [1m[35m (87.3ms)[0m  [1m[31mDELETE FROM "contacts"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.4ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'contacts';[0m
+  [1m[35m (0.6ms)[0m  [1m[35mTRUNCATE TABLE "favorite_ads"[0m
+  [1m[35m (96.1ms)[0m  [1m[31mDELETE FROM "favorite_ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorite_ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "mates"[0m
+  [1m[35m (97.3ms)[0m  [1m[31mDELETE FROM "mates"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'mates';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "services"[0m
+  [1m[35m (96.9ms)[0m  [1m[31mDELETE FROM "services"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'services';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (97.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (54.0ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.6ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_attachments"[0m
+  [1m[35m (75.6ms)[0m  [1m[31mDELETE FROM "active_storage_attachments"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.4ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_attachments';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_variant_records"[0m
+  [1m[35m (110.6ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.4ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_variant_records';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "ads"[0m
+  [1m[35m (72.8ms)[0m  [1m[31mDELETE FROM "ads"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ads';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "comments"[0m
+  [1m[35m (77.2ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'comments';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "favorites"[0m
+  [1m[35m (83.7ms)[0m  [1m[31mDELETE FROM "favorites"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.4ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorites';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "likes"[0m
+  [1m[35m (107.3ms)[0m  [1m[31mDELETE FROM "likes"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'likes';[0m
+  [1m[35m (0.6ms)[0m  [1m[35mTRUNCATE TABLE "reviews"[0m
+  [1m[35m (96.7ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.4ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'reviews';[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_blobs"[0m
+  [1m[35m (111.1ms)[0m  [1m[31mDELETE FROM "active_storage_blobs"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_blobs';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "articles"[0m
+  [1m[35m (97.6ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'articles';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "contacts"[0m
+  [1m[35m (64.5ms)[0m  [1m[31mDELETE FROM "contacts"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'contacts';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "favorite_ads"[0m
+  [1m[35m (86.3ms)[0m  [1m[31mDELETE FROM "favorite_ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorite_ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "mates"[0m
+  [1m[35m (97.2ms)[0m  [1m[31mDELETE FROM "mates"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'mates';[0m
+  [1m[35m (0.7ms)[0m  [1m[35mTRUNCATE TABLE "services"[0m
+  [1m[35m (74.6ms)[0m  [1m[31mDELETE FROM "services"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'services';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (86.6ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.6ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_attachments"[0m
+  [1m[35m (96.5ms)[0m  [1m[31mDELETE FROM "active_storage_attachments"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_attachments';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_variant_records"[0m
+  [1m[35m (99.8ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_variant_records';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "ads"[0m
+  [1m[35m (106.1ms)[0m  [1m[31mDELETE FROM "ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "comments"[0m
+  [1m[35m (77.7ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'comments';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "favorites"[0m
+  [1m[35m (105.9ms)[0m  [1m[31mDELETE FROM "favorites"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorites';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "likes"[0m
+  [1m[35m (86.3ms)[0m  [1m[31mDELETE FROM "likes"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'likes';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "reviews"[0m
+  [1m[35m (86.1ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.4ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'reviews';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.7ms)[0m  [1m[31mDELETE FROM "ads";
+DELETE FROM "articles";
+DELETE FROM "users";
+INSERT INTO "ads" ("id", "title", "created_at", "updated_at") VALUES (980190962, 'Mansarda', '2022-01-24 09:14:10.812748', '2022-01-24 09:14:10.812748');
+INSERT INTO "articles" ("id", "title", "created_at", "updated_at") VALUES (980190962, 'Bonus 110%', '2022-01-24 09:14:10.816001', '2022-01-24 09:14:10.816001');
+INSERT INTO "users" ("id", "email", "created_at", "updated_at", "roles_mask") VALUES (457772472, 'banned@user.it', '2022-01-24 09:14:10.816097', '2022-01-24 09:14:10.816097', 0);
+INSERT INTO "users" ("id", "email", "created_at", "updated_at", "roles_mask") VALUES (201253217, 'user@user.it', '2022-01-24 09:14:10.816097', '2022-01-24 09:14:10.816097', 1);
+INSERT INTO "users" ("id", "email", "created_at", "updated_at", "roles_mask") VALUES (135138680, 'admin@user.it', '2022-01-24 09:14:10.816097', '2022-01-24 09:14:10.816097', 2)[0m
+  [1m[36mTRANSACTION (119.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Bonus 110%"], ["created_at", "2022-01-24 09:14:11.032051"], ["updated_at", "2022-01-24 09:14:11.032051"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 16ms (ActiveRecord: 1.1ms | Allocations: 4034)
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Bonus 110%"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/show.html.haml within layouts/application (Duration: 0.9ms | Allocations: 259)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 366)
+Completed 200 OK in 13ms (Views: 5.7ms | ActiveRecord: 0.5ms | Allocations: 3466)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://test.host/articles
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 900)
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 14ms (ActiveRecord: 1.6ms | Allocations: 2998)
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.8ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Bonus 110%"], ["created_at", "2022-01-24 09:14:11.108960"], ["updated_at", "2022-01-24 09:14:11.108960"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 7ms (ActiveRecord: 1.3ms | Allocations: 1017)
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Bonus 110%"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/show.html.haml within layouts/application (Duration: 0.3ms | Allocations: 65)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 157)
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.5ms | Allocations: 1069)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://test.host/articles
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 824)
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (0.6ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 9ms (ActiveRecord: 1.4ms | Allocations: 1150)
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? /* loading for inspect */ LIMIT ?[0m  [["id", 980190962], ["LIMIT", 11]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? /* loading for inspect */ LIMIT ?[0m  [["id", 980190962], ["LIMIT", 11]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? /* loading for inspect */ LIMIT ?[0m  [["id", 980190962], ["LIMIT", 11]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Bonus 110%"], ["created_at", "2022-01-24 09:14:11.204560"], ["updated_at", "2022-01-24 09:14:11.204560"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms | Allocations: 1018)
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Bonus 110%"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/show.html.haml within layouts/application (Duration: 0.3ms | Allocations: 65)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 157)
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.5ms | Allocations: 1067)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://test.host/articles
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 824)
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 7ms (ActiveRecord: 1.1ms | Allocations: 1150)
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (90.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_blobs"[0m
+  [1m[35m (105.5ms)[0m  [1m[31mDELETE FROM "active_storage_blobs"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_blobs';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "articles"[0m
+  [1m[35m (119.9ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (109.8ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'articles';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "contacts"[0m
+  [1m[35m (153.9ms)[0m  [1m[31mDELETE FROM "contacts"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'contacts';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "favorite_ads"[0m
+  [1m[35m (119.4ms)[0m  [1m[31mDELETE FROM "favorite_ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorite_ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "mates"[0m
+  [1m[35m (141.7ms)[0m  [1m[31mDELETE FROM "mates"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.4ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'mates';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "services"[0m
+  [1m[35m (74.5ms)[0m  [1m[31mDELETE FROM "services"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.4ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'services';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (85.7ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (76.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.6ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_attachments"[0m
+  [1m[35m (97.5ms)[0m  [1m[31mDELETE FROM "active_storage_attachments"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_attachments';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_variant_records"[0m
+  [1m[35m (111.5ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_variant_records';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "ads"[0m
+  [1m[35m (194.8ms)[0m  [1m[31mDELETE FROM "ads"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "comments"[0m
+  [1m[35m (99.4ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.4ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'comments';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "favorites"[0m
+  [1m[35m (105.5ms)[0m  [1m[31mDELETE FROM "favorites"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorites';[0m
+  [1m[35m (1.0ms)[0m  [1m[35mTRUNCATE TABLE "likes"[0m
+  [1m[35m (96.5ms)[0m  [1m[31mDELETE FROM "likes"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'likes';[0m
+  [1m[35m (0.6ms)[0m  [1m[35mTRUNCATE TABLE "reviews"[0m
+  [1m[35m (85.3ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'reviews';[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_blobs"[0m
+  [1m[35m (92.3ms)[0m  [1m[31mDELETE FROM "active_storage_blobs"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_blobs';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "articles"[0m
+  [1m[35m (86.7ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'articles';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "contacts"[0m
+  [1m[35m (64.4ms)[0m  [1m[31mDELETE FROM "contacts"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'contacts';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "favorite_ads"[0m
+  [1m[35m (86.5ms)[0m  [1m[31mDELETE FROM "favorite_ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorite_ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "mates"[0m
+  [1m[35m (86.6ms)[0m  [1m[31mDELETE FROM "mates"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'mates';[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "services"[0m
+  [1m[35m (97.2ms)[0m  [1m[31mDELETE FROM "services"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'services';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (86.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.6ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_attachments"[0m
+  [1m[35m (96.8ms)[0m  [1m[31mDELETE FROM "active_storage_attachments"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_attachments';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_variant_records"[0m
+  [1m[35m (155.4ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_variant_records';[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "ads"[0m
+  [1m[35m (95.6ms)[0m  [1m[31mDELETE FROM "ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "comments"[0m
+  [1m[35m (88.9ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'comments';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "favorites"[0m
+  [1m[35m (126.2ms)[0m  [1m[31mDELETE FROM "favorites"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorites';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "likes"[0m
+  [1m[35m (97.6ms)[0m  [1m[31mDELETE FROM "likes"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'likes';[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "reviews"[0m
+  [1m[35m (98.1ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'reviews';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.7ms)[0m  [1m[31mDELETE FROM "ads";
+DELETE FROM "articles";
+DELETE FROM "users";
+INSERT INTO "ads" ("id", "title", "created_at", "updated_at") VALUES (980190962, 'Mansarda', '2022-01-24 09:16:03.234245', '2022-01-24 09:16:03.234245');
+INSERT INTO "articles" ("id", "title", "created_at", "updated_at") VALUES (980190962, 'Bonus 110%', '2022-01-24 09:16:03.237012', '2022-01-24 09:16:03.237012');
+INSERT INTO "users" ("id", "email", "created_at", "updated_at", "roles_mask") VALUES (457772472, 'banned@user.it', '2022-01-24 09:16:03.237098', '2022-01-24 09:16:03.237098', 0);
+INSERT INTO "users" ("id", "email", "created_at", "updated_at", "roles_mask") VALUES (201253217, 'user@user.it', '2022-01-24 09:16:03.237098', '2022-01-24 09:16:03.237098', 1);
+INSERT INTO "users" ("id", "email", "created_at", "updated_at", "roles_mask") VALUES (135138680, 'admin@user.it', '2022-01-24 09:16:03.237098', '2022-01-24 09:16:03.237098', 2)[0m
+  [1m[36mTRANSACTION (99.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Bonus 110%"], ["created_at", "2022-01-24 09:16:03.419998"], ["updated_at", "2022-01-24 09:16:03.419998"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 13ms (ActiveRecord: 1.1ms | Allocations: 4034)
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Bonus 110%"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/show.html.haml within layouts/application (Duration: 0.8ms | Allocations: 259)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 366)
+Completed 200 OK in 14ms (Views: 5.8ms | ActiveRecord: 0.7ms | Allocations: 3466)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://test.host/articles
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 900)
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 457772472], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 14ms (ActiveRecord: 1.7ms | Allocations: 2998)
+  [1m[36mArticle Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Bonus 110%"], ["created_at", "2022-01-24 09:16:03.494968"], ["updated_at", "2022-01-24 09:16:03.494968"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms | Allocations: 1017)
+  [1m[36mArticle Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Bonus 110%"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/show.html.haml within layouts/application (Duration: 0.4ms | Allocations: 65)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 157)
+Completed 200 OK in 31ms (Views: 2.1ms | ActiveRecord: 0.6ms | Allocations: 1069)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://test.host/articles
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 824)
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 201253217], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (1.0ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 8ms (ActiveRecord: 1.7ms | Allocations: 1150)
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Bonus 110%"], ["created_at", "2022-01-24 09:16:03.579375"], ["updated_at", "2022-01-24 09:16:03.579375"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms | Allocations: 1017)
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Bonus 110%"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.haml within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/show.html.haml within layouts/application (Duration: 0.3ms | Allocations: 65)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 157)
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 0.7ms | Allocations: 1067)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"Bonus 110%"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://test.host/articles
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 824)
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 135138680], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 7ms (ActiveRecord: 1.2ms | Allocations: 1150)
+  [1m[36mArticle Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."article_id" = ?[0m  [["article_id", 980190962]]
+  [1m[36mArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (85.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_blobs"[0m
+  [1m[35m (95.4ms)[0m  [1m[31mDELETE FROM "active_storage_blobs"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_blobs';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "articles"[0m
+  [1m[35m (97.1ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (76.5ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'articles';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "contacts"[0m
+  [1m[35m (65.3ms)[0m  [1m[31mDELETE FROM "contacts"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'contacts';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "favorite_ads"[0m
+  [1m[35m (95.0ms)[0m  [1m[31mDELETE FROM "favorite_ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorite_ads';[0m
+  [1m[35m (0.5ms)[0m  [1m[35mTRUNCATE TABLE "mates"[0m
+  [1m[35m (88.9ms)[0m  [1m[31mDELETE FROM "mates"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'mates';[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "services"[0m
+  [1m[35m (86.9ms)[0m  [1m[31mDELETE FROM "services"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.3ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'services';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "users"[0m
+  [1m[35m (85.6ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (76.6ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_attachments"[0m
+  [1m[35m (76.6ms)[0m  [1m[31mDELETE FROM "active_storage_attachments"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_attachments';[0m
+  [1m[35m (0.6ms)[0m  [1m[35mTRUNCATE TABLE "active_storage_variant_records"[0m
+  [1m[35m (99.6ms)[0m  [1m[31mDELETE FROM "active_storage_variant_records"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_variant_records';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "ads"[0m
+  [1m[35m (84.4ms)[0m  [1m[31mDELETE FROM "ads"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ads';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "comments"[0m
+  [1m[35m (77.7ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'comments';[0m
+  [1m[35m (0.3ms)[0m  [1m[35mTRUNCATE TABLE "favorites"[0m
+  [1m[35m (83.9ms)[0m  [1m[31mDELETE FROM "favorites"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'favorites';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "likes"[0m
+  [1m[35m (108.7ms)[0m  [1m[31mDELETE FROM "likes"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'likes';[0m
+  [1m[35m (0.4ms)[0m  [1m[35mTRUNCATE TABLE "reviews"[0m
+  [1m[35m (86.5ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'reviews';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
