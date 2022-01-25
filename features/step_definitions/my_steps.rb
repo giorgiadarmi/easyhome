@@ -8,6 +8,7 @@ Given('I am authenticated') do
 	click_button "Log in"
 end
 
+
 Given('I am on app homepage') do
     visit 'ads' 
     #pending # Write code here that turns the phrase above into concrete actions
@@ -42,7 +43,6 @@ end
 
 Then('I should see {string}') do |string|
     expect(page).to have_content(string)
-    #pending # Write code here that turns the phrase above into concrete actions
 end
 
 Given('I am on edilnews page') do
@@ -51,8 +51,8 @@ Given('I am on edilnews page') do
 end
 
 Given(/^Article "(.*?)" with Autore articolo "(.*?)" is there$/) do |arg1,arg2|
-  a = Article.new( title: arg1, author: arg2)
-  a.save
+    a = Article.new( title: arg1, author: arg2)
+    a.save
 end
 
 When(/^I click on "(.*?)" for Article "(.*?)" with Autore articolo "(.*?)"$/) do |arg1,arg2,arg3|
@@ -69,9 +69,10 @@ Then(/^I should see "(.*?)" for Article "(.*?)" with Autore articolo "(.*?)"$/) 
     current_path == '/articles/show'
 end 
 
-When(/^I click link "(.*?)" for Article "(.*?)" with Autore "(.*?)"$/) do |arg1,arg2,arg3|
+When(/^I click link "(.*?)" for Article "(.*?)" with Autore articolo "(.*?)"$/) do |arg1,arg2,arg3|
 	a = Article.find_by( title: arg2, author: arg3)
     a.save
+
     click_link(arg1)
 end
 
@@ -81,45 +82,59 @@ Then('I should be on the edilnews page') do
     #pending # Write code here that turns the phrase above into concrete actions
 end
 
-Then('I should not see Article {string}') do |string|
-    expect(page).to have_no_content(string)
-    #pending # Write code here that turns the phrase above into concrete actions
+Then('I should see Article {string} with Autore articolo {string}') do |string, string2|
+    a = Article.find_by( title: string, author: string2)
+    a.save
+	current_path = URI.parse(current_url).path
+    current_path == '/articles/show'
+  end
+  
+
+Given(/^Ad "(.*?)" with Descrizione "(.*?)" is there$/) do |arg1,arg2|
+    a = Ad.create(title: arg1, notice: arg2)
+    a.save
 end
 
-Given(/^Ad "(.*?)" with Descrizione: "(.*?)" is there$/) do |arg1,arg2|
-  a = Ad.new( title: arg1, notice: arg2)
-  a.save
-end
 
-When(/^I click on "(.*?)" for Ad "(.*?) with Descrizione: "(.*?)"$/) do |arg1,arg2,arg3|
+When('I click on {string} for Ad {string} with Descrizione {string}') do |string, string2, string3|
+    a = Ad.find_by(title: string2, notice: string3)
+    a.save
+    visit 'ads'
+    click_link(string)
+end
+      
+
+Then(/^I should see "(.*?)" for Ad "(.*?)" with Descrizione "(.*?)"$/) do |arg1,arg2,arg3|
 	a = Ad.find_by( title: arg2, notice: arg3)
     a.save
-	visit 'ads'
-    click_link(arg1)
-end
-
-Then(/^I should see "(.*?)" for Ad "(.*?)" with Descrizione: "(.*?)"$/) do |arg1,arg2,arg3|
-	a = Ad.find_by_title( title: arg2, notice: arg3)
 	current_path = URI.parse(current_url).path
     current_path == '/ads/show'
 end 
 
-When(/^I click link "(.*?)" for Ad "(.*?)" with Descrizione: "(.*?)"$/) do |arg1,arg2,arg3|
+When(/^I click link "(.*?)" for Ad "(.*?)" with Descrizione "(.*?)"$/) do |arg1,arg2,arg3|
 	a = Ad.new( title: arg2, notice: arg3)
 	a.save
 	visit 'ads/show'
     click_link(arg1)
 end
 
+When('I click link {string}') do |string|
+    click_link(string)
+end
+
 Given('I am on my profile') do
-    visit '/' 
+    visit '/'
     #pending # Write code here that turns the phrase above into concrete actions
 end
 
 Then('I should be on my profile') do
     current_path = URI.parse(current_url).path
-    current_path == '/users'
+    current_path == '/users/show'
     #pending # Write code here that turns the phrase above into concrete actions
+end
+Then /^I should be on the page for the user "([^\"]*)"$/ do |user_mail|
+    user = User.find_by(email: user_mail)
+    assert_equal "/users/#{user.id}", URI.parse(current_url).path
 end
 
 Then('I should see the favorites list') do
@@ -159,6 +174,13 @@ Then('I should see comment {string} in the article page') do |string|
   current_path == '/articles/show'
   #pending # Write code here that turns the phrase above into concrete actions
 end
+
+Then('I should see {string} for user') do |string|
+    current_path = URI.parse(current_url).path
+    current_path == '/users/edit'
+end
+  
+  
 
 
   

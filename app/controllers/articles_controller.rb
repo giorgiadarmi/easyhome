@@ -40,8 +40,15 @@ class ArticlesController < ApplicationController
 
 	#DELETE
 	def destroy
-		Article.find(params[:id]).destroy
-		redirect_to articles_path
+		if current_user.is_admin?
+			Article.find(params[:id]).destroy
+			redirect_to articles_path
+		else
+			flash[:notice] = "Cannot destroy Article"	
+			redirect_to articles_path
+
+		end
+		
 	end
 	
 	#SEARCH
