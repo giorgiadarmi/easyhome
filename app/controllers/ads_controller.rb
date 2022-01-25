@@ -32,7 +32,12 @@ class AdsController < ApplicationController
     end
 
     def destroy
-        Ad.find(params[:id]).destroy
+        if current_user==Ad.find(params[:id]).user 
+            Ad.find(params[:id]).destroy
+        else
+            flash[:notice] = "Non puoi eliminare articoli di altri utenti"
+        end
+        redirect_to ads_path
     end
 
     def edit
@@ -40,7 +45,11 @@ class AdsController < ApplicationController
     end
 
     def update  
-        Ad.find(params[:id]).update(params[:ad].permit(:owner , :adtype, :title, :notice, :location))
+        if current_user==Ad.find(params[:id]).user 
+            Ad.find(params[:id]).update(params[:ad].permit(:owner , :adtype, :title, :notice, :location))
+        else
+            flash[:notice] = "Non puoi modificare articoli di altri utenti"
+        end
         redirect_to ads_path
     end
 

@@ -3,7 +3,9 @@
 .center
     - if current_user.avatar.attached?
         = image_tag current_user.avatar, :size => "200x200"
-
+.right
+    - if @user.is_admin?
+        %h1= link_to "Gestione Admin", admin_view_path
 %br
 %br
 %table#ads
@@ -101,8 +103,6 @@
         =link_to "Dettagli", article_path(Article.find(c.article_id))
         %br
         %br
-.right
-    - if @user.is_admin?
-        %h1= link_to "Gestione Admin", admin_view_path
+
 %br
 %br
