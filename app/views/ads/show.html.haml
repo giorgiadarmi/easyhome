@@ -9,7 +9,7 @@
         - else
             %b Aggiungi ai preferiti 
             = link_to ad_favorites_path(@ad), method: :post do
-                = image_tag("favorite.png", width: 40)
+                = image_tag("favorite.png", width: 40, alt: "Favorite")
     %p{style: "text-align:left;"} 
         %b Proprietario: 
         - if current_user.avatar.attached?

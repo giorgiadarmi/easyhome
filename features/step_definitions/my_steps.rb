@@ -91,32 +91,30 @@ Then('I should see Article {string} with Autore articolo {string}') do |string, 
   
 
 Given(/^Ad "(.*?)" with Descrizione "(.*?)" is there$/) do |arg1,arg2|
-    a = Ad.create(title: arg1, notice: arg2)
+    a = Ad.new(title: arg1, notice: arg2)
     a.save
 end
 
 
-When('I click on {string} for Ad {string} with Descrizione {string}') do |string, string2, string3|
-    a = Ad.find_by(title: string2, notice: string3)
+When('I click on {string} for Ad {string}') do |string, string2|
+    a = Ad.find_by_title(string2)
     a.save
     visit 'ads'
     click_link(string)
 end
       
 
-Then(/^I should see "(.*?)" for Ad "(.*?)" with Descrizione "(.*?)"$/) do |arg1,arg2,arg3|
-	a = Ad.find_by( title: arg2, notice: arg3)
+Then(/^I should see "(.*?)" for Ad "(.*?)"$/) do |arg1,arg2|
+	a = Ad.find_by_title(arg2)
     a.save
 	current_path = URI.parse(current_url).path
     current_path == '/ads/show'
 end 
 
-When(/^I click link "(.*?)" for Ad "(.*?)" with Descrizione "(.*?)"$/) do |arg1,arg2,arg3|
-	a = Ad.new( title: arg2, notice: arg3)
-	a.save
-	visit 'ads/show'
-    click_link(arg1)
+When('I click link {string} for Ad {string}') do |string, string2|
+    click_link(string)
 end
+  
 
 When('I click link {string}') do |string|
     click_link(string)
