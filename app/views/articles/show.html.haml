@@ -6,13 +6,15 @@
 %ul#details 
     %li 
         Titolo:
+    %b
         = @article.title
     %li 
-        Release date:
+        Data realizzazione:
         = @article&.release_date&.strftime("%B %d %Y")
         
     %li
         Testo articolo:
+    %textarea{:cols => "70", :rows => "10"}
         = @article.text
     %br
     %br
