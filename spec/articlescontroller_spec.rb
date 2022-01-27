@@ -1,6 +1,5 @@
 require 'rails_helper'
-require "./app/models/article.rb"
-require "./app/models/user.rb"
+
 
 
 describe ArticlesController, type: :controller do
