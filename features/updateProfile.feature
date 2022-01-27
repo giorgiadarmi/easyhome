@@ -7,8 +7,8 @@ Scenario: User can update name
         When I am on app homepage
         And I follow "Profilo"
         Then I should be on my profile
-        When I click link "Update"
-        Then I should see "Update" for user 
+        When I click link "Modifica profilo"
+        Then I should see "Modifica profilo" for user 
         When I fill in "Nome" with "TEST_NOME"
         When I fill in "Password" with "easyhome.0102"
         When I fill in "Confirmation" with "easyhome.0102"

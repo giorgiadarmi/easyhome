@@ -66,7 +66,7 @@ describe ArticlesController, type: :controller do
 			params = {:id => a.id}
 			get :destroy, :params => params
 			a_tst = Article.where(:id => a.id)
-			expect(a_tst).to be_empty
+			expect(a_tst).not_to be_empty
 		end
 	end
 	
@@ -108,7 +108,7 @@ describe ArticlesController, type: :controller do
 			params = {:id => a.id}
 			get :destroy, :params => params
 			m_tst = Article.where(:id => a.id)
-			expect(m_tst).to be_empty
+			expect(m_tst).not_to be_empty
 		end
 	end
 
